@@ -5,6 +5,18 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
+repositories {
+    maven { url = 'https://maven.minecraftforge.net' }
+    maven { url = 'https://maven.parchmentmc.org' }
+    maven { url = 'https://maven.blamejared.com' } // для Forestry CE
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
 version = mod_version
 group = mod_group_id
 base {
@@ -60,6 +72,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    
+    // Forestry CE dependency
+    implementation fg.deobf('curse.maven:forestry-community-edition-400790:5681163')
 }
 
 jar {
