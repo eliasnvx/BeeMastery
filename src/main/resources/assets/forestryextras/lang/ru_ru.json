@@ -1,0 +1,69 @@
+{
+  "item.forestryextras.potato_comb": "Картофельные соты",
+  "item.forestryextras.carrot_comb": "Морковные соты",
+  "item.forestryextras.draconic_comb": "Драконьи соты",
+  "item.forestryextras.legendary_comb": "Легендарные соты",
+  "item.forestryextras.reinforced_comb": "Укрепленные соты",
+  "item.forestryextras.witheria_comb": "Визериевые соты",
+  "item.forestryextras.mutated_comb": "Мутировавшие соты",
+  "item.forestryextras.clayious_comb": "Глиняные соты",
+  "item.forestryextras.pig_comb": "Свинные соты",
+  "item.forestryextras.cow_comb": "Коровьи соты",
+  "item.forestryextras.sheep_comb": "Овечьи соты",
+  
+  "item.forestryextras.draconic_ingot": "Драконий слиток",
+  "item.forestryextras.legendary_ingot": "Легендарный слиток",
+  "item.forestryextras.reinforced_ingot": "Укрепленный слиток",
+  "item.forestryextras.mutated_iron_ingot": "Мутировавший железный слиток",
+  
+  "block.forestryextras.draconic_block": "Драконий блок",
+  "block.forestryextras.legendary_block": "Легендарный блок",
+  "block.forestryextras.reinforced_block": "Укрепленный блок",
+  "block.forestryextras.mutated_iron_block": "Мутировавший железный блок",
+  
+  "forestryextras.species.potato": "Картофельная пчела",
+  "forestryextras.species.potato.description": "Сельскохозяйственная пчела, производящая картофельные продукты",
+  "forestryextras.species.potato.lore": "Эта сельскохозяйственная пчела адаптировалась к выращиванию картофеля, производя крахмалистые соты, богатые питательными веществами.",
+  
+  "forestryextras.species.carrot": "Морковная пчела",
+  "forestryextras.species.carrot.description": "Сельскохозяйственная пчела, производящая морковные продукты",
+  "forestryextras.species.carrot.lore": "Эта сельскохозяйственная пчела специализируется на выращивании моркови, производя сладкие оранжевые соты.",
+  
+  "forestryextras.species.draconic": "Драконья пчела",
+  "forestryextras.species.draconic.description": "Редкая и мощная драконья пчела",
+  "forestryextras.species.draconic.lore": "Легендарная пчела, пропитанная эссенцией дракона, производящая ценные драконьи соты.",
+  
+  "forestryextras.species.legendary": "Легендарная пчела",
+  "forestryextras.species.legendary.description": "Мифическая пчела с уникальными свойствами",
+  "forestryextras.species.legendary.lore": "Самая мифическая из всех пчел, обладающая силами beyond смертного понимания.",
+  
+  "forestryextras.species.reinforced": "Укрепленная пчела",
+  "forestryextras.species.reinforced.description": "Прочная пчела для защиты улья",
+  "forestryextras.species.reinforced.lore": "Крепкая пчела, выведенная для прочности и защиты улья, производящая укрепленные соты.",
+  
+  "forestryextras.species.witheria": "Визериевая пчела",
+  "forestryextras.species.witheria.description": "Темная пчела с визер-эффектами",
+  "forestryextras.species.witheria.lore": "Испорченная пчела, пропитанная энергией визера, опасная, но ценная.",
+  
+  "forestryextras.species.mutated": "Мутировавшая пчела",
+  "forestryextras.species.mutated.description": "Результат генетических экспериментов",
+  "forestryextras.species.mutated.lore": "Пчела, измененная в результате генетических экспериментов, производящая уникальные мутировавшие продукты.",
+  
+  "forestryextras.species.clayious": "Глиняная пчела",
+  "forestryextras.species.clayious.description": "Земная пчела, связанная с глиной",
+  "forestryextras.species.clayious.lore": "Приземленная пчела, перерабатывающая глиняные минералы в полезные соты.",
+  
+  "forestryextras.species.pig": "Свинная пчела",
+  "forestryextras.species.pig.description": "Животная пчела, связанная со свиньями",
+  "forestryextras.species.pig.lore": "Одомашненная пчела, адаптированная к среде свиноводства.",
+  
+  "forestryextras.species.cow": "Коровья пчела",
+  "forestryextras.species.cow.description": "Животная пчела, связанная с коровами",
+  "forestryextras.species.cow.lore": "Нежная пчела, процветающая на пастбищах крупного рогатого скота и производящая молочные соты.",
+  
+  "forestryextras.species.sheep": "Овечья пчела",
+  "forestryextras.species.sheep.description": "Животная пчела, связанная с овцами",
+  "forestryextras.species.sheep.lore": "Пушистая пчела, адаптированная к овцеводству, производящая мягкие богатые волокном соты.",
+  
+  "itemGroup.forestryextras": "Forestry Extras CE"
+}
