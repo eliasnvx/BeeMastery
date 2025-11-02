@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:nugget_witheria"
+      "item": "beemastery:nugget_witheria"
     }
   },
   "result": {
-    "item": "forestryextras:ingot_witheria"
+    "item": "beemastery:ingot_witheria"
   }
 }

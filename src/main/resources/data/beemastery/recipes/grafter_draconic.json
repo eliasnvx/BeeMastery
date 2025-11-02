@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": ["  S", " S ", "S  "],
-  "key": {"S": {"item": "forestryextras:stick_draconic"}},
-  "result": {"item": "forestryextras:grafter_draconic"}
+  "key": {"S": {"item": "beemastery:stick_draconic"}},
+  "result": {"item": "beemastery:grafter_draconic"}
 }

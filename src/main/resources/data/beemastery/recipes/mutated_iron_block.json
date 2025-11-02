@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:ingot_mutated_iron"
+      "item": "beemastery:ingot_mutated_iron"
     }
   },
   "result": {
-    "item": "forestryextras:mutated_iron_block"
+    "item": "beemastery:mutated_iron_block"
   }
 }

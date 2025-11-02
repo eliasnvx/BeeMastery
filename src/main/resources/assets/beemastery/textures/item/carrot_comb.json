@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "forestryextras:item/carrot_comb"
+    "layer0": "beemastery:item/carrot_comb"
   }
 }

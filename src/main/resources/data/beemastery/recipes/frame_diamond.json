@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["SSS", "SWS", "SSS"],
   "key": {
-    "S": {"item": "forestryextras:stick_diamond"},
+    "S": {"item": "beemastery:stick_diamond"},
     "W": {"item": "forestry:wax"}
   },
-  "result": {"item": "forestryextras:frame_diamond"}
+  "result": {"item": "beemastery:frame_diamond"}
 }

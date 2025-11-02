@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:nugget_reinforced"
+      "item": "beemastery:nugget_reinforced"
     }
   },
   "result": {
-    "item": "forestryextras:ingot_reinforced"
+    "item": "beemastery:ingot_reinforced"
   }
 }

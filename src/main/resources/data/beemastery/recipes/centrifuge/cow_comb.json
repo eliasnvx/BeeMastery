@@ -1,6 +1,6 @@
 {
   "type": "forestry:centrifuge",
-  "input": {"item": "forestryextras:bee_comb_cow"},
+  "input": {"item": "beemastery:bee_comb_cow"},
   "products": [
     {"chance": 0.10, "item": "minecraft:leather"},
     {"chance": 0.15, "item": "minecraft:beef"}

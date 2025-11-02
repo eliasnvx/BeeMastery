@@ -1,6 +1,6 @@
 {
   "type": "forestry:centrifuge",
-  "input": {"item": "forestryextras:bee_comb_potato"},
+  "input": {"item": "beemastery:bee_comb_potato"},
   "products": [
     {"chance": 0.15, "item": "minecraft:potato"},
     {"chance": 0.15, "item": "minecraft:poisonous_potato"}

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [" S ", " SS", "S  "],
-  "key": {"S": {"item": "forestryextras:stick_reinforced"}},
-  "result": {"item": "forestryextras:scoop_reinforced"}
+  "key": {"S": {"item": "beemastery:stick_reinforced"}},
+  "result": {"item": "beemastery:scoop_reinforced"}
 }

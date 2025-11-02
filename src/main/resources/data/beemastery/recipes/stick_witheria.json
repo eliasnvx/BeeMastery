@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": ["#", "#"],
-  "key": {"#": {"item": "forestryextras:ingot_witheria"}},
-  "result": {"item": "forestryextras:stick_witheria", "count": 2}
+  "key": {"#": {"item": "beemastery:ingot_witheria"}},
+  "result": {"item": "beemastery:stick_witheria", "count": 2}
 }

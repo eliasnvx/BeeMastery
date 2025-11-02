@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "forestryextras:block/legendary_block"
+      "model": "beemastery:block/legendary_block"
     }
   }
 }

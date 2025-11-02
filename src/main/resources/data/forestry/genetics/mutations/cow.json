@@ -1,6 +1,6 @@
 {
   "parent1": "forestry:steadfast",
-  "parent2": "forestryextras:potato",
-  "result": "forestryextras:cow",
+  "parent2": "beemastery:potato",
+  "result": "beemastery:cow",
   "chance": 0.30
 }

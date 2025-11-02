@@ -1,6 +1,6 @@
 {
   "type": "forestry:centrifuge",
-  "input": {"item": "forestryextras:bee_comb_sheep"},
+  "input": {"item": "beemastery:bee_comb_sheep"},
   "products": [
     {"chance": 0.10, "item": "minecraft:white_wool"},
     {"chance": 0.15, "item": "minecraft:string"}

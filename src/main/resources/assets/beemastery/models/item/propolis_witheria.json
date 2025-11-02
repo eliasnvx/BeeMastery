@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "forestryextras:item/propolis_witheria"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "beemastery:item/propolis_witheria"}}

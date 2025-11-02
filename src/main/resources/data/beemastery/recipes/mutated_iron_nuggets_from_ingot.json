@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "forestryextras:ingot_mutated_iron"
+      "item": "beemastery:ingot_mutated_iron"
     }
   ],
   "result": {
-    "item": "forestryextras:nugget_mutated_iron",
+    "item": "beemastery:nugget_mutated_iron",
     "count": 9
   }
 }

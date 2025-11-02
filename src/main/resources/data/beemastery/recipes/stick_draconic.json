@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": ["#", "#"],
-  "key": {"#": {"item": "forestryextras:ingot_draconic"}},
-  "result": {"item": "forestryextras:stick_draconic", "count": 2}
+  "key": {"#": {"item": "beemastery:ingot_draconic"}},
+  "result": {"item": "beemastery:stick_draconic", "count": 2}
 }

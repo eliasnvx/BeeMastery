@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "forestryextras:item/stick_emerald"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "beemastery:item/stick_emerald"}}

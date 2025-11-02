@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:nugget_legendary"
+      "item": "beemastery:nugget_legendary"
     }
   },
   "result": {
-    "item": "forestryextras:ingot_legendary"
+    "item": "beemastery:ingot_legendary"
   }
 }

@@ -1,6 +1,6 @@
 {
   "type": "forestry:centrifuge",
-  "input": {"item": "forestryextras:bee_comb_clayious"},
+  "input": {"item": "beemastery:bee_comb_clayious"},
   "products": [
     {"chance": 0.15, "item": "minecraft:clay_ball"},
     {"chance": 0.75, "item": "forestry:honey_drop"}

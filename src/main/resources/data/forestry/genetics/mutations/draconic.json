@@ -1,6 +1,6 @@
 {
-  "parent1": "forestryextras:witheria",
-  "parent2": "forestryextras:reinforced",
-  "result": "forestryextras:draconic",
+  "parent1": "beemastery:witheria",
+  "parent2": "beemastery:reinforced",
+  "result": "beemastery:draconic",
   "chance": 0.05
 }

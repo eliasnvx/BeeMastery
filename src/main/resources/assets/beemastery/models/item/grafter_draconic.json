@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "forestryextras:item/grafter_draconic"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "beemastery:item/grafter_draconic"}}

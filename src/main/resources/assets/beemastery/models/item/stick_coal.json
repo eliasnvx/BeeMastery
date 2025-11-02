@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "forestryextras:item/stick_coal"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "beemastery:item/stick_coal"}}

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "forestryextras:block/legendary_block"
+    "all": "beemastery:block/legendary_block"
   }
 }

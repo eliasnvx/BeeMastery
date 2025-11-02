@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": ["#", "#"],
-  "key": {"#": {"item": "forestryextras:ingot_mutated_iron"}},
-  "result": {"item": "forestryextras:stick_mutated_iron", "count": 2}
+  "key": {"#": {"item": "beemastery:ingot_mutated_iron"}},
+  "result": {"item": "beemastery:stick_mutated_iron", "count": 2}
 }

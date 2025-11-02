@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-    "forestryextras:scoop_reinforced",
-    "forestryextras:scoop_draconic",
-    "forestryextras:scoop_legendary"
+    "beemastery:scoop_reinforced",
+    "beemastery:scoop_draconic",
+    "beemastery:scoop_legendary"
   ]
 }

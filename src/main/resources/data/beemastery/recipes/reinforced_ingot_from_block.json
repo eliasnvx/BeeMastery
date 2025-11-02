@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "forestryextras:reinforced_block"
+      "item": "beemastery:reinforced_block"
     }
   ],
   "result": {
-    "item": "forestryextras:ingot_reinforced",
+    "item": "beemastery:ingot_reinforced",
     "count": 9
   }
 }

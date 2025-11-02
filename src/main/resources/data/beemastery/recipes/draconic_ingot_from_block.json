@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "forestryextras:draconic_block"
+      "item": "beemastery:draconic_block"
     }
   ],
   "result": {
-    "item": "forestryextras:ingot_draconic",
+    "item": "beemastery:ingot_draconic",
     "count": 9
   }
 }

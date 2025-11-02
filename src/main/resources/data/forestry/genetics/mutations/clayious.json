@@ -1,6 +1,6 @@
 {
   "parent1": "forestry:meadows",
   "parent2": "forestry:noble",
-  "result": "forestryextras:clayious",
+  "result": "beemastery:clayious",
   "chance": 0.15
 }

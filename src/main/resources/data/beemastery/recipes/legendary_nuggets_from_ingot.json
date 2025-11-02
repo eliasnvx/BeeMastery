@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "forestryextras:ingot_legendary"
+      "item": "beemastery:ingot_legendary"
     }
   ],
   "result": {
-    "item": "forestryextras:nugget_legendary",
+    "item": "beemastery:nugget_legendary",
     "count": 9
   }
 }

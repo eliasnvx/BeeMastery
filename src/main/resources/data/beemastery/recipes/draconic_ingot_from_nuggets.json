@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:nugget_draconic"
+      "item": "beemastery:nugget_draconic"
     }
   },
   "result": {
-    "item": "forestryextras:ingot_draconic"
+    "item": "beemastery:ingot_draconic"
   }
 }

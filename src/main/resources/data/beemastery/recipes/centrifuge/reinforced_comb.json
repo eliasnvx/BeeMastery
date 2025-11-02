@@ -1,8 +1,8 @@
 {
   "type": "forestry:centrifuge",
-  "input": {"item": "forestryextras:bee_comb_reinforced"},
+  "input": {"item": "beemastery:bee_comb_reinforced"},
   "products": [
-    {"chance": 0.25, "item": "forestryextras:nugget_reinforced"},
+    {"chance": 0.25, "item": "beemastery:nugget_reinforced"},
     {"chance": 0.75, "item": "forestry:honey_drop"}
   ],
   "time": 200

@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "forestryextras:ingot_legendary"
+      "item": "beemastery:ingot_legendary"
     }
   },
   "result": {
-    "item": "forestryextras:legendary_block"
+    "item": "beemastery:legendary_block"
   }
 }

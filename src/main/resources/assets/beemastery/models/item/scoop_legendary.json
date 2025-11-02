@@ -1,1 +1,1 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "forestryextras:item/scoop_legendary"}}
+{"parent": "minecraft:item/generated", "textures": {"layer0": "beemastery:item/scoop_legendary"}}

@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["SSS", "SWS", "SSS"],
   "key": {
-    "S": {"item": "forestryextras:stick_reinforced"},
+    "S": {"item": "beemastery:stick_reinforced"},
     "W": {"item": "forestry:wax"}
   },
-  "result": {"item": "forestryextras:frame_reinforced"}
+  "result": {"item": "beemastery:frame_reinforced"}
 }

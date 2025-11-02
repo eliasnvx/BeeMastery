@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "forestryextras:item/frame_layer0",
-    "layer1": "forestryextras:item/frame_layer1"
+    "layer0": "beemastery:item/frame_layer0",
+    "layer1": "beemastery:item/frame_layer1"
   }
 }

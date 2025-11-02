@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": ["SSS", "SWS", "SSS"],
   "key": {
-    "S": {"item": "forestryextras:stick_witheria"},
+    "S": {"item": "beemastery:stick_witheria"},
     "W": {"item": "forestry:wax"}
   },
-  "result": {"item": "forestryextras:frame_witheria"}
+  "result": {"item": "beemastery:frame_witheria"}
 }

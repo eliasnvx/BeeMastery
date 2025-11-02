@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": ["  S", " S ", "S  "],
-  "key": {"S": {"item": "forestryextras:stick_legendary"}},
-  "result": {"item": "forestryextras:grafter_legendary"}
+  "key": {"S": {"item": "beemastery:stick_legendary"}},
+  "result": {"item": "beemastery:grafter_legendary"}
 }

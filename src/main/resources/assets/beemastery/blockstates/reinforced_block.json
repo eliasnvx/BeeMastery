@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "forestryextras:block/reinforced_block"
+      "model": "beemastery:block/reinforced_block"
     }
   }
 }
