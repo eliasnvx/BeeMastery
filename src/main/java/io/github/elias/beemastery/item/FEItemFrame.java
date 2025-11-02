@@ -33,15 +33,15 @@ public class FEItemFrame extends ItemForestry implements IColoredItem {
         
         // Показываем информацию всегда
         tooltip.add(Component.literal(""));
-        tooltip.add(Component.translatable("forestryextras.frame.production", 
+        tooltip.add(Component.translatable("beemastery.frame.production", 
             formatModifier(type.productionModifier)).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("forestryextras.frame.lifespan", 
+        tooltip.add(Component.translatable("beemastery.frame.lifespan", 
             formatModifier(type.lifespanModifier)).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("forestryextras.frame.mutation", 
+        tooltip.add(Component.translatable("beemastery.frame.mutation", 
             formatModifier(type.mutationModifier)).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("forestryextras.frame.territory", 
+        tooltip.add(Component.translatable("beemastery.frame.territory", 
             formatModifier(type.territoryModifier)).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable("forestryextras.frame.durability", 
+        tooltip.add(Component.translatable("beemastery.frame.durability", 
             String.valueOf(type.maxDamage)).withStyle(ChatFormatting.GRAY));
     }
 

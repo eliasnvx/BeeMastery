@@ -20,7 +20,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
     @Override
     public ResourceLocation id() {
         System.out.println("ForestryExtrasPlugin: Loading plugin...");
-        return new ResourceLocation("forestryextras", "plugin");
+        return new ResourceLocation("beemastery", "plugin");
     }
 
     @Override
@@ -40,14 +40,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
         try {
             // Draconic Bee
             IBeeSpeciesBuilder draconic = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "draconic"),
+                new ResourceLocation("beemastery", "draconic"),
                 ForestryTaxa.GENUS_HEROIC,
                 "Draconic",
                 false,
                 TextColor.fromRgb(0x990000) // Dark Red
             );
             
-            draconic.setAuthority("forestryextras")
+            draconic.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x990000))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -61,14 +61,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Legendary Bee  
             IBeeSpeciesBuilder legendary = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "legendary"),
+                new ResourceLocation("beemastery", "legendary"),
                 ForestryTaxa.GENUS_NOBLE,
                 "Legendary",
                 false,
                 TextColor.fromRgb(0x0000CD) // Medium Blue
             );
             
-            legendary.setAuthority("forestryextras")
+            legendary.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x0000CD))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -83,14 +83,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Reinforced Bee
             IBeeSpeciesBuilder reinforced = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "reinforced"),
+                new ResourceLocation("beemastery", "reinforced"),
                 ForestryTaxa.GENUS_INDUSTRIOUS,
                 "Reinforced",
                 false,
                 TextColor.fromRgb(0xCCCC99) // Beige
             );
             
-            reinforced.setAuthority("forestryextras")
+            reinforced.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xCCCC99))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.NORMAL)
@@ -104,14 +104,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Witheria Bee
             IBeeSpeciesBuilder witheria = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "witheria"),
+                new ResourceLocation("beemastery", "witheria"),
                 ForestryTaxa.GENUS_INFERNAL,
                 "Witheria",
                 false,
                 TextColor.fromRgb(0x000000) // Black
             );
             
-            witheria.setAuthority("forestryextras")
+            witheria.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x000000))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -124,14 +124,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Mutated Bee
             IBeeSpeciesBuilder mutated = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "mutated"),
+                new ResourceLocation("beemastery", "mutated"),
                 ForestryTaxa.GENUS_AUSTERE, // Используем существующий genus "modapis"
                 "Mutated",
                 false,
                 TextColor.fromRgb(0x99CC00) // Lime Green
             );
             
-            mutated.setAuthority("forestryextras")
+            mutated.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x99CC00))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.NORMAL)
@@ -145,14 +145,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Clayious Bee
             IBeeSpeciesBuilder clayious = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "clayious"),
+                new ResourceLocation("beemastery", "clayious"),
                 ForestryTaxa.GENUS_INDUSTRIOUS, // Используем существующий genus "industrapis"
                 "Clayious",
                 false,
                 TextColor.fromRgb(0xB0C4DE) // Light Steel Blue
             );
             
-            clayious.setAuthority("forestryextras")
+            clayious.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xB0C4DE))
                     .setStripes(TextColor.fromRgb(0xF5F5F5))
                     .setTemperature(TemperatureType.NORMAL)
@@ -165,14 +165,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Pig Bee
             IBeeSpeciesBuilder pig = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "pig"),
+                new ResourceLocation("beemastery", "pig"),
                 ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
                 "Pig",
                 false,
                 TextColor.fromRgb(0xFF69B4) // Hot Pink
             );
             
-            pig.setAuthority("forestryextras")
+            pig.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xFF69B4))
                     .setStripes(TextColor.fromRgb(0xFFB6C1))
                     .setTemperature(TemperatureType.NORMAL)
@@ -185,14 +185,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Cow Bee
             IBeeSpeciesBuilder cow = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "cow"),
+                new ResourceLocation("beemastery", "cow"),
                 ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
                 "Cow",
                 false,
                 TextColor.fromRgb(0x8B4513) // Saddle Brown
             );
             
-            cow.setAuthority("forestryextras")
+            cow.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x8B4513))
                     .setStripes(TextColor.fromRgb(0xE9967A))
                     .setTemperature(TemperatureType.NORMAL)
@@ -205,14 +205,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Sheep Bee
             IBeeSpeciesBuilder sheep = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "sheep"),
+                new ResourceLocation("beemastery", "sheep"),
                 ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
                 "Sheep",
                 false,
                 TextColor.fromRgb(0xFFFFFF) // White
             );
             
-            sheep.setAuthority("forestryextras")
+            sheep.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xFFFFFF))
                     .setStripes(TextColor.fromRgb(0xE9967A))
                     .setTemperature(TemperatureType.NORMAL)
@@ -225,14 +225,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Potato Bee
             IBeeSpeciesBuilder potato = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "potato"),
+                new ResourceLocation("beemastery", "potato"),
                 ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
                 "Potato",
                 false,
                 TextColor.fromRgb(0xEEE8AA) // Pale Goldenrod
             );
             
-            potato.setAuthority("forestryextras")
+            potato.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xEEE8AA))
                     .setStripes(TextColor.fromRgb(0xF0E68C))
                     .setTemperature(TemperatureType.NORMAL)
@@ -245,14 +245,14 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             // Carrot Bee
             IBeeSpeciesBuilder carrot = registration.registerSpecies(
-                new ResourceLocation("forestryextras", "carrot"),
+                new ResourceLocation("beemastery", "carrot"),
                 ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
                 "Carrot",
                 false,
                 TextColor.fromRgb(0xFFA500) // Orange
             );
             
-            carrot.setAuthority("forestryextras")
+            carrot.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0xFFA500))
                     .setStripes(TextColor.fromRgb(0xFFA500))
                     .setTemperature(TemperatureType.NORMAL)

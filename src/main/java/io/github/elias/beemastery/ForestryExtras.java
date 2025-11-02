@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 
 @Mod(ForestryExtras.MOD_ID)
 public class ForestryExtras {
-    public static final String MOD_ID = "forestryextras";
+    public static final String MOD_ID = "beemastery";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static ForestryExtras instance;

@@ -27,7 +27,7 @@ public class ModCreativeTabs {
 
     public static final RegistryObject<CreativeModeTab> FORESTRY_EXTRAS_TAB = CREATIVE_MODE_TABS.register("forestry_extras_tab",
         () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.forestryextras"))
+            .title(Component.translatable("itemGroup.beemastery"))
             .icon(() -> new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.DRACONIC).get()))
             .displayItems((params, output) -> {
                 // Соты
