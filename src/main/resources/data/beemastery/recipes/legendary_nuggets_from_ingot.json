@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "forestryextras:ingot_legendary"
+    }
+  ],
+  "result": {
+    "item": "forestryextras:nugget_legendary",
+    "count": 9
+  }
+}

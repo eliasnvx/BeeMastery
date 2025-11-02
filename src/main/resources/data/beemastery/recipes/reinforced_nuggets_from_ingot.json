@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "forestryextras:ingot_reinforced"
+    }
+  ],
+  "result": {
+    "item": "forestryextras:nugget_reinforced",
+    "count": 9
+  }
+}

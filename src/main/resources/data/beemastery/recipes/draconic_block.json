@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "forestryextras:ingot_draconic"
+    }
+  },
+  "result": {
+    "item": "forestryextras:draconic_block"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "forestryextras:ingot_draconic"
+    }
+  ],
+  "result": {
+    "item": "forestryextras:nugget_draconic",
+    "count": 9
+  }
+}

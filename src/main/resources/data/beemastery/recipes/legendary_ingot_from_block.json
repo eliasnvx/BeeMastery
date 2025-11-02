@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "forestryextras:legendary_block"
+    }
+  ],
+  "result": {
+    "item": "forestryextras:ingot_legendary",
+    "count": 9
+  }
+}

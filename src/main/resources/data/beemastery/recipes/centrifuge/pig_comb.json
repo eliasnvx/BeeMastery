@@ -1,0 +1,8 @@
+{
+  "type": "forestry:centrifuge",
+  "input": {"item": "forestryextras:bee_comb_pig"},
+  "products": [
+    {"chance": 0.15, "item": "minecraft:porkchop"}
+  ],
+  "time": 200
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["SSS", "SWS", "SSS"],
+  "key": {
+    "S": {"item": "forestryextras:stick_coal"},
+    "W": {"item": "forestry:wax"}
+  },
+  "result": {"item": "forestryextras:frame_coal"}
+}

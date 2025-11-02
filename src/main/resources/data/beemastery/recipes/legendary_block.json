@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "forestryextras:ingot_legendary"
+    }
+  },
+  "result": {
+    "item": "forestryextras:legendary_block"
+  }
+}

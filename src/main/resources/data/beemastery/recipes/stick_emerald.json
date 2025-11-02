@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["#", "#"],
+  "key": {"#": {"item": "minecraft:emerald"}},
+  "result": {"item": "forestryextras:stick_emerald", "count": 2}
+}

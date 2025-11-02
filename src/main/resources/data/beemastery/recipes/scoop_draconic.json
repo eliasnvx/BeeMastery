@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" S ", " SS", "S  "],
+  "key": {"S": {"item": "forestryextras:stick_draconic"}},
+  "result": {"item": "forestryextras:scoop_draconic"}
+}

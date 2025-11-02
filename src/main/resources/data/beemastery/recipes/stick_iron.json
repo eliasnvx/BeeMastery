@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["#", "#"],
+  "key": {"#": {"item": "minecraft:iron_ingot"}},
+  "result": {"item": "forestryextras:stick_iron", "count": 2}
+}
