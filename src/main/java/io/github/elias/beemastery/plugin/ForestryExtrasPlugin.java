@@ -1,0 +1,271 @@
+package io.github.elias.beemastery.plugin;
+
+import forestry.api.apiculture.*;
+import forestry.api.plugin.*;
+import forestry.api.core.*;
+import forestry.api.genetics.ForestryTaxa;
+import io.github.elias.beemastery.registry.ModItems;
+import io.github.elias.beemastery.item.FEEnumHoneyComb;
+import io.github.elias.beemastery.item.FEEnumIngot;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextColor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
+/**
+ * Плагин для регистрации пчел ForestryExtras в Forestry CE
+ */
+public class ForestryExtrasPlugin implements IForestryPlugin {
+
+    @Override
+    public ResourceLocation id() {
+        System.out.println("ForestryExtrasPlugin: Loading plugin...");
+        return new ResourceLocation("forestryextras", "plugin");
+    }
+
+    @Override
+    public void registerApiculture(IApicultureRegistration registration) {
+        System.out.println("ForestryExtrasPlugin: Registering bees...");
+        // Регистрируем пчел
+        registerBees(registration);
+        System.out.println("ForestryExtrasPlugin: Bees registered successfully!");
+        
+        // TODO: Регистрируем мутации (требуется уточнить API Forestry CE)
+        // System.out.println("ForestryExtrasPlugin: Registering bee mutations...");
+        // registerMutations(registration);
+        // System.out.println("ForestryExtrasPlugin: Bee mutations registered successfully!");
+    }
+
+    private void registerBees(IApicultureRegistration registration) {
+        try {
+            // Draconic Bee
+            IBeeSpeciesBuilder draconic = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "draconic"),
+                ForestryTaxa.GENUS_HEROIC,
+                "Draconic",
+                false,
+                TextColor.fromRgb(0x990000) // Dark Red
+            );
+            
+            draconic.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0x990000))
+                    .setStripes(TextColor.fromRgb(0xFFFFCC))
+                    .setTemperature(TemperatureType.HELLISH)
+                    .setHumidity(HumidityType.ARID)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.DRACONIC).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(4)
+                    .setGlint(true);
+            
+            System.out.println("ForestryExtrasPlugin: Draconic bee registered!");
+            
+            // Legendary Bee  
+            IBeeSpeciesBuilder legendary = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "legendary"),
+                ForestryTaxa.GENUS_NOBLE,
+                "Legendary",
+                false,
+                TextColor.fromRgb(0x0000CD) // Medium Blue
+            );
+            
+            legendary.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0x0000CD))
+                    .setStripes(TextColor.fromRgb(0xFFFFCC))
+                    .setTemperature(TemperatureType.HELLISH)
+                    .setHumidity(HumidityType.ARID)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.LEGENDARY).get()), 0.12f)
+                    .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.LEGENDARY).get()), 0.05f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(5)
+                    .setGlint(true);
+            
+            System.out.println("ForestryExtrasPlugin: Legendary bee registered!");
+            
+            // Reinforced Bee
+            IBeeSpeciesBuilder reinforced = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "reinforced"),
+                ForestryTaxa.GENUS_INDUSTRIOUS,
+                "Reinforced",
+                false,
+                TextColor.fromRgb(0xCCCC99) // Beige
+            );
+            
+            reinforced.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xCCCC99))
+                    .setStripes(TextColor.fromRgb(0xFFFFCC))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.REINFORCED).get()), 0.25f)
+                    .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.REINFORCED).get()), 0.1f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(3);
+            
+            System.out.println("ForestryExtrasPlugin: Reinforced bee registered!");
+            
+            // Witheria Bee
+            IBeeSpeciesBuilder witheria = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "witheria"),
+                ForestryTaxa.GENUS_INFERNAL,
+                "Witheria",
+                false,
+                TextColor.fromRgb(0x000000) // Black
+            );
+            
+            witheria.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0x000000))
+                    .setStripes(TextColor.fromRgb(0xFFFFCC))
+                    .setTemperature(TemperatureType.HELLISH)
+                    .setHumidity(HumidityType.ARID)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.WITHERIA).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(4);
+            
+            System.out.println("ForestryExtrasPlugin: Witheria bee registered!");
+            
+            // Mutated Bee
+            IBeeSpeciesBuilder mutated = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "mutated"),
+                ForestryTaxa.GENUS_AUSTERE, // Используем существующий genus "modapis"
+                "Mutated",
+                false,
+                TextColor.fromRgb(0x99CC00) // Lime Green
+            );
+            
+            mutated.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0x99CC00))
+                    .setStripes(TextColor.fromRgb(0xFFFFCC))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.DAMP)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.MUTATED).get()), 0.12f)
+                    .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.MUTATED_IRON).get()), 0.05f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(3);
+            
+            System.out.println("ForestryExtrasPlugin: Mutated bee registered!");
+            
+            // Clayious Bee
+            IBeeSpeciesBuilder clayious = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "clayious"),
+                ForestryTaxa.GENUS_INDUSTRIOUS, // Используем существующий genus "industrapis"
+                "Clayious",
+                false,
+                TextColor.fromRgb(0xB0C4DE) // Light Steel Blue
+            );
+            
+            clayious.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xB0C4DE))
+                    .setStripes(TextColor.fromRgb(0xF5F5F5))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.CLAYIOUS).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(2);
+            
+            System.out.println("ForestryExtrasPlugin: Clayious bee registered!");
+            
+            // Pig Bee
+            IBeeSpeciesBuilder pig = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "pig"),
+                ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
+                "Pig",
+                false,
+                TextColor.fromRgb(0xFF69B4) // Hot Pink
+            );
+            
+            pig.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xFF69B4))
+                    .setStripes(TextColor.fromRgb(0xFFB6C1))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.PIG).get()), 0.5f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(1);
+            
+            System.out.println("ForestryExtrasPlugin: Pig bee registered!");
+            
+            // Cow Bee
+            IBeeSpeciesBuilder cow = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "cow"),
+                ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
+                "Cow",
+                false,
+                TextColor.fromRgb(0x8B4513) // Saddle Brown
+            );
+            
+            cow.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0x8B4513))
+                    .setStripes(TextColor.fromRgb(0xE9967A))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.COW).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(1);
+            
+            System.out.println("ForestryExtrasPlugin: Cow bee registered!");
+            
+            // Sheep Bee
+            IBeeSpeciesBuilder sheep = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "sheep"),
+                ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
+                "Sheep",
+                false,
+                TextColor.fromRgb(0xFFFFFF) // White
+            );
+            
+            sheep.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xFFFFFF))
+                    .setStripes(TextColor.fromRgb(0xE9967A))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.SHEEP).get()), 0.5f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(1);
+            
+            System.out.println("ForestryExtrasPlugin: Sheep bee registered!");
+            
+            // Potato Bee
+            IBeeSpeciesBuilder potato = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "potato"),
+                ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
+                "Potato",
+                false,
+                TextColor.fromRgb(0xEEE8AA) // Pale Goldenrod
+            );
+            
+            potato.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xEEE8AA))
+                    .setStripes(TextColor.fromRgb(0xF0E68C))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.POTATO).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(1);
+            
+            System.out.println("ForestryExtrasPlugin: Potato bee registered!");
+            
+            // Carrot Bee
+            IBeeSpeciesBuilder carrot = registration.registerSpecies(
+                new ResourceLocation("forestryextras", "carrot"),
+                ForestryTaxa.GENUS_HONEY, // Используем существующий genus "apis"
+                "Carrot",
+                false,
+                TextColor.fromRgb(0xFFA500) // Orange
+            );
+            
+            carrot.setAuthority("forestryextras")
+                    .setBody(TextColor.fromRgb(0xFFA500))
+                    .setStripes(TextColor.fromRgb(0xFFA500))
+                    .setTemperature(TemperatureType.NORMAL)
+                    .setHumidity(HumidityType.NORMAL)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.CARROT).get()), 0.12f)
+                    .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
+                    .setComplexity(1);
+            
+            System.out.println("ForestryExtrasPlugin: Carrot bee registered!");
+            
+        } catch (Exception e) {
+            System.err.println("ForestryExtrasPlugin: Error registering bees: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}

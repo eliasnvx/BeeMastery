@@ -1,9 +1,9 @@
-package io.github.elias.forestryextras;
+package io.github.elias.beemastery;
 
 import com.mojang.logging.LogUtils;
-import io.github.elias.forestryextras.registry.ModBlocks;
-import io.github.elias.forestryextras.registry.ModCreativeTabs;
-import io.github.elias.forestryextras.registry.ModItems;
+import io.github.elias.beemastery.registry.ModBlocks;
+import io.github.elias.beemastery.registry.ModCreativeTabs;
+import io.github.elias.beemastery.registry.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;

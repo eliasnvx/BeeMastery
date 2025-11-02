@@ -1,4 +1,4 @@
-package io.github.elias.forestryextras.registry;
+package io.github.elias.beemastery.registry;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -9,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import io.github.elias.forestryextras.ForestryExtras;
+import io.github.elias.beemastery.ForestryExtras;
 
 import java.util.function.Supplier;
 
