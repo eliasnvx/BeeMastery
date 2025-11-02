@@ -213,3 +213,32 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+ForestryExtras/
+
+#############
+## Gradle
+#############
+.gradle/
+build/
+
+#############
+## IntelliJ IDEA
+#############
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+#############
+## Minecraft Development
+#############
+run/
+logs/
+
+#############
+## Temporary files
+#############
+*.class
+*.jar
+!gradle-wrapper.jar

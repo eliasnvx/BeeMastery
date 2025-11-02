@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:steadfast",
+  "parent2": "forestryextras:carrot",
+  "result": "forestryextras:pig",
+  "chance": 0.30
+}

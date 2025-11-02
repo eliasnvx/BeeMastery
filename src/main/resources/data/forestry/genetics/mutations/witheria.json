@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:industrious",
+  "parent2": "forestryextras:mutated",
+  "result": "forestryextras:witheria",
+  "chance": 0.05
+}

@@ -1,74 +1,125 @@
 package io.github.elias.forestryextras.registry;
 
+import io.github.elias.forestryextras.ForestryExtras;
+import io.github.elias.forestryextras.item.FEEnumHoneyComb;
+import io.github.elias.forestryextras.item.FEEnumIngot;
+import io.github.elias.forestryextras.item.FEEnumScoop;
+import io.github.elias.forestryextras.item.FEEnumGrafter;
+import io.github.elias.forestryextras.item.FEEnumNugget;
+import io.github.elias.forestryextras.item.FEEnumFrame;
+import io.github.elias.forestryextras.item.FEEnumStick;
+import io.github.elias.forestryextras.item.FEEnumPropolis;
+import io.github.elias.forestryextras.item.FEItemHoneyComb;
+import io.github.elias.forestryextras.item.FEItemIngot;
+import io.github.elias.forestryextras.item.FEItemScoop;
+import io.github.elias.forestryextras.item.FEItemGrafter;
+import io.github.elias.forestryextras.item.FEItemNugget;
+import io.github.elias.forestryextras.item.FEItemFrame;
+import io.github.elias.forestryextras.item.FEItemStick;
+import io.github.elias.forestryextras.item.FEItemPropolis;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import io.github.elias.forestryextras.ForestryExtras;
+import java.util.HashMap;
+import java.util.Map;
 
-import java.util.function.Supplier;
-
-/**
- * Регистрация предметов для ForestryExtras
- */
 public class ModItems {
-    
-    public static final DeferredRegister<Item> ITEMS = 
-        DeferredRegister.create(ForgeRegistries.ITEMS, ForestryExtras.MOD_ID);
-    
-    // Соты для всех пчел
-    public static final RegistryObject<Item> POTATO_COMB = register("potato_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> CARROT_COMB = register("carrot_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> DRACONIC_COMB = register("draconic_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> LEGENDARY_COMB = register("legendary_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> REINFORCED_COMB = register("reinforced_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> WITHERIA_COMB = register("witheria_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> MUTATED_COMB = register("mutated_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> CLAYIOUS_COMB = register("clayious_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> PIG_COMB = register("pig_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> COW_COMB = register("cow_comb", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> SHEEP_COMB = register("sheep_comb", 
-        () -> new Item(new Item.Properties()));
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, ForestryExtras.MOD_ID);
+
+    // Соты
+    public static final Map<FEEnumHoneyComb, RegistryObject<Item>> BEE_COMBS = new HashMap<>();
     
     // Слитки
-    public static final RegistryObject<Item> DRACONIC_INGOT = register("draconic_ingot", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> LEGENDARY_INGOT = register("legendary_ingot", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> REINFORCED_INGOT = register("reinforced_ingot", 
-        () -> new Item(new Item.Properties()));
-    
-    public static final RegistryObject<Item> MUTATED_IRON_INGOT = register("mutated_iron_ingot", 
-        () -> new Item(new Item.Properties()));
-    
-    private static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item) {
-        return ITEMS.register(name, item);
+    public static final Map<FEEnumIngot, RegistryObject<Item>> INGOTS = new HashMap<>();
+
+    // Крюки (Scoops)
+    public static final Map<FEEnumScoop, RegistryObject<Item>> SCOOPS = new HashMap<>();
+
+    // Прививочные ножи (Grafters)
+    public static final Map<FEEnumGrafter, RegistryObject<Item>> GRAFTERS = new HashMap<>();
+
+    // Самородки (Nuggets)
+    public static final Map<FEEnumNugget, RegistryObject<Item>> NUGGETS = new HashMap<>();
+
+    // Рамки (Frames)
+    public static final Map<FEEnumFrame, RegistryObject<Item>> FRAMES = new HashMap<>();
+
+    // Палки (Sticks)
+    public static final Map<FEEnumStick, RegistryObject<Item>> STICKS = new HashMap<>();
+
+    // Прополис (Propolis)
+    public static final Map<FEEnumPropolis, RegistryObject<Item>> PROPOLIS = new HashMap<>();
+
+    static {
+        // Регистрируем все соты
+        for (FEEnumHoneyComb combType : FEEnumHoneyComb.VALUES) {
+            String name = "bee_comb_" + combType.getSerializedName();
+            FEEnumHoneyComb finalCombType = combType; // Захватываем значение для лямбды
+            RegistryObject<Item> comb = ITEMS.register(name, () -> new FEItemHoneyComb(finalCombType));
+            BEE_COMBS.put(combType, comb);
+        }
+        
+        // Регистрируем все слитки
+        for (FEEnumIngot ingotType : FEEnumIngot.VALUES) {
+            String name = "ingot_" + ingotType.getSerializedName();
+            FEEnumIngot finalIngotType = ingotType; // Захватываем значение для лямбды
+            RegistryObject<Item> ingot = ITEMS.register(name, () -> new FEItemIngot(finalIngotType));
+            INGOTS.put(ingotType, ingot);
+        }
+
+        // Регистрируем все крюки
+        for (FEEnumScoop scoopType : FEEnumScoop.VALUES) {
+            String name = "scoop_" + scoopType.getSerializedName();
+            FEEnumScoop finalScoopType = scoopType; // Захватываем значение для лямбды
+            RegistryObject<Item> scoop = ITEMS.register(name, () -> new FEItemScoop(finalScoopType));
+            SCOOPS.put(scoopType, scoop);
+        }
+
+        // Регистрируем все прививочные ножи
+        for (FEEnumGrafter grafterType : FEEnumGrafter.VALUES) {
+            String name = "grafter_" + grafterType.getSerializedName();
+            FEEnumGrafter finalGrafterType = grafterType; // Захватываем значение для лямбды
+            RegistryObject<Item> grafter = ITEMS.register(name, () -> new FEItemGrafter(finalGrafterType));
+            GRAFTERS.put(grafterType, grafter);
+        }
+
+        // Регистрируем все самородки
+        for (FEEnumNugget nuggetType : FEEnumNugget.VALUES) {
+            String name = "nugget_" + nuggetType.getSerializedName();
+            FEEnumNugget finalNuggetType = nuggetType; // Захватываем значение для лямбды
+            RegistryObject<Item> nugget = ITEMS.register(name, () -> new FEItemNugget(finalNuggetType));
+            NUGGETS.put(nuggetType, nugget);
+        }
+
+        // Регистрируем все рамки
+        for (FEEnumFrame frameType : FEEnumFrame.VALUES) {
+            String name = "frame_" + frameType.getSerializedName();
+            FEEnumFrame finalFrameType = frameType; // Захватываем значение для лямбды
+            RegistryObject<Item> frame = ITEMS.register(name, () -> new FEItemFrame(finalFrameType));
+            FRAMES.put(frameType, frame);
+        }
+
+        // Регистрируем все палки
+        for (FEEnumStick stickType : FEEnumStick.VALUES) {
+            String name = "stick_" + stickType.getSerializedName();
+            FEEnumStick finalStickType = stickType; // Захватываем значение для лямбды
+            RegistryObject<Item> stick = ITEMS.register(name, () -> new FEItemStick(finalStickType));
+            STICKS.put(stickType, stick);
+        }
+
+        // Регистрируем весь прополис
+        for (FEEnumPropolis propolisType : FEEnumPropolis.VALUES) {
+            String name = "propolis_" + propolisType.getSerializedName();
+            FEEnumPropolis finalPropolisType = propolisType; // Захватываем значение для лямбды
+            RegistryObject<Item> propolis = ITEMS.register(name, () -> new FEItemPropolis(finalPropolisType));
+            PROPOLIS.put(propolisType, propolis);
+        }
     }
-    
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

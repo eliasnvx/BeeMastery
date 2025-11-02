@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:majestic",
+  "parent2": "forestryextras:reinforced",
+  "result": "forestryextras:mutated",
+  "chance": 0.05
+}

@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'maven-publish'
@@ -5,10 +17,14 @@ plugins {
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: 'org.spongepowered.mixin'
+
 repositories {
     maven { url = 'https://maven.minecraftforge.net' }
     maven { url = 'https://maven.parchmentmc.org' }
-    maven { url = 'https://maven.blamejared.com' } // для Forestry CE
+    maven { url = 'https://api.modrinth.com/maven' } // Modrinth Maven для Forestry CE
     maven {
         url "https://cursemaven.com"
         content {
@@ -36,6 +52,11 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            
+            // Mixin refmap remapping для Patchouli
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            
             mods {
                 forestryextras {
                     source sourceSets.main
@@ -47,6 +68,11 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            
+            // Mixin refmap remapping для Patchouli
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            
             mods {
                 forestryextras {
                     source sourceSets.main
@@ -73,8 +99,20 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     
-    // Forestry CE dependency
-    implementation fg.deobf('curse.maven:forestry-community-edition-400790:5681163')
+    // Forestry CE dependency from Modrinth
+    implementation fg.deobf("maven.modrinth:forestry-community-edition:2.5.0")
+    
+    // Patchouli dependency
+    implementation fg.deobf('curse.maven:patchouli-306770:6164575')
+}
+
+processResources {
+    inputs.property "version", mod_version
+
+    filesMatching("META-INF/mods.toml") {
+        expand "mod_id": mod_id, "mod_version": mod_version, "mod_name": mod_name, "mod_author": mod_author, "mod_description": mod_description,
+                "forge_version_range": forge_version_range, "minecraft_version_range": minecraft_version_range, "forestry_version": forestry_version
+    }
 }
 
 jar {

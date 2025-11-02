@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[40,)"
+loaderVersion = "[47,)"
 license = "MIT"
 
 [[mods]]
@@ -8,6 +8,10 @@ version = "${mod_version}"
 displayName = "${mod_name}"
 authors = "${mod_author}"
 description = "${mod_description}"
+
+[[pack.resources]]
+namespace = "forestryextras"
+description = "ForestryExtras Resources"
 
 [[dependencies.${mod_id}]]
 modId = "forge"
@@ -27,5 +31,12 @@ side = "BOTH"
 modId = "forestry"
 mandatory = true
 versionRange = "${forestry_version}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "patchouli"
+mandatory = true
+versionRange = "[1.20.1-84-FORGE,)"
 ordering = "NONE"
 side = "BOTH"
