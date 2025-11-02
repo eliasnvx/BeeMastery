@@ -242,3 +242,9 @@ logs/
 *.class
 *.jar
 !gradle-wrapper.jar
+
+#############
+## Documentation files (except README.md)
+#############
+*.md
+!README.md
