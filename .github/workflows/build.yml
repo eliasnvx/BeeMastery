@@ -1,0 +1,73 @@
+name: 🔨 Build
+
+on:
+  pull_request:
+    branches: [ '1.20.1-dev', 'main' ]
+  push:
+    branches: [ '1.20.1-dev' ]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+
+jobs:
+  build:
+    name: 🏗️ Build Bee Mastery
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: ✅ Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v3
+      
+      - name: ☕ Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+      
+      - name: 🗂️ Setup Gradle cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      
+      - name: 🧹 Cleanup Gradle cache
+        run: |
+          rm -f ~/.gradle/caches/modules-2/modules-2.lock
+          rm -f ~/.gradle/caches/modules-2/gc.properties
+      
+      - name: 🔧 Grant execute permission for gradlew
+        run: chmod +x gradlew
+      
+      - name: 🏗️ Build with Gradle
+        run: ./gradlew build --no-daemon --stacktrace
+        env:
+          GRADLE_OPTS: "-Xmx3G"
+      
+      - name: 📊 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: BeeMastery-${{ github.sha }}
+          path: build/libs/*.jar
+          retention-days: 30
+      
+      - name: 📝 Build summary
+        if: success()
+        run: |
+          echo "### ✅ Build Successful!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📦 Artifacts uploaded successfully!" >> $GITHUB_STEP_SUMMARY

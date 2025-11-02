@@ -1,0 +1,99 @@
+name: 🚀 Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., 1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  release:
+    name: 📦 Create Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: ☕ Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
+      
+      - name: ✅ Validate Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v3
+      
+      - name: 🔧 Grant execute permission for gradlew
+        run: chmod +x gradlew
+      
+      - name: 🏗️ Build with Gradle
+        run: ./gradlew build --no-daemon --stacktrace
+        env:
+          GRADLE_OPTS: "-Xmx3G"
+      
+      - name: 📝 Extract version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: 📋 Generate changelog
+        id: changelog
+        run: |
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          if [ -f CHANGELOG.md ]; then
+            sed -n '/^## \[${{ steps.version.outputs.VERSION }}\]/,/^## \[/p' CHANGELOG.md | sed '$d' >> $GITHUB_OUTPUT
+          else
+            echo "Release ${{ steps.version.outputs.VERSION }}" >> $GITHUB_OUTPUT
+          fi
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: 🎉 Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.VERSION }}
+          name: Bee Mastery v${{ steps.version.outputs.VERSION }}
+          body: |
+            ## 🐝 Bee Mastery v${{ steps.version.outputs.VERSION }}
+            
+            ${{ steps.changelog.outputs.CHANGELOG }}
+            
+            ---
+            
+            ### 📥 Downloads
+            - Download the JAR file below
+            - Requires Minecraft 1.20.1 + Forge 47.2.0+
+            - Requires Forestry: Community Edition 7.0.0+
+            
+            ### 🔗 Links
+            - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/bee-mastery)
+            - [Modrinth](https://modrinth.com/mod/bee-mastery)
+            - [GitHub](https://github.com/eliasnvx/BeeMastery)
+          files: build/libs/*.jar
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: ✅ Release summary
+        run: |
+          echo "### 🎉 Release v${{ steps.version.outputs.VERSION }} Published!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Tag:** \`v${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 [View Release](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.VERSION }})" >> $GITHUB_STEP_SUMMARY
