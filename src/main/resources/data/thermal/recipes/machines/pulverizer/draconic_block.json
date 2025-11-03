@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "beemastery:draconic_block"
+  },
+  "result": [
+    {
+      "item": "beemastery:ingot_draconic",
+      "count": 9
+    }
+  ],
+  "energy": 4000
+}

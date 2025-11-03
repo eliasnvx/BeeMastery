@@ -1,0 +1,21 @@
+{
+  "type": "thermal:centrifuge",
+  "ingredient": {
+    "item": "beemastery:bee_comb_reinforced"
+  },
+  "result": [
+    {
+      "item": "beemastery:ingot_reinforced",
+      "chance": 0.9
+    },
+    {
+      "item": "minecraft:honeycomb",
+      "chance": 1.0
+    },
+    {
+      "item": "beemastery:nugget_reinforced",
+      "chance": 0.25
+    }
+  ],
+  "energy": 3000
+}

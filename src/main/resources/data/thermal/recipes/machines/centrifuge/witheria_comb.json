@@ -1,0 +1,22 @@
+{
+  "type": "thermal:centrifuge",
+  "ingredient": {
+    "item": "beemastery:bee_comb_witheria"
+  },
+  "result": [
+    {
+      "item": "beemastery:nugget_witheria",
+      "count": 2,
+      "chance": 0.8
+    },
+    {
+      "item": "minecraft:honeycomb",
+      "chance": 1.0
+    },
+    {
+      "item": "beemastery:nugget_witheria",
+      "chance": 0.3
+    }
+  ],
+  "energy": 3500
+}

@@ -1,0 +1,18 @@
+{
+  "type": "thermal:smelter",
+  "ingredients": [
+    {
+      "item": "beemastery:ingot_draconic"
+    },
+    {
+      "tag": "forge:ingots/iron"
+    }
+  ],
+  "result": [
+    {
+      "item": "beemastery:ingot_reinforced",
+      "count": 2
+    }
+  ],
+  "energy": 4000
+}

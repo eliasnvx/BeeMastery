@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "beemastery:reinforced_block"
+  },
+  "result": [
+    {
+      "item": "beemastery:ingot_reinforced",
+      "count": 9
+    }
+  ],
+  "energy": 4000
+}

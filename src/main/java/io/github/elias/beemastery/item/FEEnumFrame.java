@@ -18,7 +18,17 @@ public enum FEEnumFrame implements StringRepresentable, IItemSubtype {
     WITHERIA(new Color(0x333333), 750, 2.0f, 1.0f, 1.0f, 1.0f),
     DRACONIC(new Color(0xFF0000), 1000, 2.5f, 1.0f, 1.0f, 1.0f),
     MUTATION(new Color(0x99CC00), 40, 1.0f, 0.5f, 10.0f, 1.0f),
-    LEGENDARY(new Color(0x0066FF), 10000, 5.0f, 1.0f, 1.0f, 1.0f);
+    LEGENDARY(new Color(0x0066FF), 10000, 5.0f, 1.0f, 1.0f, 1.0f),
+    
+    // Thermal Series Integration
+    TIN(new Color(0xCCE4F0), 80, 1.05f, 1.0f, 1.0f, 1.0f),
+    SILVER(new Color(0xE8F5FF), 180, 1.15f, 1.0f, 1.0f, 1.2f),
+    LEAD(new Color(0x4D4968), 220, 1.1f, 1.3f, 1.0f, 1.0f),
+    NICKEL(new Color(0xF0F0C8), 240, 1.25f, 1.0f, 1.0f, 1.0f),
+    INVAR(new Color(0xB4C4B4), 350, 1.35f, 1.0f, 1.0f, 1.0f),
+    CONSTANTAN(new Color(0xD86C3C), 280, 1.2f, 1.0f, 1.5f, 1.0f),
+    ELECTRUM(new Color(0xF4F4A0), 200, 1.3f, 1.0f, 1.0f, 1.0f),
+    ENDERIUM(new Color(0x2E9999), 1200, 2.0f, 1.0f, 1.2f, 1.3f);
 
     public static final FEEnumFrame[] VALUES = values();
 

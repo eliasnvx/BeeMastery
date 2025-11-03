@@ -1,0 +1,21 @@
+{
+  "type": "thermal:centrifuge",
+  "ingredient": {
+    "item": "beemastery:bee_comb_mutated"
+  },
+  "result": [
+    {
+      "item": "beemastery:ingot_mutated_iron",
+      "chance": 0.85
+    },
+    {
+      "item": "minecraft:honeycomb",
+      "chance": 1.0
+    },
+    {
+      "item": "beemastery:nugget_mutated_iron",
+      "chance": 0.3
+    }
+  ],
+  "energy": 2500
+}

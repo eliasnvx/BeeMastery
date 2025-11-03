@@ -1,0 +1,13 @@
+{
+  "type": "thermal:pulverizer",
+  "ingredient": {
+    "item": "beemastery:legendary_block"
+  },
+  "result": [
+    {
+      "item": "beemastery:ingot_legendary",
+      "count": 9
+    }
+  ],
+  "energy": 4000
+}
