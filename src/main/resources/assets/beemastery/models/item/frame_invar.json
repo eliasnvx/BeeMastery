@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "beemastery:item/frame_layer0",
+    "layer1": "beemastery:item/frame_layer1"
+  }
+}

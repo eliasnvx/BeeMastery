@@ -7,14 +7,14 @@
   ],
   "key": {
     "S": {
-      "item": "beemastery:stick_invar"
+      "item": "beemastery:stick_copper"
     },
     "W": {
       "item": "forestry:wax"
     }
   },
   "result": {
-    "item": "beemastery:frame_invar"
+    "item": "beemastery:frame_copper"
   },
   "conditions": [
     {

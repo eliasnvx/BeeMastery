@@ -7,14 +7,14 @@
   ],
   "key": {
     "S": {
-      "item": "beemastery:stick_invar"
+      "item": "beemastery:stick_steel"
     },
     "W": {
       "item": "forestry:wax"
     }
   },
   "result": {
-    "item": "beemastery:frame_invar"
+    "item": "beemastery:frame_steel"
   },
   "conditions": [
     {
