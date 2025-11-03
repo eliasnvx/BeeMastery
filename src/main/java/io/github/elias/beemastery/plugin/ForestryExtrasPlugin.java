@@ -30,10 +30,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
         registerBees(registration);
         System.out.println("ForestryExtrasPlugin: Bees registered successfully!");
         
-        // TODO: Регистрируем мутации (требуется уточнить API Forestry CE)
-        // System.out.println("ForestryExtrasPlugin: Registering bee mutations...");
-        // registerMutations(registration);
-        // System.out.println("ForestryExtrasPlugin: Bee mutations registered successfully!");
+        // Регистрируем мутации
+        System.out.println("ForestryExtrasPlugin: Registering bee mutations...");
+        registerMutations(registration);
+        System.out.println("ForestryExtrasPlugin: Bee mutations registered successfully!");
     }
 
     private void registerBees(IApicultureRegistration registration) {
@@ -259,7 +259,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .setHumidity(HumidityType.NORMAL)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.CARROT).get()), 0.12f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(1);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MEADOWS, 15);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Carrot bee registered!");
             
@@ -267,5 +270,11 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             System.err.println("ForestryExtrasPlugin: Error registering bees: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+    
+    private void registerMutations(IApicultureRegistration registration) {
+        // Мутации регистрируются через .addMutations() в каждом виде
+        // См. registerBees() выше
+        System.out.println("ForestryExtrasPlugin: Mutations are registered via .addMutations() in species builders");
     }
 }
