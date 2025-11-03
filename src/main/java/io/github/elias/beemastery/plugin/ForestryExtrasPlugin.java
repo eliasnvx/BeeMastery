@@ -55,7 +55,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.DRACONIC).get()), 0.12f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
                     .setComplexity(4)
-                    .setGlint(true);
+                    .setGlint(true)
+                    .addMutations(mutations -> {
+                        mutations.add(new ResourceLocation("beemastery", "witheria"), new ResourceLocation("beemastery", "reinforced"), 5);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Draconic bee registered!");
             
@@ -77,7 +80,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.LEGENDARY).get()), 0.05f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
                     .setComplexity(5)
-                    .setGlint(true);
+                    .setGlint(true)
+                    .addMutations(mutations -> {
+                        mutations.add(new ResourceLocation("beemastery", "witheria"), new ResourceLocation("beemastery", "draconic"), 5);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Legendary bee registered!");
             
@@ -98,7 +104,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.REINFORCED).get()), 0.25f)
                     .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.REINFORCED).get()), 0.1f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(3);
+                    .setComplexity(3)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.VALIANT, ForestryBeeSpecies.NOBLE, 5);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Reinforced bee registered!");
             
@@ -118,7 +127,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .setHumidity(HumidityType.ARID)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.WITHERIA).get()), 0.12f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(4);
+                    .setComplexity(3)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.INDUSTRIOUS, new ResourceLocation("beemastery", "mutated"), 5);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Witheria bee registered!");
             
@@ -136,10 +148,13 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.NORMAL)
                     .setHumidity(HumidityType.DAMP)
-                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.MUTATED).get()), 0.12f)
-                    .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.MUTATED_IRON).get()), 0.05f)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.MUTATED).get()), 0.25f)
+                    .addProduct(new ItemStack(ModItems.INGOTS.get(FEEnumIngot.MUTATED_IRON).get()), 0.1f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(3);
+                    .setComplexity(3)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.MAJESTIC, new ResourceLocation("beemastery", "reinforced"), 5);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Mutated bee registered!");
             
@@ -153,13 +168,16 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             clayious.setAuthority("beemastery")
-                    .setBody(TextColor.fromRgb(0xB0C4DE))
-                    .setStripes(TextColor.fromRgb(0xF5F5F5))
+                    .setBody(TextColor.fromRgb(0xA0522D))
+                    .setStripes(TextColor.fromRgb(0xD2691E))
                     .setTemperature(TemperatureType.NORMAL)
                     .setHumidity(HumidityType.NORMAL)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.CLAYIOUS).get()), 0.12f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(2);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.MEADOWS, ForestryBeeSpecies.NOBLE, 15);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Clayious bee registered!");
             
@@ -173,13 +191,16 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             pig.setAuthority("beemastery")
-                    .setBody(TextColor.fromRgb(0xFF69B4))
+                    .setBody(TextColor.fromRgb(0xFFC0CB))
                     .setStripes(TextColor.fromRgb(0xFFB6C1))
                     .setTemperature(TemperatureType.NORMAL)
                     .setHumidity(HumidityType.NORMAL)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.PIG).get()), 0.5f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(1);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.STEADFAST, new ResourceLocation("beemastery", "carrot"), 30);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Pig bee registered!");
             
@@ -194,12 +215,15 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             
             cow.setAuthority("beemastery")
                     .setBody(TextColor.fromRgb(0x8B4513))
-                    .setStripes(TextColor.fromRgb(0xE9967A))
+                    .setStripes(TextColor.fromRgb(0xFFFFFF))
                     .setTemperature(TemperatureType.NORMAL)
                     .setHumidity(HumidityType.NORMAL)
-                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.COW).get()), 0.12f)
+                    .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.COW).get()), 0.5f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(1);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.STEADFAST, new ResourceLocation("beemastery", "potato"), 30);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Cow bee registered!");
             
@@ -219,7 +243,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .setHumidity(HumidityType.NORMAL)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.SHEEP).get()), 0.5f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(1);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(new ResourceLocation("beemastery", "carrot"), new ResourceLocation("beemastery", "potato"), 30);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Sheep bee registered!");
             
@@ -239,7 +266,10 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .setHumidity(HumidityType.NORMAL)
                     .addProduct(new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.POTATO).get()), 0.12f)
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
-                    .setComplexity(1);
+                    .setComplexity(1)
+                    .addMutations(mutations -> {
+                        mutations.add(ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MEADOWS, 15);
+                    });
             
             System.out.println("ForestryExtrasPlugin: Potato bee registered!");
             
