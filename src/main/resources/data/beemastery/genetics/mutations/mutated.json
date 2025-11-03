@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:majestic",
+  "parent2": "beemastery:reinforced",
+  "result": "beemastery:mutated",
+  "chance": 0.05
+}

@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:valiant",
+  "parent2": "forestry:noble",
+  "result": "beemastery:reinforced",
+  "chance": 0.05
+}

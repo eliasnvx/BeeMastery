@@ -1,0 +1,6 @@
+{
+  "parent1": "beemastery:witheria",
+  "parent2": "beemastery:draconic",
+  "result": "beemastery:legendary",
+  "chance": 0.05
+}

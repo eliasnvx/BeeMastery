@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:industrious",
+  "parent2": "beemastery:mutated",
+  "result": "beemastery:witheria",
+  "chance": 0.05
+}

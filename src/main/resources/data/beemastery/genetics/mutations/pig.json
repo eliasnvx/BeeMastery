@@ -1,0 +1,6 @@
+{
+  "parent1": "forestry:steadfast",
+  "parent2": "beemastery:carrot",
+  "result": "beemastery:pig",
+  "chance": 0.30
+}
