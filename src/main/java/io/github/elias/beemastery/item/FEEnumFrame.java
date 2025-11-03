@@ -24,11 +24,11 @@ public enum FEEnumFrame implements StringRepresentable, IItemSubtype {
     TIN(new Color(0xCCE4F0), 80, 1.05f, 1.0f, 1.0f, 1.0f),
     SILVER(new Color(0xE8F5FF), 180, 1.15f, 1.0f, 1.0f, 1.2f),
     LEAD(new Color(0x4D4968), 220, 1.1f, 1.3f, 1.0f, 1.0f),
-    NICKEL(new Color(0xF0F0C8), 240, 1.25f, 1.0f, 1.0f, 1.0f),
+    COPPER(new Color(0xFF8C3C), 120, 1.1f, 1.0f, 1.0f, 1.0f),
+    BRONZE(new Color(0xFFCC66), 160, 1.2f, 1.0f, 1.0f, 1.0f),
+    STEEL(new Color(0x808080), 300, 1.4f, 1.0f, 1.0f, 1.0f),
     INVAR(new Color(0xB4C4B4), 350, 1.35f, 1.0f, 1.0f, 1.0f),
-    CONSTANTAN(new Color(0xD86C3C), 280, 1.2f, 1.0f, 1.5f, 1.0f),
-    ELECTRUM(new Color(0xF4F4A0), 200, 1.3f, 1.0f, 1.0f, 1.0f),
-    ENDERIUM(new Color(0x2E9999), 1200, 2.0f, 1.0f, 1.2f, 1.3f);
+    ELECTRUM(new Color(0xF4F4A0), 200, 1.3f, 1.0f, 1.0f, 1.0f);
 
     public static final FEEnumFrame[] VALUES = values();
 

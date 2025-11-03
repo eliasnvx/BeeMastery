@@ -6,12 +6,12 @@
   ],
   "key": {
     "I": {
-      "tag": "forge:ingots/nickel"
+      "tag": "forge:ingots/copper"
     }
   },
   "result": {
-    "item": "beemastery:stick_nickel",
-    "count": 4
+    "item": "beemastery:stick_copper",
+    "count": 2
   },
   "conditions": [
     {

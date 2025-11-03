@@ -1,20 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SSS",
-    "SWS",
-    "SSS"
+    "I",
+    "I"
   ],
   "key": {
-    "S": {
-      "item": "beemastery:stick_constantan"
-    },
-    "W": {
-      "tag": "minecraft:planks"
+    "I": {
+      "tag": "forge:ingots/bronze"
     }
   },
   "result": {
-    "item": "beemastery:frame_constantan"
+    "item": "beemastery:stick_bronze",
+    "count": 2
   },
   "conditions": [
     {

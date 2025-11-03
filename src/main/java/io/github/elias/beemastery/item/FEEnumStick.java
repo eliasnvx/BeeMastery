@@ -24,11 +24,11 @@ public enum FEEnumStick implements StringRepresentable, IItemSubtype {
     TIN(new Color(0xCCE4F0)),
     SILVER(new Color(0xE8F5FF)),
     LEAD(new Color(0x4D4968)),
-    NICKEL(new Color(0xF0F0C8)),
+    COPPER(new Color(0xFF8C3C)),
+    BRONZE(new Color(0xFFCC66)),
+    STEEL(new Color(0x808080)),
     INVAR(new Color(0xB4C4B4)),
-    CONSTANTAN(new Color(0xD86C3C)),
-    ELECTRUM(new Color(0xF4F4A0)),
-    ENDERIUM(new Color(0x2E9999));
+    ELECTRUM(new Color(0xF4F4A0));
 
     public static final FEEnumStick[] VALUES = values();
 
