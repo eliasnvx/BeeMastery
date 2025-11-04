@@ -3,9 +3,10 @@
 # 🐝 Bee Mastery 🐝
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green?style=for-the-badge&logo=minecraft&logoColor=white&color=62B47A)](https://www.minecraft.net/)
-[![Forge](https://img.shields.io/badge/Forge-47.2.0+-orange?style=for-the-badge&logo=curseforge&logoColor=white&color=FF6B35)](https://files.minecraftforge.net/)
-[![Forestry CE](https://img.shields.io/badge/Forestry_CE-7.0.0+-yellow?style=for-the-badge&color=FFD700)](https://github.com/thedarkcolour/ForestryCE)
+[![Forge](https://img.shields.io/badge/Forge-47.3.5+-orange?style=for-the-badge&logo=curseforge&logoColor=white&color=FF6B35)](https://files.minecraftforge.net/)
+[![Forestry CE](https://img.shields.io/badge/Forestry_CE-2.5.0+-yellow?style=for-the-badge&color=FFD700)](https://github.com/thedarkcolour/ForestryCE)
 [![License](https://img.shields.io/badge/License-LGPL--3.0-blue?style=for-the-badge&color=4A90E2)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.1-brightgreen?style=for-the-badge)](https://github.com/eliasnvx/BeeMastery/releases/tag/v1.0.1)
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/bee-mastery)
 
 **Master the art of beekeeping with 11 unique bee species, legendary tools, and powerful frames!**
