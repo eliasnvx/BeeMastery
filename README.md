@@ -7,6 +7,7 @@
 [![Forestry CE](https://img.shields.io/badge/Forestry_CE-2.5.0+-yellow?style=for-the-badge&color=FFD700)](https://github.com/thedarkcolour/ForestryCE)
 [![License](https://img.shields.io/badge/License-LGPL--3.0-blue?style=for-the-badge&color=4A90E2)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.0.1-brightgreen?style=for-the-badge)](https://github.com/eliasnvx/BeeMastery/releases/tag/v1.0.1)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-green?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/bee-mastery)
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange?style=for-the-badge&logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/mc-mods/bee-mastery)
 
 **Master the art of beekeeping with 11 unique bee species, legendary tools, and powerful frames!**
