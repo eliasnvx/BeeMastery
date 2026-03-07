@@ -3,7 +3,7 @@
   "pattern": ["SSS", "SWS", "SSS"],
   "key": {
     "S": {"item": "beemastery:stick_diamond"},
-    "W": {"item": "forestry:wax"}
+    "W": {"item": "forestry:beeswax"}
   },
   "result": {"item": "beemastery:frame_diamond"}
 }
