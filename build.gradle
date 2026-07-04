@@ -51,8 +51,18 @@ base {
     archivesName = "${mod_id}_${minecraft_version}"
 }
 
-// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+// Mojang ships Java 17 to end users in 1.18+, so the mod bytecode must target Java 17.
+// When Gradle is launched with a newer JDK, reuse it and compile with --release 17
+// instead of forcing an extra JDK 17 download.
+def buildJdkVersion = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
+        ? Integer.parseInt(JavaVersion.current().majorVersion)
+        : 17
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(buildJdkVersion)
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 

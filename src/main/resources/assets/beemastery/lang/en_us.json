@@ -42,7 +42,15 @@
   "item.beemastery.frame_draconic": "Draconic Frame",
   "item.beemastery.frame_mutation": "Mutation Frame",
   "item.beemastery.frame_legendary": "Legendary Frame",
-  
+  "item.beemastery.frame_tin": "Tin Frame",
+  "item.beemastery.frame_silver": "Silver Frame",
+  "item.beemastery.frame_lead": "Lead Frame",
+  "item.beemastery.frame_copper": "Copper Frame",
+  "item.beemastery.frame_bronze": "Bronze Frame",
+  "item.beemastery.frame_steel": "Steel Frame",
+  "item.beemastery.frame_invar": "Invar Frame",
+  "item.beemastery.frame_electrum": "Electrum Frame",
+
   "item.beemastery.stick_coal": "Coal Stick",
   "item.beemastery.stick_iron": "Iron Stick",
   "item.beemastery.stick_gold": "Gold Stick",
@@ -54,7 +62,15 @@
   "item.beemastery.stick_reinforced": "Reinforced Stick",
   "item.beemastery.stick_witheria": "Witheria Stick",
   "item.beemastery.stick_mutated_iron": "Mutated Iron Stick",
-  
+  "item.beemastery.stick_tin": "Tin Stick",
+  "item.beemastery.stick_silver": "Silver Stick",
+  "item.beemastery.stick_lead": "Lead Stick",
+  "item.beemastery.stick_copper": "Copper Stick",
+  "item.beemastery.stick_bronze": "Bronze Stick",
+  "item.beemastery.stick_steel": "Steel Stick",
+  "item.beemastery.stick_invar": "Invar Stick",
+  "item.beemastery.stick_electrum": "Electrum Stick",
+
   "item.beemastery.propolis_draconic": "Draconic Propolis",
   "item.beemastery.propolis_legendary": "Legendary Propolis",
   "item.beemastery.propolis_reinforced": "Reinforced Propolis",

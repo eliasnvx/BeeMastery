@@ -149,7 +149,7 @@ cd BeeMastery
 The compiled `.jar` will be in `build/libs/`
 
 ### Requirements
-- Java 21
+- Java 17+ JDK (the mod is compiled for Java 17 bytecode)
 - Gradle 8.8
 - Minecraft 1.20.1
 - Forge 47.2.0+
