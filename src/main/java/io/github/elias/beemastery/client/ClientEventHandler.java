@@ -124,5 +124,7 @@ public class ClientEventHandler {
                 }
             }, propolisEntry.getValue().get());
         }
+
+        // Аура-талисманы используют собственные готовые текстуры, без тинта.
     }
 }

@@ -9,6 +9,7 @@ import io.github.elias.beemastery.item.FEEnumNugget;
 import io.github.elias.beemastery.item.FEEnumFrame;
 import io.github.elias.beemastery.item.FEEnumStick;
 import io.github.elias.beemastery.item.FEEnumPropolis;
+import io.github.elias.beemastery.item.FEEnumAura;
 import io.github.elias.beemastery.item.FEItemHoneyComb;
 import io.github.elias.beemastery.item.FEItemIngot;
 import io.github.elias.beemastery.item.FEItemScoop;
@@ -17,6 +18,7 @@ import io.github.elias.beemastery.item.FEItemNugget;
 import io.github.elias.beemastery.item.FEItemFrame;
 import io.github.elias.beemastery.item.FEItemStick;
 import io.github.elias.beemastery.item.FEItemPropolis;
+import io.github.elias.beemastery.item.FEItemAuraCharm;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -53,6 +55,9 @@ public class ModItems {
 
     // Прополис (Propolis)
     public static final Map<FEEnumPropolis, RegistryObject<Item>> PROPOLIS = new HashMap<>();
+
+    // Аура-талисманы (Aura Charms)
+    public static final Map<FEEnumAura, RegistryObject<Item>> AURA_CHARMS = new HashMap<>();
 
     static {
         // Регистрируем все соты
@@ -117,6 +122,14 @@ public class ModItems {
             FEEnumPropolis finalPropolisType = propolisType; // Захватываем значение для лямбды
             RegistryObject<Item> propolis = ITEMS.register(name, () -> new FEItemPropolis(finalPropolisType));
             PROPOLIS.put(propolisType, propolis);
+        }
+
+        // Регистрируем аура-талисманы
+        for (FEEnumAura auraType : FEEnumAura.VALUES) {
+            String name = "aura_charm_" + auraType.getSerializedName();
+            FEEnumAura finalAuraType = auraType; // Захватываем значение для лямбды
+            RegistryObject<Item> charm = ITEMS.register(name, () -> new FEItemAuraCharm(finalAuraType));
+            AURA_CHARMS.put(auraType, charm);
         }
     }
 

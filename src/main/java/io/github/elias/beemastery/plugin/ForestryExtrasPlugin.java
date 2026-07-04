@@ -4,6 +4,12 @@ import forestry.api.apiculture.*;
 import forestry.api.plugin.*;
 import forestry.api.core.*;
 import forestry.api.genetics.ForestryTaxa;
+import forestry.api.apiculture.genetics.IBeeEffect;
+import forestry.api.genetics.alleles.BeeChromosomes;
+import forestry.api.genetics.alleles.ForestryAlleles;
+import forestry.api.genetics.alleles.IRegistryAllele;
+import io.github.elias.beemastery.effect.AuraBeeEffect;
+import io.github.elias.beemastery.item.FEEnumAura;
 import io.github.elias.beemastery.registry.ModItems;
 import io.github.elias.beemastery.item.FEEnumHoneyComb;
 import io.github.elias.beemastery.item.FEEnumIngot;
@@ -26,6 +32,8 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
     @Override
     public void registerApiculture(IApicultureRegistration registration) {
         System.out.println("ForestryExtrasPlugin: Registering bees...");
+        // Register aura bee effects before species so their alleles resolve
+        registerAuras(registration);
         // Регистрируем пчел
         registerBees(registration);
         System.out.println("ForestryExtrasPlugin: Bees registered successfully!");
@@ -48,6 +56,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             draconic.setAuthority("beemastery")
+                    .setGenome(g -> g.set(BeeChromosomes.EFFECT, auraAllele(FEEnumAura.DRACONIC)))
                     .setBody(TextColor.fromRgb(0x990000))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -72,6 +81,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             legendary.setAuthority("beemastery")
+                    .setGenome(g -> g.set(BeeChromosomes.EFFECT, auraAllele(FEEnumAura.LEGENDARY)))
                     .setBody(TextColor.fromRgb(0x0000CD))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -121,6 +131,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             witheria.setAuthority("beemastery")
+                    .setGenome(g -> g.set(BeeChromosomes.EFFECT, auraAllele(FEEnumAura.WITHERIA)))
                     .setBody(TextColor.fromRgb(0x000000))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.HELLISH)
@@ -144,6 +155,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             mutated.setAuthority("beemastery")
+                    .setGenome(g -> g.set(BeeChromosomes.EFFECT, auraAllele(FEEnumAura.MUTAGENIC)))
                     .setBody(TextColor.fromRgb(0x99CC00))
                     .setStripes(TextColor.fromRgb(0xFFFFCC))
                     .setTemperature(TemperatureType.NORMAL)
@@ -283,6 +295,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
             );
             
             carrot.setAuthority("beemastery")
+                    .setGenome(g -> g.set(BeeChromosomes.EFFECT, auraAllele(FEEnumAura.HARVEST)))
                     .setBody(TextColor.fromRgb(0xFFA500))
                     .setStripes(TextColor.fromRgb(0xFFA500))
                     .setTemperature(TemperatureType.NORMAL)
@@ -306,5 +319,24 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
         // Мутации регистрируются через .addMutations() в каждом виде
         // См. registerBees() выше
         System.out.println("ForestryExtrasPlugin: Mutations are registered via .addMutations() in species builders");
+    }
+
+    /**
+     * Registers one {@link AuraBeeEffect} per aura under id {@code beemastery:<aura>_aura}.
+     */
+    private void registerAuras(IApicultureRegistration registration) {
+        System.out.println("ForestryExtrasPlugin: Registering aura bee effects...");
+        for (FEEnumAura aura : FEEnumAura.VALUES) {
+            registration.registerBeeEffect(auraId(aura), new AuraBeeEffect(aura));
+        }
+    }
+
+    private static ResourceLocation auraId(FEEnumAura aura) {
+        return new ResourceLocation("beemastery", aura.getSerializedName() + "_aura");
+    }
+
+    /** Resolves the EFFECT-chromosome allele for a registered aura, for use in setGenome. */
+    private static IRegistryAllele<IBeeEffect> auraAllele(FEEnumAura aura) {
+        return ForestryAlleles.REGISTRY.registryAllele(auraId(aura), BeeChromosomes.EFFECT);
     }
 }

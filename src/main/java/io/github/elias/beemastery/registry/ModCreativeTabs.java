@@ -9,6 +9,7 @@ import io.github.elias.beemastery.item.FEEnumNugget;
 import io.github.elias.beemastery.item.FEEnumFrame;
 import io.github.elias.beemastery.item.FEEnumStick;
 import io.github.elias.beemastery.item.FEEnumPropolis;
+import io.github.elias.beemastery.item.FEEnumAura;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -68,6 +69,11 @@ public class ModCreativeTabs {
                 // Прополис (Propolis)
                 for (FEEnumPropolis propolis : FEEnumPropolis.VALUES) {
                     output.accept(ModItems.PROPOLIS.get(propolis).get());
+                }
+
+                // Аура-талисманы (Aura Charms)
+                for (FEEnumAura aura : FEEnumAura.VALUES) {
+                    output.accept(ModItems.AURA_CHARMS.get(aura).get());
                 }
                 
                 // Блоки

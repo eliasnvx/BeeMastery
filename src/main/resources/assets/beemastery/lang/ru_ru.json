@@ -100,5 +100,20 @@
   "allele.forestry.bee_species.beemastery.clayious": "Глиняная",
   "allele.forestry.bee_species.beemastery.pig": "Свиная",
   "allele.forestry.bee_species.beemastery.cow": "Коровья",
-  "allele.forestry.bee_species.beemastery.sheep": "Овечья"
+  "allele.forestry.bee_species.beemastery.sheep": "Овечья",
+  
+  "item.beemastery.aura_charm_draconic": "Талисман драконьей ауры",
+  "item.beemastery.aura_charm_legendary": "Талисман легендарной ауры",
+  "item.beemastery.aura_charm_witheria": "Талисман иссушающей ауры",
+  "item.beemastery.aura_charm_mutagenic": "Талисман мутагенной ауры",
+  "item.beemastery.aura_charm_harvest": "Талисман ауры урожая",
+  
+  "beemastery.charm.aura": "Аура: %s",
+  "beemastery.charm.charge": "Заряд: %s / %s",
+  
+  "beemastery.aura.draconic": "Драконья ярость",
+  "beemastery.aura.legendary": "Легендарное благословение",
+  "beemastery.aura.witheria": "Иссушение",
+  "beemastery.aura.mutagenic": "Мутаген",
+  "beemastery.aura.harvest": "Урожай"
 }

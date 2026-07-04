@@ -84,5 +84,20 @@
   "allele.forestry.bee_species.beemastery.clayious": "Clayious",
   "allele.forestry.bee_species.beemastery.pig": "Pig",
   "allele.forestry.bee_species.beemastery.cow": "Cow",
-  "allele.forestry.bee_species.beemastery.sheep": "Sheep"
+  "allele.forestry.bee_species.beemastery.sheep": "Sheep",
+  
+  "item.beemastery.aura_charm_draconic": "Draconic Aura Charm",
+  "item.beemastery.aura_charm_legendary": "Legendary Aura Charm",
+  "item.beemastery.aura_charm_witheria": "Withering Aura Charm",
+  "item.beemastery.aura_charm_mutagenic": "Mutagenic Aura Charm",
+  "item.beemastery.aura_charm_harvest": "Harvest Aura Charm",
+  
+  "beemastery.charm.aura": "Aura: %s",
+  "beemastery.charm.charge": "Charge: %s / %s",
+  
+  "beemastery.aura.draconic": "Draconic Fury",
+  "beemastery.aura.legendary": "Legendary Blessing",
+  "beemastery.aura.witheria": "Withering",
+  "beemastery.aura.mutagenic": "Mutagenic",
+  "beemastery.aura.harvest": "Harvest"
 }
