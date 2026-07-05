@@ -1,0 +1,18 @@
+{
+  "name": "Frame Basics",
+  "icon": "beemastery:frame_reinforced",
+  "category": "beemastery:frames",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Every frame in Bee Mastery carries four numbers: production (how fast the hive works), lifespan (how quickly the queen's genes decay), mutation (bonus mutation chance), and territory (how far the hive's effects, including auras, reach)."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:frame_mutation",
+      "title": "Frame of Mutation",
+      "text": "A specialist: half the lifespan but ten times the mutation chance. Built for breeding through the tandem line fast, not for long-term production."
+    }
+  ]
+}

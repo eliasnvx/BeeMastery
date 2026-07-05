@@ -1,0 +1,22 @@
+{
+  "name": "The Aura Belt",
+  "icon": "beemastery:aura_belt",
+  "category": "beemastery:auras",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "A bare charm does nothing on its own - it has to be socketed into an Aura Belt to actually pulse. The belt holds two charms at once, so you always have to choose which two auras you're carrying."
+    },
+    {
+      "type": "text",
+      "title": "Socketing",
+      "text": "No GUI needed: hold the belt in one hand and a charm in the other, then right-click. It doesn't matter which hand holds which."
+    },
+    {
+      "type": "text",
+      "title": "Removing",
+      "text": "Sneak and right-click with the belt in hand and your other hand empty to pop the most recently socketed charm back out. A quick right-click with both hands empty just shows you what's currently socketed."
+    }
+  ]
+}

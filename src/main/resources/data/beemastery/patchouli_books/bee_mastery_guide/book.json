@@ -1,0 +1,10 @@
+{
+  "name": "Bee Mastery Guide",
+  "landing_text": "Bee Mastery layers a whole second breeding tree on top of Forestry: a tandem line of engineered bees, five living auras, and the tools and frames you'll need to keep up with them. This book walks through the breeding order, what each aura actually does, and how the frame recipes escalate as you climb the tandem.",
+  "subtitle": "The Apiarist's Companion",
+  "creative_tab": "beemastery:forestry_extras_tab",
+  "text_color": "3b2e1e",
+  "show_progress": false,
+  "use_resource_pack": true,
+  "version": 1
+}

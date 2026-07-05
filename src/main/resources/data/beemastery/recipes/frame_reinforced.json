@@ -1,9 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["SSS", "SWS", "SSS"],
+  "pattern": [
+    "SSS",
+    "SXS",
+    "SDS"
+  ],
   "key": {
     "S": {"item": "beemastery:stick_reinforced"},
-    "W": {"item": "forestry:beeswax"}
+    "X": {"item": "forestry:beeswax"},
+    "D": {"item": "beemastery:frame_diamond"}
   },
   "result": {"item": "beemastery:frame_reinforced"}
 }

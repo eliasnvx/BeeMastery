@@ -1,0 +1,16 @@
+{
+  "name": "Hive Synergy",
+  "icon": "beemastery:draconic_block",
+  "category": "beemastery:auras",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Hives running the same aura amplify each other when clustered within about 12 blocks: each nearby hive running that aura adds to the pulse area, up to four neighbours' worth of bonus."
+    },
+    {
+      "type": "text",
+      "text": "This rewards building a themed bee-yard - a whole row of Draconic hives side by side - over scattering your apiaries at random. Mix your tiers and you lose the bonus; commit to one aura per cluster and it grows with you."
+    }
+  ]
+}

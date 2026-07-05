@@ -1,10 +1,13 @@
 package io.github.elias.beemastery.item;
 
 import forestry.core.items.ItemForestry;
-import forestry.core.items.definitions.IColoredItem;
 import net.minecraft.world.item.ItemStack;
 
-public class FEItemIngot extends ItemForestry implements IColoredItem {
+/**
+ * Unlike most Bee Mastery items, the ingot uses a hand-drawn, pre-colored texture per
+ * type instead of a tinted base texture, so it does not implement {@code IColoredItem}.
+ */
+public class FEItemIngot extends ItemForestry {
     private final FEEnumIngot type;
 
     public FEItemIngot(FEEnumIngot type) {
@@ -13,11 +16,6 @@ public class FEItemIngot extends ItemForestry implements IColoredItem {
 
     public FEEnumIngot getType() {
         return type;
-    }
-
-    @Override
-    public int getColorFromItemStack(ItemStack itemstack, int tintIndex) {
-        return type.color;
     }
 
     @Override

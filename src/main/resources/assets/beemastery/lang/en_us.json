@@ -16,6 +16,7 @@
   "item.beemastery.ingot_draconic": "Draconic Ingot",
   "item.beemastery.ingot_legendary": "Legendary Ingot",
   "item.beemastery.ingot_reinforced": "Reinforced Ingot",
+  "item.beemastery.ingot_witheria": "Witheria Ingot",
   "item.beemastery.ingot_mutated_iron": "Mutated Iron Ingot",
   
   "item.beemastery.scoop_reinforced": "Reinforced Scoop",
@@ -42,6 +43,7 @@
   "item.beemastery.frame_draconic": "Draconic Frame",
   "item.beemastery.frame_mutation": "Mutation Frame",
   "item.beemastery.frame_legendary": "Legendary Frame",
+  "item.beemastery.frame_ranch": "Ranch Frame",
   "item.beemastery.frame_tin": "Tin Frame",
   "item.beemastery.frame_silver": "Silver Frame",
   "item.beemastery.frame_lead": "Lead Frame",
@@ -88,6 +90,7 @@
   "block.beemastery.draconic_block": "Draconic Block",
   "block.beemastery.legendary_block": "Legendary Block",
   "block.beemastery.reinforced_block": "Reinforced Block",
+  "block.beemastery.witheria_block": "Witheria Block",
   "block.beemastery.mutated_iron_block": "Mutated Iron Block",
   
   "allele.forestry.bee_species.beemastery.potato": "Potato",
@@ -108,12 +111,33 @@
   "item.beemastery.aura_charm_mutagenic": "Mutagenic Aura Charm",
   "item.beemastery.aura_charm_harvest": "Harvest Aura Charm",
   
+  "item.beemastery.aura_belt": "Aura Belt",
+
   "beemastery.charm.aura": "Aura: %s",
   "beemastery.charm.charge": "Charge: %s / %s",
+  "beemastery.charm.needs_belt": "Socket into an Aura Belt to activate",
+
+  "beemastery.belt.socketed": "Socketed %s (%s/%s)",
+  "beemastery.belt.removed": "Removed %s",
+  "beemastery.belt.full": "Belt is full",
+  "beemastery.belt.empty": "Belt is empty",
+  "beemastery.belt.status": "Socketed: %s",
+  "beemastery.belt.charm_broke": "A charm in your belt broke!",
   
   "beemastery.aura.draconic": "Draconic Fury",
   "beemastery.aura.legendary": "Legendary Blessing",
   "beemastery.aura.witheria": "Withering",
   "beemastery.aura.mutagenic": "Mutagenic",
-  "beemastery.aura.harvest": "Harvest"
+  "beemastery.aura.harvest": "Harvest",
+
+  "beemastery.aura.active": "✦ %s ✦",
+
+  "beemastery.jei.category.aura": "Bee Mastery Auras",
+  "beemastery.jei.aura.draconic": "Damages nearby hostiles and grants Strength to players.",
+  "beemastery.jei.aura.legendary": "Grants Regeneration and Absorption to nearby players.",
+  "beemastery.jei.aura.witheria": "Applies Wither to nearby hostile mobs.",
+  "beemastery.jei.aura.mutagenic": "Grants a random buff to nearby players.",
+  "beemastery.jei.aura.harvest": "Fertilizes nearby crops, like bonemeal.",
+  "beemastery.jei.aura.radius": "Charm radius: %s blocks",
+  "beemastery.jei.aura.interval": "Pulses every %s sec"
 }

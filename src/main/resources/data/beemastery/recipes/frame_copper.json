@@ -15,11 +15,5 @@
   },
   "result": {
     "item": "beemastery:frame_copper"
-  },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "thermal"
-    }
-  ]
+  }
 }

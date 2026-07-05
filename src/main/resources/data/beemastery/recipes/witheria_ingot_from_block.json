@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beemastery:witheria_block"
+    }
+  ],
+  "result": {
+    "item": "beemastery:ingot_witheria",
+    "count": 9
+  }
+}

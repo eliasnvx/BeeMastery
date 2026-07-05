@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["  S", " S ", "S  "],
-  "key": {"S": {"item": "beemastery:stick_draconic"}},
+  "pattern": ["  I", " S ", "S  "],
+  "key": {
+    "I": {"item": "beemastery:ingot_draconic"},
+    "S": {"item": "beemastery:stick_draconic"}
+  },
   "result": {"item": "beemastery:grafter_draconic"}
 }

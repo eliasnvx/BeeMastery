@@ -16,6 +16,7 @@
   "item.beemastery.ingot_draconic": "龙族锭",
   "item.beemastery.ingot_legendary": "传说锭",
   "item.beemastery.ingot_reinforced": "强化锭",
+  "item.beemastery.ingot_witheria": "凋零锭",
   "item.beemastery.ingot_mutated_iron": "变异铁锭",
 
   "item.beemastery.scoop_reinforced": "强化捕蜂勺",
@@ -42,6 +43,7 @@
   "item.beemastery.frame_draconic": "龙族蜂框",
   "item.beemastery.frame_mutation": "变异蜂框",
   "item.beemastery.frame_legendary": "传说蜂框",
+  "item.beemastery.frame_ranch": "牧场蜂框",
   "item.beemastery.frame_tin": "锡蜂框",
   "item.beemastery.frame_silver": "银蜂框",
   "item.beemastery.frame_lead": "铅蜂框",
@@ -88,6 +90,7 @@
   "block.beemastery.draconic_block": "龙族方块",
   "block.beemastery.legendary_block": "传说方块",
   "block.beemastery.reinforced_block": "强化方块",
+  "block.beemastery.witheria_block": "凋零方块",
   "block.beemastery.mutated_iron_block": "变异铁方块",
 
   "allele.forestry.bee_species.beemastery.potato": "马铃薯",
@@ -107,13 +110,33 @@
   "item.beemastery.aura_charm_witheria": "凋零灵气护符",
   "item.beemastery.aura_charm_mutagenic": "诱变灵气护符",
   "item.beemastery.aura_charm_harvest": "丰收灵气护符",
+  "item.beemastery.aura_belt": "灵气腰带",
 
   "beemastery.charm.aura": "灵气：%s",
   "beemastery.charm.charge": "充能：%s / %s",
+  "beemastery.charm.needs_belt": "需装入灵气腰带才能生效",
+
+  "beemastery.belt.socketed": "已装入：%s（%s/%s）",
+  "beemastery.belt.removed": "已取出：%s",
+  "beemastery.belt.full": "腰带已满",
+  "beemastery.belt.empty": "腰带是空的",
+  "beemastery.belt.status": "已装入：%s",
+  "beemastery.belt.charm_broke": "你腰带里的一个护符碎了！",
 
   "beemastery.aura.draconic": "龙之怒",
   "beemastery.aura.legendary": "传说祝福",
   "beemastery.aura.witheria": "凋零",
   "beemastery.aura.mutagenic": "诱变",
-  "beemastery.aura.harvest": "丰收"
+  "beemastery.aura.harvest": "丰收",
+
+  "beemastery.aura.active": "✦ %s ✦",
+
+  "beemastery.jei.category.aura": "Bee Mastery 灵气",
+  "beemastery.jei.aura.draconic": "对附近敌对生物造成伤害，并给予玩家力量。",
+  "beemastery.jei.aura.legendary": "给予附近玩家生命恢复和伤害吸收。",
+  "beemastery.jei.aura.witheria": "对附近敌对生物施加凋零效果。",
+  "beemastery.jei.aura.mutagenic": "给予附近玩家随机增益效果。",
+  "beemastery.jei.aura.harvest": "像骨粉一样为附近作物施肥。",
+  "beemastery.jei.aura.radius": "护符范围：%s 格",
+  "beemastery.jei.aura.interval": "每 %s 秒脉冲一次"
 }

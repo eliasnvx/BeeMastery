@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LSW",
+    "SXS",
+    "CSP"
+  ],
+  "key": {
+    "L": {"item": "minecraft:leather"},
+    "S": {"item": "minecraft:stick"},
+    "W": {"item": "minecraft:white_wool"},
+    "X": {"item": "forestry:beeswax"},
+    "C": {"item": "minecraft:clay_ball"},
+    "P": {"item": "minecraft:carrot"}
+  },
+  "result": {"item": "beemastery:frame_ranch"}
+}

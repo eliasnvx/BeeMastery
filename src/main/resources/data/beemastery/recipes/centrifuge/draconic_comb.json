@@ -11,6 +11,10 @@
     {
       "chance": 0.75,
       "item": "forestry:honey_drop"
+    },
+    {
+      "chance": 0.10,
+      "item": "beemastery:propolis_draconic"
     }
   ],
   "time": 200

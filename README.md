@@ -160,7 +160,7 @@ The compiled `.jar` will be in `build/libs/`
 ## 🙏 Credits
 
 - **Original Mod:** [wasliebob](https://github.com/wasliebob) - ForestryExtras for Forestry 4
-- **Port & Maintenance:** [Elias Friedlaender](https://github.com/eliasnvx)
+- **Port & Maintenance:** [Elias](https://github.com/eliasnvx)
 - **Forestry CE:** [thedarkcolour](https://github.com/thedarkcolour) and contributors
 - **Original Forestry:** SirSengir and the Forestry team
 

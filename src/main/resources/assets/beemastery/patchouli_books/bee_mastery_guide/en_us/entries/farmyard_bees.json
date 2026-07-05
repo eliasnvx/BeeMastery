@@ -1,0 +1,16 @@
+{
+  "name": "Farmyard Bees",
+  "icon": "beemastery:bee_comb_cow",
+  "category": "beemastery:breeding",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "A separate, sillier line that mutates its way through farm produce instead of metals: Clayious, Pig, Cow, Sheep, Potato and Carrot bees. No auras, no dedicated tools - just easy drops of clay, leather, beef, wool, string, potatoes and carrots straight from the hive."
+    },
+    {
+      "type": "text",
+      "text": "Clayious mutates from Meadows and Noble. Potato and Carrot both mutate from Forest and Meadows. Pig mutates from Steadfast and Carrot, Cow from Steadfast and Potato, and Sheep from Carrot and Potato - a small breeding web all its own."
+    }
+  ]
+}

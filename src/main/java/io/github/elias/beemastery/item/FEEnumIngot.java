@@ -11,6 +11,7 @@ public enum FEEnumIngot implements StringRepresentable, IItemSubtype {
     DRACONIC(new Color(0xFF0000)),  // Ярко-красный
     LEGENDARY(new Color(0x0066FF)),  // Ярко-синий
     REINFORCED(new Color(0xCCCC99)),
+    WITHERIA(new Color(0x333333)),
     MUTATED_IRON(new Color(0x99CC00));
 
     public static final FEEnumIngot[] VALUES = values();

@@ -4,7 +4,6 @@ import forestry.api.ForestryTags;
 import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.apiculture.genetics.BeeLifeStage;
 import forestry.core.items.ItemForestry;
-import forestry.core.items.definitions.IColoredItem;
 import forestry.core.utils.SpeciesUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -21,7 +20,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class FEItemScoop extends ItemForestry implements IColoredItem {
+/**
+ * Unlike most Bee Mastery items, the scoop uses a hand-drawn, pre-colored texture per
+ * type instead of a tinted base texture, so it does not implement {@code IColoredItem}.
+ */
+public class FEItemScoop extends ItemForestry {
     private final FEEnumScoop type;
 
     public FEItemScoop(FEEnumScoop type) {
@@ -31,11 +34,6 @@ public class FEItemScoop extends ItemForestry implements IColoredItem {
 
     public FEEnumScoop getType() {
         return type;
-    }
-
-    @Override
-    public int getColorFromItemStack(ItemStack itemstack, int tintIndex) {
-        return type.color;
     }
 
     @Override

@@ -2,6 +2,8 @@ package io.github.elias.beemastery.effect;
 
 import io.github.elias.beemastery.item.FEEnumAura;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -49,22 +51,36 @@ public final class AuraActions {
         if (level.isClientSide) {
             return;
         }
+        List<Player> players = players(level, area);
+        notifyPlayers(aura, players);
         switch (aura) {
             case DRACONIC -> {
                 damageHostiles(level, area, 6.0F);
-                buff(players(level, area), MobEffects.DAMAGE_BOOST, 20 * 6, 0);
+                buff(players, MobEffects.DAMAGE_BOOST, 20 * 6, 0);
             }
             case LEGENDARY -> {
-                List<Player> players = players(level, area);
                 buff(players, MobEffects.REGENERATION, 20 * 6, 1);
                 buff(players, MobEffects.ABSORPTION, 20 * 12, 0);
             }
             case WITHERIA -> witherHostiles(level, area);
             case MUTAGENIC -> {
                 MobEffect chosen = MUTAGENIC_POOL[level.random.nextInt(MUTAGENIC_POOL.length)];
-                buff(players(level, area), chosen, MUTAGENIC_DURATION, 0);
+                buff(players, chosen, MUTAGENIC_DURATION, 0);
             }
             case HARVEST -> fertilize(level, area);
+        }
+    }
+
+    /** Shows an action-bar hint naming the active aura to every player standing inside its pulse area. */
+    private static void notifyPlayers(FEEnumAura aura, List<Player> players) {
+        if (players.isEmpty()) {
+            return;
+        }
+        Component name = Component.translatable("beemastery.aura." + aura.getSerializedName());
+        Component message = Component.translatable("beemastery.aura.active", name)
+                .withStyle(style -> style.withColor(TextColor.fromRgb(aura.color)).withBold(true));
+        for (Player player : players) {
+            player.displayClientMessage(message, true);
         }
     }
 

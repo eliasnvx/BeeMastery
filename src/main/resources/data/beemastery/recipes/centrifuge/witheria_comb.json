@@ -3,7 +3,8 @@
   "input": {"item": "beemastery:bee_comb_witheria"},
   "products": [
     {"chance": 0.15, "item": "beemastery:nugget_witheria"},
-    {"chance": 0.75, "item": "forestry:honey_drop"}
+    {"chance": 0.75, "item": "forestry:honey_drop"},
+    {"chance": 0.10, "item": "beemastery:propolis_witheria"}
   ],
   "time": 200
 }

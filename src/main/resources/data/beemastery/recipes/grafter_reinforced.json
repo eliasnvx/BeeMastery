@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["  S", " S ", "S  "],
-  "key": {"S": {"item": "beemastery:stick_reinforced"}},
+  "pattern": ["  I", " S ", "S  "],
+  "key": {
+    "I": {"item": "beemastery:ingot_reinforced"},
+    "S": {"item": "beemastery:stick_reinforced"}
+  },
   "result": {"item": "beemastery:grafter_reinforced"}
 }

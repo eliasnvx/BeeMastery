@@ -16,6 +16,7 @@
   "item.beemastery.ingot_draconic": "Smocza sztabka",
   "item.beemastery.ingot_legendary": "Legendarna sztabka",
   "item.beemastery.ingot_reinforced": "Wzmocniona sztabka",
+  "item.beemastery.ingot_witheria": "Witherowa sztabka",
   "item.beemastery.ingot_mutated_iron": "Zmutowana żelazna sztabka",
 
   "item.beemastery.scoop_reinforced": "Wzmocniony czerpak",
@@ -42,6 +43,7 @@
   "item.beemastery.frame_draconic": "Smocza ramka",
   "item.beemastery.frame_mutation": "Ramka mutacji",
   "item.beemastery.frame_legendary": "Legendarna ramka",
+  "item.beemastery.frame_ranch": "Ramka farmy",
   "item.beemastery.frame_tin": "Cynowa ramka",
   "item.beemastery.frame_silver": "Srebrna ramka",
   "item.beemastery.frame_lead": "Ołowiana ramka",
@@ -88,6 +90,7 @@
   "block.beemastery.draconic_block": "Smoczy blok",
   "block.beemastery.legendary_block": "Legendarny blok",
   "block.beemastery.reinforced_block": "Wzmocniony blok",
+  "block.beemastery.witheria_block": "Witherowy blok",
   "block.beemastery.mutated_iron_block": "Zmutowany żelazny blok",
 
   "allele.forestry.bee_species.beemastery.potato": "Ziemniaczana",
@@ -107,13 +110,33 @@
   "item.beemastery.aura_charm_witheria": "Talizman usychającej aury",
   "item.beemastery.aura_charm_mutagenic": "Talizman mutagennej aury",
   "item.beemastery.aura_charm_harvest": "Talizman aury żniw",
+  "item.beemastery.aura_belt": "Pas aury",
 
   "beemastery.charm.aura": "Aura: %s",
   "beemastery.charm.charge": "Ładunek: %s / %s",
+  "beemastery.charm.needs_belt": "Umieść w Pasie aury, aby aktywować",
+
+  "beemastery.belt.socketed": "Osadzono: %s (%s/%s)",
+  "beemastery.belt.removed": "Usunięto: %s",
+  "beemastery.belt.full": "Pas jest pełny",
+  "beemastery.belt.empty": "Pas jest pusty",
+  "beemastery.belt.status": "Osadzono: %s",
+  "beemastery.belt.charm_broke": "Talizman w twoim pasie się zepsuł!",
 
   "beemastery.aura.draconic": "Smocza furia",
   "beemastery.aura.legendary": "Legendarne błogosławieństwo",
   "beemastery.aura.witheria": "Usychanie",
   "beemastery.aura.mutagenic": "Mutagen",
-  "beemastery.aura.harvest": "Żniwa"
+  "beemastery.aura.harvest": "Żniwa",
+
+  "beemastery.aura.active": "✦ %s ✦",
+
+  "beemastery.jei.category.aura": "Aury Bee Mastery",
+  "beemastery.jei.aura.draconic": "Zadaje obrażenia pobliskim wrogom i daje Siłę graczom.",
+  "beemastery.jei.aura.legendary": "Daje pobliskim graczom Regenerację i Pochłanianie.",
+  "beemastery.jei.aura.witheria": "Nakłada Więdnięcie na pobliskich wrogów.",
+  "beemastery.jei.aura.mutagenic": "Daje pobliskim graczom losowy efekt.",
+  "beemastery.jei.aura.harvest": "Nawozi pobliskie uprawy, jak mączka kostna.",
+  "beemastery.jei.aura.radius": "Zasięg talizmanu: %s bloków",
+  "beemastery.jei.aura.interval": "Pulsuje co %s sek"
 }

@@ -1,0 +1,27 @@
+{
+  "name": "The Tandem Recipes",
+  "icon": "beemastery:frame_draconic",
+  "category": "beemastery:frames",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Frames in the tandem line don't just use sticks and wax - each one climbs on the back of the frame below it, the same way the bees themselves mutate from their parents."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_reinforced",
+      "text": "Reinforced starts the tandem: a Diamond Frame plus Reinforced sticks and wax."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_draconic",
+      "text": "Draconic needs both parent frames on the workbench at once - Witheria and Reinforced - just like the bee itself needs both to mutate."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_legendary",
+      "text": "Legendary needs Witheria and Draconic, plus a Nether Star. This is the most expensive frame in the mod by a wide margin - treat it as the actual end-game goal, not a routine craft."
+    }
+  ]
+}

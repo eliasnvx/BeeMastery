@@ -75,11 +75,15 @@ public class ModCreativeTabs {
                 for (FEEnumAura aura : FEEnumAura.VALUES) {
                     output.accept(ModItems.AURA_CHARMS.get(aura).get());
                 }
-                
+
+                // Пояс аур
+                output.accept(ModItems.AURA_BELT.get());
+
                 // Блоки
                 output.accept(ModBlocks.DRACONIC_BLOCK_ITEM.get());
                 output.accept(ModBlocks.LEGENDARY_BLOCK_ITEM.get());
                 output.accept(ModBlocks.REINFORCED_BLOCK_ITEM.get());
+                output.accept(ModBlocks.WITHERIA_BLOCK_ITEM.get());
                 output.accept(ModBlocks.MUTATED_IRON_BLOCK_ITEM.get());
             })
             .build());

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    " N ",
+    "LLL"
+  ],
+  "key": {
+    "L": {"item": "minecraft:leather"},
+    "N": {"item": "minecraft:iron_nugget"}
+  },
+  "result": {"item": "beemastery:aura_belt"}
+}

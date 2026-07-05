@@ -16,6 +16,7 @@
   "item.beemastery.ingot_draconic": "Drakonischer Barren",
   "item.beemastery.ingot_legendary": "Legendärer Barren",
   "item.beemastery.ingot_reinforced": "Verstärkter Barren",
+  "item.beemastery.ingot_witheria": "Witheria-Barren",
   "item.beemastery.ingot_mutated_iron": "Mutierter Eisenbarren",
 
   "item.beemastery.scoop_reinforced": "Verstärkte Kelle",
@@ -42,6 +43,7 @@
   "item.beemastery.frame_draconic": "Drakonischer Rahmen",
   "item.beemastery.frame_mutation": "Mutationsrahmen",
   "item.beemastery.frame_legendary": "Legendärer Rahmen",
+  "item.beemastery.frame_ranch": "Ranch-Rahmen",
   "item.beemastery.frame_tin": "Zinnrahmen",
   "item.beemastery.frame_silver": "Silberrahmen",
   "item.beemastery.frame_lead": "Bleirahmen",
@@ -88,6 +90,7 @@
   "block.beemastery.draconic_block": "Drakonischer Block",
   "block.beemastery.legendary_block": "Legendärer Block",
   "block.beemastery.reinforced_block": "Verstärkter Block",
+  "block.beemastery.witheria_block": "Witheria-Block",
   "block.beemastery.mutated_iron_block": "Mutierter Eisenblock",
 
   "allele.forestry.bee_species.beemastery.potato": "Kartoffel",
@@ -107,13 +110,33 @@
   "item.beemastery.aura_charm_witheria": "Verdorrender Aura-Talisman",
   "item.beemastery.aura_charm_mutagenic": "Mutagener Aura-Talisman",
   "item.beemastery.aura_charm_harvest": "Ernte-Aura-Talisman",
+  "item.beemastery.aura_belt": "Aura-Gürtel",
 
   "beemastery.charm.aura": "Aura: %s",
   "beemastery.charm.charge": "Ladung: %s / %s",
+  "beemastery.charm.needs_belt": "In einen Aura-Gürtel stecken, um zu aktivieren",
+
+  "beemastery.belt.socketed": "Eingesetzt: %s (%s/%s)",
+  "beemastery.belt.removed": "Entfernt: %s",
+  "beemastery.belt.full": "Gürtel ist voll",
+  "beemastery.belt.empty": "Gürtel ist leer",
+  "beemastery.belt.status": "Eingesetzt: %s",
+  "beemastery.belt.charm_broke": "Ein Talisman in deinem Gürtel ist zerbrochen!",
 
   "beemastery.aura.draconic": "Drakonischer Zorn",
   "beemastery.aura.legendary": "Legendärer Segen",
   "beemastery.aura.witheria": "Verwelken",
   "beemastery.aura.mutagenic": "Mutagen",
-  "beemastery.aura.harvest": "Ernte"
+  "beemastery.aura.harvest": "Ernte",
+
+  "beemastery.aura.active": "✦ %s ✦",
+
+  "beemastery.jei.category.aura": "Bee Mastery Auren",
+  "beemastery.jei.aura.draconic": "Verursacht Schaden an nahen Feinden und gewährt Spielern Stärke.",
+  "beemastery.jei.aura.legendary": "Gewährt nahen Spielern Regeneration und Absorption.",
+  "beemastery.jei.aura.witheria": "Wendet Verwelken auf nahe feindliche Monster an.",
+  "beemastery.jei.aura.mutagenic": "Gewährt nahen Spielern einen zufälligen Effekt.",
+  "beemastery.jei.aura.harvest": "Düngt nahe Pflanzen wie Knochenmehl.",
+  "beemastery.jei.aura.radius": "Talisman-Radius: %s Blöcke",
+  "beemastery.jei.aura.interval": "Pulsiert alle %s Sek."
 }

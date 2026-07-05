@@ -1,0 +1,22 @@
+{
+  "name": "Auras & Charms",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Draconic, Legendary, Witheria and Mutated bees each carry a living aura that pulses from their hive while they work - the pulse radius comes straight from the bee's own Territory gene, so anything that widens territory widens the aura too."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "Aura Charms",
+      "text": "Craft the matching propolis into a charm to carry an aura with you instead of leaving it at the hive. A charm has limited charge - each pulse costs one point of durability, and when it runs out the charm breaks."
+    },
+    {
+      "type": "text",
+      "text": "There's a fifth aura too: Harvest, carried by the Carrot bee, which fertilizes nearby crops like bonemeal. It has no matching propolis, so its charm is still crafted from a Carrot comb."
+    }
+  ]
+}

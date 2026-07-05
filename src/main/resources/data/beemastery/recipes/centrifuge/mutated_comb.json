@@ -3,7 +3,8 @@
   "input": {"item": "beemastery:bee_comb_mutated"},
   "products": [
     {"chance": 0.15, "item": "beemastery:nugget_mutated_iron"},
-    {"chance": 0.75, "item": "forestry:honey_drop"}
+    {"chance": 0.75, "item": "forestry:honey_drop"},
+    {"chance": 0.10, "item": "beemastery:propolis_mutated"}
   ],
   "time": 200
 }

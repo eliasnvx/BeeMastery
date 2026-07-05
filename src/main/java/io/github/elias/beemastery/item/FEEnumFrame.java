@@ -19,6 +19,7 @@ public enum FEEnumFrame implements StringRepresentable, IItemSubtype {
     DRACONIC(new Color(0xFF0000), 1000, 2.5f, 1.0f, 1.0f, 1.0f),
     MUTATION(new Color(0x99CC00), 40, 1.0f, 0.5f, 10.0f, 1.0f),
     LEGENDARY(new Color(0x0066FF), 10000, 5.0f, 1.0f, 1.0f, 1.0f),
+    RANCH(new Color(0xC19A6B), 150, 1.15f, 1.0f, 1.0f, 1.15f),
     
     // Thermal Series Integration
     TIN(new Color(0xCCE4F0), 80, 1.05f, 1.0f, 1.0f, 1.0f),

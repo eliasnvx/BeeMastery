@@ -1,0 +1,33 @@
+{
+  "name": "The Tandem Line",
+  "icon": "beemastery:bee_comb_legendary",
+  "category": "beemastery:breeding",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Reinforced",
+      "text": "The base of the tandem. Mutates from Forestry's own Valiant and Noble bees. Sturdy, common, and the gateway to everything above it."
+    },
+    {
+      "type": "text",
+      "title": "Witheria",
+      "text": "A side branch, not a child of Reinforced. Mutates from Forestry's Industrious plus a Mutated bee. Carries the Withering aura, which applies Wither to nearby hostiles."
+    },
+    {
+      "type": "text",
+      "title": "Draconic",
+      "text": "Mutates from Witheria and Reinforced together - both parents required, same as the frame recipe below. Carries the Draconic aura: damages nearby hostiles and grants Strength to players."
+    },
+    {
+      "type": "text",
+      "title": "Legendary",
+      "text": "The top of the tandem. Mutates from Witheria and Draconic together. Carries the Legendary aura: Regeneration and Absorption for nearby players. Everything about this tier - the frame, the tools - is the most expensive version of its kind."
+    },
+    {
+      "type": "text",
+      "title": "Mutated",
+      "text": "A separate line entirely, mutating from Forestry's Majestic bee plus Reinforced. Carries the Mutagenic aura, which hands out a random buff to nearby players each pulse."
+    }
+  ]
+}

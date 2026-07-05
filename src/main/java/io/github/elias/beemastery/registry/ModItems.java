@@ -19,6 +19,7 @@ import io.github.elias.beemastery.item.FEItemFrame;
 import io.github.elias.beemastery.item.FEItemStick;
 import io.github.elias.beemastery.item.FEItemPropolis;
 import io.github.elias.beemastery.item.FEItemAuraCharm;
+import io.github.elias.beemastery.item.FEItemAuraBelt;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -58,6 +59,9 @@ public class ModItems {
 
     // Аура-талисманы (Aura Charms)
     public static final Map<FEEnumAura, RegistryObject<Item>> AURA_CHARMS = new HashMap<>();
+
+    // Пояс аур (держит ограниченное число талисманов)
+    public static final RegistryObject<Item> AURA_BELT = ITEMS.register("aura_belt", FEItemAuraBelt::new);
 
     static {
         // Регистрируем все соты

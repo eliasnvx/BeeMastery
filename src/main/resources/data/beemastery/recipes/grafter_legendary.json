@@ -1,6 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": ["  S", " S ", "S  "],
-  "key": {"S": {"item": "beemastery:stick_legendary"}},
+  "pattern": ["  I", " S ", "S  "],
+  "key": {
+    "I": {"item": "beemastery:ingot_legendary"},
+    "S": {"item": "beemastery:stick_legendary"}
+  },
   "result": {"item": "beemastery:grafter_legendary"}
 }

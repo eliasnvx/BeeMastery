@@ -2,13 +2,8 @@ package io.github.elias.beemastery.client;
 
 import io.github.elias.beemastery.registry.ModItems;
 import io.github.elias.beemastery.item.FEItemHoneyComb;
-import io.github.elias.beemastery.item.FEItemIngot;
-import io.github.elias.beemastery.item.FEItemScoop;
-import io.github.elias.beemastery.item.FEItemGrafter;
-import io.github.elias.beemastery.item.FEItemNugget;
 import io.github.elias.beemastery.item.FEItemFrame;
 import io.github.elias.beemastery.item.FEItemStick;
-import io.github.elias.beemastery.item.FEItemPropolis;
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,58 +29,6 @@ public class ClientEventHandler {
             }, combEntry.getValue().get());
         }
         
-        // Регистрируем цвета для всех слитков
-        for (var ingotEntry : ModItems.INGOTS.entrySet()) {
-            event.register(new ItemColor() {
-                @Override
-                public int getColor(ItemStack stack, int tintIndex) {
-                    if (stack.getItem() instanceof FEItemIngot ingot) {
-                        return ingot.getColorFromItemStack(stack, tintIndex);
-                    }
-                    return 0xFFFFFF;
-                }
-            }, ingotEntry.getValue().get());
-        }
-
-        // Регистрируем цвета для всех крюков
-        for (var scoopEntry : ModItems.SCOOPS.entrySet()) {
-            event.register(new ItemColor() {
-                @Override
-                public int getColor(ItemStack stack, int tintIndex) {
-                    if (stack.getItem() instanceof FEItemScoop scoop) {
-                        return scoop.getColorFromItemStack(stack, tintIndex);
-                    }
-                    return 0xFFFFFF;
-                }
-            }, scoopEntry.getValue().get());
-        }
-
-        // Регистрируем цвета для всех прививочных ножей
-        for (var grafterEntry : ModItems.GRAFTERS.entrySet()) {
-            event.register(new ItemColor() {
-                @Override
-                public int getColor(ItemStack stack, int tintIndex) {
-                    if (stack.getItem() instanceof FEItemGrafter grafter) {
-                        return grafter.getColorFromItemStack(stack, tintIndex);
-                    }
-                    return 0xFFFFFF;
-                }
-            }, grafterEntry.getValue().get());
-        }
-
-        // Регистрируем цвета для всех самородков
-        for (var nuggetEntry : ModItems.NUGGETS.entrySet()) {
-            event.register(new ItemColor() {
-                @Override
-                public int getColor(ItemStack stack, int tintIndex) {
-                    if (stack.getItem() instanceof FEItemNugget nugget) {
-                        return nugget.getColorFromItemStack(stack, tintIndex);
-                    }
-                    return 0xFFFFFF;
-                }
-            }, nuggetEntry.getValue().get());
-        }
-
         // Регистрируем цвета для всех рамок
         for (var frameEntry : ModItems.FRAMES.entrySet()) {
             event.register(new ItemColor() {
@@ -112,19 +55,6 @@ public class ClientEventHandler {
             }, stickEntry.getValue().get());
         }
 
-        // Регистрируем цвета для всего прополиса
-        for (var propolisEntry : ModItems.PROPOLIS.entrySet()) {
-            event.register(new ItemColor() {
-                @Override
-                public int getColor(ItemStack stack, int tintIndex) {
-                    if (stack.getItem() instanceof FEItemPropolis propolis) {
-                        return propolis.getColorFromItemStack(stack, tintIndex);
-                    }
-                    return 0xFFFFFF;
-                }
-            }, propolisEntry.getValue().get());
-        }
-
-        // Аура-талисманы используют собственные готовые текстуры, без тинта.
+        // Прополис, слитки, самородки, крюки, прививочные ножи и аура-талисманы используют собственные готовые текстуры, без тинта.
     }
 }

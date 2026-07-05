@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [" C ", "NGN", " N "],
   "key": {
-    "C": {"item": "beemastery:bee_comb_witheria"},
+    "C": {"item": "beemastery:propolis_witheria"},
     "N": {"item": "beemastery:nugget_witheria"},
     "G": {"item": "minecraft:glass_bottle"}
   },

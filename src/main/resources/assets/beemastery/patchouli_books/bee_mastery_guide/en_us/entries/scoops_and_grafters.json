@@ -1,0 +1,23 @@
+{
+  "name": "Scoops & Grafters",
+  "icon": "beemastery:scoop_legendary",
+  "category": "beemastery:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Scoops",
+      "text": "A Scoop catches a wild vanilla bee and turns it into a Forestry drone. Comes in Reinforced, Draconic and Legendary tiers, each catching faster and lasting longer than the last."
+    },
+    {
+      "type": "text",
+      "title": "Grafters",
+      "text": "A Grafter speeds up tree grafting in the arboriculture side of Forestry. Same three tiers as the Scoop, and each one's blade is forged from its tier's ingot rather than just more sticks."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:grafter_legendary",
+      "text": "Every Grafter recipe puts the ingot at the very tip of the blade - that's the cutting edge - with two sticks forming the handle beneath it."
+    }
+  ]
+}

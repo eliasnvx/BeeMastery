@@ -1,0 +1,22 @@
+{
+  "name": "Getting Started",
+  "icon": "beemastery:bee_comb_reinforced",
+  "category": "beemastery:breeding",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Every Bee Mastery bee produces its own comb, and every comb centrifuges down into three things: a nugget of its metal, honey, and a chance of propolis. Reinforced combs are the most generous of the bunch, so that's the line to start with."
+    },
+    {
+      "type": "text",
+      "text": "Nuggets compress into ingots, ingots into sticks, and sticks craft into frames and tools with beeswax. That whole chain - comb to nugget to ingot to stick - is the backbone of every tier in this book."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:scoop_reinforced",
+      "title": "Catching Wild Bees",
+      "text": "A Scoop lets you catch a wild vanilla bee and turn it into a Forestry drone, which you can then breed into the tandem line below."
+    }
+  ]
+}
