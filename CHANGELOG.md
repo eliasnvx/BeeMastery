@@ -5,6 +5,31 @@ All notable changes to Bee Mastery will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-07-05
+
+### Added
+- **Aura Belt:** new item that holds up to 2 Aura Charms — a bare charm no longer pulses on its own, it must be socketed in the belt (hold belt + charm, right-click to socket; sneak + right-click to remove). This is the balance gate for the aura system: no more free-riding all 5 auras at once from your inventory.
+- **Hive Synergy:** apiaries running the same aura now amplify each other when clustered within ~12 blocks — up to +60% pulse area from 4 neighbouring hives of the same aura. Build a themed bee-yard, not a scattered one.
+- **JEI Aura category:** every aura now has its own JEI page listing its effect, radius and pulse interval.
+- **In-game guide book (Patchouli):** covers the breeding tandem, the aura system, frame progression and tools. Craft it from a Book + Reinforced Propolis.
+- **Witheria Ingot & Witheria Block:** closes a gap where the Witheria tier had a comb, nugget, frame and stick but no ingot or storage block.
+- **Ranch Frame:** a flavour frame for the farmyard bee line (Clayious/Pig/Cow/Sheep/Potato/Carrot), crafted from leather, wool, clay and carrot instead of a metal tier.
+- New hand-drawn textures for propolis, grafters, scoops, ingots, nuggets, storage blocks and the aura belt, replacing tinted placeholder art.
+- A small "wow" touch: an action-bar readout naming the active aura (colour-matched) while you're inside its pulse radius.
+
+### Changed
+- **Frame tandem recipes now escalate:** Reinforced Frame requires a Diamond Frame; Draconic Frame requires both a Witheria and a Reinforced Frame (mirroring the bee's own mutation parents); Legendary Frame requires a Witheria Frame, a Draconic Frame, and a Nether Star.
+- **Grafter recipes reworked:** the ingot now sits at the blade tip with 2 sticks forming the handle, instead of 3 plain sticks.
+- **Bees drop nuggets, not ingots:** Reinforced/Legendary/Mutated bees now drop their metal as a nugget (matching the refining chain); Draconic and Witheria bees gained a nugget drop they were previously missing entirely.
+- **Propolis is obtainable again:** centrifuging Draconic/Legendary/Reinforced/Witheria/Mutated combs now has a 10% chance of propolis, alongside the nugget and honey.
+- Aura Charms are now crafted from the matching propolis instead of a bee comb.
+
+### Fixed
+- **Copper frame/stick recipes** no longer require the Thermal mod to be loaded — they only ever needed the vanilla copper ingot tag.
+- **Witheria Frame was uncraftable:** its stick recipe depended on an Ingot that was never registered. Added the missing ingot end-to-end (item, model, textures, recipes, localization).
+- Removed ~160 unused legacy texture files (old pre-refactor art, duplicate asset folders, orphaned tint sources) left over from earlier iterations.
+- Removed dead duplicate bee-mutation JSON files that mirrored the real (Java-registered) mutation data but were never actually loaded by anything.
+
 ## [1.0.1] - 2025-11-04
 
 ### Fixed
