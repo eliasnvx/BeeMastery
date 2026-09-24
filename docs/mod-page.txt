@@ -1,0 +1,94 @@
+![Bee Mastery](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/banner.png)
+
+**Master the art of beekeeping.** Bee Mastery is a big expansion for **Forestry: Community Edition** — 11 new bees, living auras, top-tier tools and frames, and a **hive you wear on your back** that keeps working wherever you go.
+
+It's the spiritual successor to the beloved *ForestryExtras*, rebuilt from scratch for modern Minecraft, with an in-game guide book in 10 languages so you're never lost.
+
+---
+
+![Portable Hive](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_portable_hive.png)
+
+A Bee House you wear in the chestplate slot. Put in a queen (or a princess and a drone), and the bees keep working **wherever you walk** — biome, weather, light and flowers all come from where you're standing. It runs Forestry's own beekeeping logic, so breeding, ageing and production work exactly as in a normal hive.
+
+- 🌼 **Flower slot** — carry a flower your bees like and they stop needing flowers around you. The empty slot shows which one the current bee wants.
+- 🎒 **A real 3D hive on your back** — bottom board, landing board, brood box, honey super and roof — with bees buzzing out of it while it works. Other players see them too.
+- 🛡️ **Built-in armour** — craft the hive together with any chestplate to get its protection. If the chestplate breaks, the hive and its bees stay.
+- 📊 **Always know what your bees are doing** — a small panel on screen shows the queen, her remaining life and the hive status, and the hive window tells you exactly why the bees stopped (too hot, raining, no flowers…).
+- 🐝 **Your own hive never stings you** — aggressive or radioactive bees on your back won't hurt their owner. Other hives still will.
+- ⌨️ Press **B** to open the hive on your back (rebindable).
+
+![Portable Hive tiers](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/tiers.png)
+
+---
+
+![Upgrades & Modules](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_modules.png)
+
+Upgrade the hive with the mod's metals — **Reinforced → Draconic → Legendary**. Every tier adds speed and a module slot, and everything inside the hive is kept. Each tier looks the part, in your inventory and on your back.
+
+Modules plug into a side panel of the hive window and switch on Forestry's own mechanics — the same ones its big machinery uses:
+
+![Hive modules](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/modules.png)
+
+The **Lantern** even lights up the area around you and hangs a glowing lantern on the hive's roof. One module of each kind per hive; the Mutagen and the Gene Stabilizer don't mix.
+
+---
+
+![Bees & Auras](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_bees.png)
+
+| Tier | Bees |
+|---|---|
+| 🥕 Agricultural | Potato, Carrot |
+| 🐄 Livestock | Pig, Cow, Sheep |
+| 🧱 Resource | Clayious |
+| ⚙️ Advanced | Reinforced, Mutated |
+| 👑 Elite | Witheria, Draconic, Legendary |
+
+The elite line is a **breeding tandem**: every bee mutates from the ones before it, all the way up to Legendary.
+
+**Five living auras** pulse from the hives of their bees while they work:
+
+- 🔥 **Draconic** — damages nearby hostiles and grants Strength
+- 💙 **Legendary** — Regeneration and Absorption for nearby players
+- 💀 **Withering** (Witheria) — withers nearby hostiles
+- 🧪 **Mutagenic** (Mutated) — a random buff every pulse
+- 🌾 **Harvest** (Carrot) — fertilizes nearby crops like bone meal
+
+Bottle an aura into an **Aura Charm** to carry it with you, socket up to two charms into an **Aura Belt**, and cluster hives of the same aura together — they amplify each other.
+
+---
+
+![Tools & Frames](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_tools.png)
+
+- 🥅 **Nets (Scoops)** — catch vanilla bees and turn them into Forestry drones. Reinforced, Draconic and Legendary tiers, 300 to 10,000 durability.
+- 🔪 **Grafters** — 3× to 10× sapling drops, forged from their tier's ingot.
+- 🖼️ **19 Bee Frames** — from Coal up to a tandem chain where every top frame is built from the frames below it, ending in the Legendary Frame (5× production) and the Frame of Mutation (10× mutation chance).
+- 💎 **Five material lines** — Draconic, Legendary, Reinforced, Witheria and Mutated Iron, each with combs, nuggets, ingots, storage blocks and propolis.
+
+![All items](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/items.png)
+
+---
+
+![Guide Book](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_guide.png)
+
+A Patchouli guide book (Book + Reinforced Propolis) covers the breeding order, what each aura does, frame progression, tools and the Portable Hive. It opens in your game language: **English, Russian, Ukrainian, Belarusian, German, Dutch, Polish and Chinese** (Simplified, Taiwan, Hong Kong).
+
+**JEI integration:** bee breeding, frame and hive recipes, and a page for every aura show up automatically.
+
+**For modpack makers:** a server config sets the hive speed per tier, module strengths, the lantern's light and more; clients can hide or move the hive panel.
+
+---
+
+![Requirements](https://raw.githubusercontent.com/eliasnvx/BeeMastery/1.21.1-dev/docs/images/header_requirements.png)
+
+| | Minecraft 1.20.1 | Minecraft 1.21.1 |
+|---|---|---|
+| Loader | Forge 47.3.5+ | NeoForge 21.1.251+ |
+| Forestry: Community Edition | 2.5.0+ | 3.0.0-alpha6+ |
+| Patchouli | required | required (by Forestry) |
+| JEI | optional | optional |
+
+The 1.21.1 version is marked **beta** while Forestry itself is in alpha on 1.21.1.
+
+---
+
+**Credits:** original *ForestryExtras* by wasliebob. Rebuilt and maintained by Elias.
