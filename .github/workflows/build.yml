@@ -2,9 +2,9 @@ name: 🔨 Build
 
 on:
   pull_request:
-    branches: [ '1.20.1-dev', 'main' ]
+    branches: [ '1.20.1-dev', '1.21.1-dev', 'main' ]
   push:
-    branches: [ '1.20.1-dev' ]
+    branches: [ '1.20.1-dev', '1.21.1-dev' ]
     paths-ignore:
       - '**.md'
       - '.gitignore'
@@ -46,14 +46,25 @@ jobs:
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
           rm -f ~/.gradle/caches/modules-2/gc.properties
       
-      - name: 🔧 Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
+      - name: 🔧 Prepare Gradle for CI
+        run: |
+          chmod +x gradlew
+          # gradle.properties may pin a local (macOS) JDK path; CI uses the JDK set up above.
+          sed -i '/^org.gradle.java.home=/d' gradle.properties
+
       - name: 🏗️ Build with Gradle
         run: ./gradlew build --no-daemon --stacktrace
         env:
           GRADLE_OPTS: "-Xmx3G"
-      
+
+      # Creates a real world and checks that recipes, bee mutations and the guide book
+      # loaded. Only on branches that have the smoke test (1.21.1+).
+      - name: 🧪 Datapack smoke test (world creation)
+        if: hashFiles('src/main/java/**/gametest/*.java') != ''
+        run: ./gradlew runGameTestServer --no-daemon
+        env:
+          GRADLE_OPTS: "-Xmx3G"
+
       - name: 📊 Upload build artifacts
         uses: actions/upload-artifact@v4
         if: success()

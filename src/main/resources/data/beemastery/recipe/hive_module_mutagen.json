@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "WXW",
+    "PWP"
+  ],
+  "key": {
+    "P": {
+      "item": "beemastery:propolis_mutated"
+    },
+    "W": {
+      "item": "forestry:beeswax"
+    },
+    "X": {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  },
+  "result": {
+    "id": "beemastery:hive_module_mutagen"
+  }
+}

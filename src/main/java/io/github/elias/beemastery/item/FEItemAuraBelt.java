@@ -1,14 +1,13 @@
 package io.github.elias.beemastery.item;
 
 import io.github.elias.beemastery.effect.AuraActions;
+import io.github.elias.beemastery.registry.ModDataComponents;
 import net.minecraft.ChatFormatting;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -32,27 +32,17 @@ import java.util.List;
 public class FEItemAuraBelt extends Item {
 
     public static final int SLOTS = 2;
-    private static final String TAG_CHARMS = "Charms";
 
-    public FEItemAuraBelt() {
-        super(new Properties().stacksTo(1));
-    }
-
-    private static ListTag getCharms(ItemStack belt) {
-        return belt.getOrCreateTag().getList(TAG_CHARMS, Tag.TAG_COMPOUND);
-    }
-
-    private static void setCharms(ItemStack belt, ListTag list) {
-        belt.getOrCreateTag().put(TAG_CHARMS, list);
+    public FEItemAuraBelt(Item.Properties properties) {
+        super(properties.stacksTo(1));
     }
 
     public static List<ItemStack> getSocketed(ItemStack belt) {
-        ListTag list = getCharms(belt);
-        List<ItemStack> out = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            out.add(ItemStack.of(list.getCompound(i)));
-        }
-        return out;
+        return belt.getOrDefault(ModDataComponents.CHARMS.get(), Collections.emptyList());
+    }
+
+    private static void setCharms(ItemStack belt, List<ItemStack> list) {
+        belt.set(ModDataComponents.CHARMS.get(), new ArrayList<>(list));
     }
 
     @Override
@@ -64,7 +54,7 @@ public class FEItemAuraBelt extends Item {
 
         InteractionHand otherHand = hand == InteractionHand.MAIN_HAND ? InteractionHand.OFF_HAND : InteractionHand.MAIN_HAND;
         ItemStack other = player.getItemInHand(otherHand);
-        ListTag list = getCharms(belt);
+        List<ItemStack> list = new ArrayList<>(getSocketed(belt));
 
         if (other.isEmpty()) {
             if (player.isShiftKeyDown()) {
@@ -72,9 +62,7 @@ public class FEItemAuraBelt extends Item {
                     player.displayClientMessage(Component.translatable("beemastery.belt.empty"), true);
                     return InteractionResultHolder.pass(belt);
                 }
-                CompoundTag removedTag = list.getCompound(list.size() - 1);
-                ItemStack removed = ItemStack.of(removedTag);
-                list.remove(list.size() - 1);
+                ItemStack removed = list.remove(list.size() - 1);
                 setCharms(belt, list);
                 if (!player.getInventory().add(removed)) {
                     player.drop(removed, false);
@@ -96,16 +84,14 @@ public class FEItemAuraBelt extends Item {
         }
 
         ItemStack toStore = other.copyWithCount(1);
-        CompoundTag stored = new CompoundTag();
-        toStore.save(stored);
-        list.add(stored);
+        list.add(toStore);
         setCharms(belt, list);
         other.shrink(1);
         player.displayClientMessage(Component.translatable("beemastery.belt.socketed", toStore.getHoverName(), list.size(), SLOTS), true);
         return InteractionResultHolder.success(belt);
     }
 
-    private static Component statusMessage(ListTag list) {
+    private static Component statusMessage(List<ItemStack> list) {
         if (list.isEmpty()) {
             return Component.translatable("beemastery.belt.empty");
         }
@@ -114,7 +100,7 @@ public class FEItemAuraBelt extends Item {
             if (i > 0) {
                 names.append(", ");
             }
-            ItemStack charm = ItemStack.of(list.getCompound(i));
+            ItemStack charm = list.get(i);
             int remaining = charm.getMaxDamage() - charm.getDamageValue();
             names.append(charm.getHoverName().getString())
                     .append(" (").append(remaining).append('/').append(charm.getMaxDamage()).append(')');
@@ -127,14 +113,14 @@ public class FEItemAuraBelt extends Item {
         if (level.isClientSide || !(entity instanceof Player player)) {
             return;
         }
-        ListTag list = getCharms(stack);
+        List<ItemStack> list = new ArrayList<>(getSocketed(stack));
         if (list.isEmpty()) {
             return;
         }
 
         boolean changed = false;
         for (int i = list.size() - 1; i >= 0; i--) {
-            ItemStack charmStack = ItemStack.of(list.getCompound(i));
+            ItemStack charmStack = list.get(i);
             if (!(charmStack.getItem() instanceof FEItemAuraCharm charmItem)) {
                 continue;
             }
@@ -147,16 +133,11 @@ public class FEItemAuraBelt extends Item {
             AABB area = player.getBoundingBox().inflate(r, r / 2.0, r);
             AuraActions.pulse(type, level, area);
 
-            charmStack.hurtAndBreak(1, player, p -> {
-            });
+            charmStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
             changed = true;
             if (charmStack.isEmpty()) {
                 list.remove(i);
                 player.displayClientMessage(Component.translatable("beemastery.belt.charm_broke"), true);
-            } else {
-                CompoundTag updated = new CompoundTag();
-                charmStack.save(updated);
-                list.set(i, updated);
             }
         }
 
@@ -166,8 +147,8 @@ public class FEItemAuraBelt extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, world, tooltip, flag);
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltip, flag);
         List<ItemStack> socketed = getSocketed(stack);
         if (socketed.isEmpty()) {
             tooltip.add(Component.translatable("beemastery.belt.empty").withStyle(ChatFormatting.DARK_GRAY));

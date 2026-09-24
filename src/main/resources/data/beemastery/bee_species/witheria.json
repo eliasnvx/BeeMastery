@@ -1,0 +1,31 @@
+{
+  "genus": "diapis",
+  "species": "witheria",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 0,
+  "body": 0,
+  "stripes": 16777164,
+  "temperature": "HELLISH",
+  "humidity": "ARID",
+  "complexity": 3,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_witheria"
+    },
+    {
+      "chance": 0.05,
+      "item": "beemastery:nugget_witheria"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "genome": {
+    "forestry:bee_effect": {
+      "value": "beemastery:witheria_aura"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "genus": "apis",
+  "species": "cow",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 9127187,
+  "body": 9127187,
+  "stripes": 16777215,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.5,
+      "item": "beemastery:bee_comb_cow"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

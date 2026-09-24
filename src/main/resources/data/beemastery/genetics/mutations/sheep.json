@@ -1,6 +1,0 @@
-{
-  "parent1": "beemastery:carrot",
-  "parent2": "beemastery:potato",
-  "result": "beemastery:sheep",
-  "chance": 0.30
-}

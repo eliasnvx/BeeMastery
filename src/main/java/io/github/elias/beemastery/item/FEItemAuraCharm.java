@@ -1,11 +1,10 @@
 package io.github.elias.beemastery.item;
 
-import forestry.core.items.ItemForestry;
+import net.minecraft.world.item.Item;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 
 import java.util.List;
 
@@ -19,12 +18,12 @@ import java.util.List;
  * <p>Unlike most Bee Mastery items, this one uses a hand-drawn, pre-colored texture per
  * aura instead of a tinted base texture, so it does not implement {@code IColoredItem}.
  */
-public class FEItemAuraCharm extends ItemForestry {
+public class FEItemAuraCharm extends Item {
 
     private final FEEnumAura type;
 
-    public FEItemAuraCharm(FEEnumAura type) {
-        super(new Properties().stacksTo(1).durability(type.charmCharge).setNoRepair());
+    public FEItemAuraCharm(FEEnumAura type, Item.Properties properties) {
+        super(properties.stacksTo(1).durability(type.charmCharge));
         this.type = type;
     }
 
@@ -38,8 +37,8 @@ public class FEItemAuraCharm extends ItemForestry {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, world, tooltip, flag);
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltip, flag);
         int remaining = stack.getMaxDamage() - stack.getDamageValue();
         tooltip.add(Component.translatable("beemastery.charm.aura",
                 Component.translatable("beemastery.aura." + type.getSerializedName()))

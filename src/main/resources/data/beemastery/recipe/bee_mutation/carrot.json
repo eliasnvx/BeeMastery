@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/carrot",
+  "first": "forestry:cultivated",
+  "second": "forestry:forest",
+  "result": "beemastery:carrot",
+  "chance": 0.15
+}

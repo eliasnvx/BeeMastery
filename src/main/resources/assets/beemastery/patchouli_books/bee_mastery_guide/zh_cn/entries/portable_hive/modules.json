@@ -1,0 +1,47 @@
+{
+  "name": "模块",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "模块装在蜂箱界面的侧面板中。蜂箱的等级决定开放多少个模块槽。$(br2)每个蜂箱每种模块只能装一个，而且诱变模块和基因稳定模块不能同时使用。"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)灯笼$()：照亮你周围的区域，蜜蜂日夜工作。$(li)$(l)雨棚$()：雨天也能工作。$(li)$(l)人造太阳$()：可在地下工作。$(li)$(l)气候稳定$()：无视生物群系的气候。",
+      "title": "何时何地"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)加速$()：产量+25%。$(li)$(l)长寿$()：蜂后寿命加倍。$(li)$(l)诱变$()：突变几率翻倍。$(li)$(l)基因稳定$()：不发生突变。$(li)$(l)收集$()：产物直接进入你的物品栏。",
+      "title": "效率与产出"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "每种模块都由蜂胶、蜂蜡和一件关键物品合成；越强的模块需要越稀有的蜂胶。"
+    }
+  ]
+}

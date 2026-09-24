@@ -1,0 +1,27 @@
+{
+  "name": "Ulepszenia",
+  "icon": "beemastery:portable_hive[beemastery:hive_tier=3]",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ulepszaj ul metalami z moda. Każdy poziom dodaje szybkość i slot modułu:$(li)Podstawowy: 25%, 1 slot$(li)Wzmocniony: 35%, 2 sloty$(li)Smoczy: 50%, 3 sloty$(li)Legendarny: 75%, 4 sloty"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Poziomy idą po kolei: tylko Smoczy ul może stać się Legendarnym. Wszystko w środku zostaje: pszczoły, ramka, kwiat, moduły, pancerz."
+    },
+    {
+      "type": "text",
+      "text": "Każdy poziom widać od razu: metalowe okucia na przedmiocie, metalowe narożniki na ulu na twoich plecach i barwy poziomu w oknie ula.",
+      "title": "Na pokaz"
+    }
+  ]
+}

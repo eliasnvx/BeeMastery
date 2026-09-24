@@ -1,0 +1,22 @@
+{
+  "name": "Pas aury",
+  "icon": "beemastery:aura_belt",
+  "category": "beemastery:auras",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Sam talizman nic nie robi – musi zostać osadzony w Pasie aury, żeby naprawdę pulsował. Pas mieści dwa talizmany naraz, więc zawsze musisz wybrać, które dwie aury nosisz."
+    },
+    {
+      "type": "text",
+      "title": "Osadzanie",
+      "text": "Bez żadnego GUI: trzymaj pas w jednej ręce, a talizman w drugiej, i kliknij PPM. Nie ma znaczenia, która ręka trzyma co."
+    },
+    {
+      "type": "text",
+      "title": "Wyjmowanie",
+      "text": "Skradaj się i kliknij PPM z pasem w ręce i pustą drugą ręką, aby wyjąć ostatnio osadzony talizman. Takie samo kliknięcie bez skradania tylko pokaże, co jest teraz osadzone."
+    }
+  ]
+}

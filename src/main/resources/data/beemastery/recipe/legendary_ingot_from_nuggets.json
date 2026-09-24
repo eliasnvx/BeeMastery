@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "beemastery:nugget_legendary"
+    }
+  },
+  "result": {
+    "id": "beemastery:ingot_legendary"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SXS",
+    "HSR"
+  ],
+  "key": {
+    "S": {
+      "item": "beemastery:stick_draconic"
+    },
+    "X": {
+      "item": "forestry:beeswax"
+    },
+    "H": {
+      "item": "beemastery:frame_witheria"
+    },
+    "R": {
+      "item": "beemastery:frame_reinforced"
+    }
+  },
+  "result": {
+    "id": "beemastery:frame_draconic"
+  }
+}

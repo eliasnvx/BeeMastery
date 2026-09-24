@@ -1,0 +1,22 @@
+{
+  "type": "forestry:centrifuge",
+  "id": "beemastery:centrifuge/draconic_comb",
+  "input": {
+    "item": "beemastery:bee_comb_draconic"
+  },
+  "products": [
+    {
+      "chance": 0.1,
+      "item": "beemastery:nugget_draconic"
+    },
+    {
+      "chance": 0.75,
+      "item": "forestry:honey_drop"
+    },
+    {
+      "chance": 0.1,
+      "item": "beemastery:propolis_draconic"
+    }
+  ],
+  "time": 200
+}

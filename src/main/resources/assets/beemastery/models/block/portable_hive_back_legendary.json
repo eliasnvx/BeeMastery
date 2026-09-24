@@ -1,0 +1,8 @@
+{
+  "parent": "beemastery:block/portable_hive_back",
+  "textures": {
+    "front": "beemastery:block/portable_hive/front_legendary",
+    "side": "beemastery:block/portable_hive/side_legendary",
+    "top": "beemastery:block/portable_hive/top_legendary"
+  }
+}

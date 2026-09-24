@@ -1,0 +1,47 @@
+{
+  "name": "Modules",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Modules go in the side panel of the hive window. The hive's tier decides how many slots are open.$(br2)One module of each kind per hive, and the Mutagen and the Gene Stabilizer can't be used together."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Lantern$(): lights up the area around you; bees work day and night.$(li)$(l)Canopy$(): work in the rain.$(li)$(l)Artificial Sun$(): work underground.$(li)$(l)Climate Stabilizer$(): ignore the biome's climate.",
+      "title": "Where & When"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Booster$(): +25% production.$(li)$(l)Longevity$(): the queen lives twice as long.$(li)$(l)Mutagen$(): double mutation chance.$(li)$(l)Gene Stabilizer$(): no mutations.$(li)$(l)Collector$(): products go straight into your inventory.",
+      "title": "How & What"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "Every module is propolis, beeswax and one key item; stronger modules need rarer propolis."
+    }
+  ]
+}

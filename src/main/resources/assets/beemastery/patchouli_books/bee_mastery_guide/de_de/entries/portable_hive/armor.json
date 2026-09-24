@@ -1,0 +1,17 @@
+{
+  "name": "Eingebaute Rüstung",
+  "icon": "minecraft:iron_chestplate",
+  "category": "beemastery:portable_hive",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Der Stock belegt deinen Brustpanzer-Platz, also trägt er den Brustpanzer einfach mit.$(br2)Lege Stock und Brustpanzer zusammen ins Handwerksfeld: Der Stock erhält dessen Rüstung, Härte und Verzauberungen und sieht auch so aus."
+    },
+    {
+      "type": "text",
+      "text": "Lege einen gepanzerten Stock allein ins Handwerksfeld, um den Brustpanzer wieder herauszuholen.$(br2)Geht der eingebaute Brustpanzer kaputt, ist nur er verloren. Stock und Bienen bleiben.",
+      "title": "Ausbauen"
+    }
+  ]
+}

@@ -1,120 +1,57 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '6.+', changing: true
-        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
-    }
-}
-
 plugins {
+    id 'java-library'
     id 'eclipse'
+    id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '6.0.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-}
-
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
-apply plugin: 'org.spongepowered.mixin'
-
-repositories {
-    maven { url = 'https://maven.minecraftforge.net' }
-    maven { url = 'https://maven.parchmentmc.org' }
-    maven { url = 'https://api.modrinth.com/maven' } // Modrinth Maven для Forestry CE
-    maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-    maven {
-        url "https://maven.covers1624.net/"
-        content {
-            includeGroup "cofh"
-        }
-    }
-    maven {
-        url "https://maven.blamejared.com"
-        content {
-            includeGroup "mezz.jei"
-        }
-    }
+    id 'net.neoforged.moddev' version '2.0.76'
 }
 
 version = mod_version
 group = mod_group_id
+
+repositories {
+    mavenLocal()
+    maven { url = "https://api.modrinth.com/maven" } // Forestry CE
+    maven { url = "https://maven.blamejared.com" } // JEI
+}
+
 base {
     archivesName = "${mod_id}_${minecraft_version}"
 }
 
-// Mojang ships Java 17 to end users in 1.18+, so the mod bytecode must target Java 17.
-// When Gradle is launched with a newer JDK, reuse it and compile with --release 17
-// instead of forcing an extra JDK 17 download.
-def buildJdkVersion = JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)
-        ? Integer.parseInt(JavaVersion.current().majorVersion)
-        : 17
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(buildJdkVersion)
+neoForge {
+    version = project.neo_version
 
-tasks.withType(JavaCompile).configureEach {
-    options.release = 17
-}
-
-println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
-
-minecraft {
-    mappings channel: 'official', version: minecraft_version
+    parchment {
+        mappingsVersion = '2024.07.28'
+        minecraftVersion = '1.21'
+    }
 
     runs {
         client {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            
-            // Mixin refmap remapping для Patchouli
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            
-            // Disable problematic CoFH Core mixin
-            property 'mixin.config.mixins.cofhcore.json', 'false'
-            
-            mods {
-                beemastery {
-                    source sourceSets.main
-                }
-            }
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
         }
-
         server {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            
-            // Mixin refmap remapping для Patchouli
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            
-            mods {
-                beemastery {
-                    source sourceSets.main
-                }
-            }
+            server()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            programArgument '--nogui'
         }
-
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
         data {
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            args '--mod', 'beemastery', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-            mods {
-                beemastery {
-                    source sourceSets.main
-                }
-            }
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+    }
+    
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
         }
     }
 }
@@ -122,44 +59,34 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    
-    // Forestry CE dependency from Modrinth
-    implementation fg.deobf("maven.modrinth:forestry-community-edition:2.5.0")
-    
-    // Patchouli dependency
-    implementation fg.deobf('curse.maven:patchouli-306770:6164575')
-    
-    // JEI for recipe viewing (compileOnly - optional dependency)
-    compileOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27")
-    runtimeOnly fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27")
-    
-    // NOTE: Thermal Series cannot be tested in dev environment due to CoFH Core mixin issues
-    // Test Thermal integration in production Minecraft with Thermal mods installed
-    // All recipes have conditional loading and will work automatically
+    // Forestry CE
+    implementation "maven.modrinth:forestry-community-edition:3.0.0-alpha6" 
+
+    // JEI for recipe viewing
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:19.57.0.449"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:19.57.0.449"
+
+    // Patchouli (required by Forestry CE on 1.21.1, and hosts our guide book)
+    implementation "maven.modrinth:patchouli:1.21.1-93-neoforge"
 }
 
-processResources {
-    inputs.property "version", mod_version
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_version            : mod_version,
+            mod_author             : mod_author,
+            mod_description        : mod_description,
+            forestry_version       : forestry_version
+    ]
+    inputs.properties replaceProperties
 
-    filesMatching("META-INF/mods.toml") {
-        expand "mod_id": mod_id, "mod_version": mod_version, "mod_name": mod_name, "mod_author": mod_author, "mod_description": mod_description,
-                "forge_version_range": forge_version_range, "minecraft_version_range": minecraft_version_range, "forestry_version": forestry_version
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
     }
 }
-
-jar {
-    manifest {
-        attributes([
-            "Specification-Title": "beemastery",
-            "Specification-Vendor": "beemastery",
-            "Specification-Version": "1",
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${mod_version}",
-            "Implementation-Vendor": "beemastery",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-        ])
-    }
-}
-
-jar.finalizedBy('reobfJar')

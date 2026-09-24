@@ -1,0 +1,18 @@
+{
+  "name": "蜂框基础",
+  "icon": "beemastery:frame_reinforced",
+  "category": "beemastery:frames",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Bee Mastery 的每种蜂框都有四项数值：产量（蜂箱的工作速度）、基因衰减（蜂后基因退化的快慢）、变异（额外的突变几率）和领地（蜂箱效果——包括灵气——的覆盖范围）。"
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:frame_mutation",
+      "title": "变异蜂框",
+      "text": "专精型蜂框：寿命减半，但突变几率提高到十倍。它是为快速培育串联谱系而生的，不适合长期生产。"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "beemastery:nugget_witheria"
+    }
+  },
+  "result": {
+    "id": "beemastery:ingot_witheria"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "genus": "apis",
+  "species": "carrot",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 16753920,
+  "body": 16753920,
+  "stripes": 16753920,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_carrot"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "genome": {
+    "forestry:bee_effect": {
+      "value": "beemastery:harvest_aura"
+    }
+  }
+}

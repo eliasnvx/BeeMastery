@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/sheep",
+  "first": "beemastery:carrot",
+  "second": "beemastery:potato",
+  "result": "beemastery:sheep",
+  "chance": 0.3
+}

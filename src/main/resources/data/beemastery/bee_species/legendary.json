@@ -1,0 +1,32 @@
+{
+  "genus": "probapis",
+  "species": "legendary",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 205,
+  "body": 205,
+  "stripes": 16777164,
+  "temperature": "HELLISH",
+  "humidity": "ARID",
+  "complexity": 5,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_legendary"
+    },
+    {
+      "chance": 0.05,
+      "item": "beemastery:nugget_legendary"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "glint": true,
+  "genome": {
+    "forestry:bee_effect": {
+      "value": "beemastery:legendary_aura"
+    }
+  }
+}

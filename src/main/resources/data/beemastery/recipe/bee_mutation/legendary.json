@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/legendary",
+  "first": "beemastery:witheria",
+  "second": "beemastery:draconic",
+  "result": "beemastery:legendary",
+  "chance": 0.05
+}

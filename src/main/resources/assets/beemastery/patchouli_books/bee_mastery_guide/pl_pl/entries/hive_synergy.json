@@ -1,0 +1,16 @@
+{
+  "name": "Synergia uli",
+  "icon": "beemastery:draconic_block",
+  "category": "beemastery:auras",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ule z tą samą aurą wzmacniają się nawzajem, gdy stoją w promieniu około 12 bloków: każdy pobliski ul z tą aurą powiększa obszar pulsu, maksymalnie o premię od czterech sąsiadów."
+    },
+    {
+      "type": "text",
+      "text": "To nagradza tematyczną pasiekę – cały rząd Smoczych uli obok siebie – zamiast uli rozrzuconych byle jak. Wymieszasz poziomy, a stracisz premię; trzymaj się jednej aury na grupę, a będzie rosła razem z tobą."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Der Aura-Gürtel",
+  "icon": "beemastery:aura_belt",
+  "category": "beemastery:auras",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ein Talisman allein bewirkt nichts – erst in einem Aura-Gürtel pulsiert er wirklich. Der Gürtel fasst zwei Talismane gleichzeitig, du musst also immer wählen, welche zwei Auren du mitnimmst."
+    },
+    {
+      "type": "text",
+      "title": "Einsetzen",
+      "text": "Ganz ohne GUI: Nimm den Gürtel in die eine Hand und einen Talisman in die andere, dann Rechtsklick. Welche Hand was hält, ist egal."
+    },
+    {
+      "type": "text",
+      "title": "Entfernen",
+      "text": "Mit Schleichen + Rechtsklick – Gürtel in der Hand, andere Hand leer – holst du den zuletzt eingesetzten Talisman wieder heraus. Derselbe Rechtsklick ohne Schleichen zeigt dir nur, was gerade eingesetzt ist."
+    }
+  ]
+}

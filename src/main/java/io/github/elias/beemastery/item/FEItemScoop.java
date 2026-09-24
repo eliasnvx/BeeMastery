@@ -3,8 +3,8 @@ package io.github.elias.beemastery.item;
 import forestry.api.ForestryTags;
 import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.apiculture.genetics.BeeLifeStage;
-import forestry.core.items.ItemForestry;
-import forestry.core.utils.SpeciesUtil;
+import net.minecraft.world.item.Item;
+import forestry.core.platform.util.SpeciesUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -24,11 +24,11 @@ import net.minecraft.world.level.block.state.BlockState;
  * Unlike most Bee Mastery items, the scoop uses a hand-drawn, pre-colored texture per
  * type instead of a tinted base texture, so it does not implement {@code IColoredItem}.
  */
-public class FEItemScoop extends ItemForestry {
+public class FEItemScoop extends Item {
     private final FEEnumScoop type;
 
-    public FEItemScoop(FEEnumScoop type) {
-        super(new Properties().stacksTo(1).durability(type.maxDamage));
+    public FEItemScoop(FEEnumScoop type, Item.Properties properties) {
+        super(properties.stacksTo(1).durability(type.maxDamage));
         this.type = type;
     }
 
@@ -52,14 +52,14 @@ public class FEItemScoop extends ItemForestry {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity entity, LivingEntity player) {
-        stack.hurtAndBreak(2, player, (living) -> living.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+        stack.hurtAndBreak(2, player, net.minecraft.world.entity.EquipmentSlot.MAINHAND);
         return true;
     }
 
     @Override
     public boolean mineBlock(ItemStack stack, Level world, BlockState blockState, BlockPos pos, LivingEntity player) {
         if (!world.isClientSide && blockState.getDestroySpeed(world, pos) != 0.0F) {
-            stack.hurtAndBreak(1, player, (living) -> living.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+            stack.hurtAndBreak(1, player, net.minecraft.world.entity.EquipmentSlot.MAINHAND);
         }
         return true;
     }
@@ -75,7 +75,7 @@ public class FEItemScoop extends ItemForestry {
                 level.addFreshEntity(bee);
                 level.playSound(null, interactionTarget.blockPosition(), SoundEvents.BEE_HURT, SoundSource.PLAYERS, 1f, 1f);
                 interactionTarget.setRemoved(Entity.RemovalReason.DISCARDED);
-                stack.hurtAndBreak(1, player, living -> living.broadcastBreakEvent(usedHand));
+                stack.hurtAndBreak(1, player, usedHand == net.minecraft.world.InteractionHand.MAIN_HAND ? net.minecraft.world.entity.EquipmentSlot.MAINHAND : net.minecraft.world.entity.EquipmentSlot.OFFHAND);
             }
             return InteractionResult.sidedSuccess(player.level().isClientSide());
         }

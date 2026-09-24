@@ -1,0 +1,18 @@
+{
+  "name": "Kaders: de basis",
+  "icon": "beemastery:frame_reinforced",
+  "category": "beemastery:frames",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Elk kader in Bee Mastery heeft vier waarden: productie (hoe snel de korf werkt), genetisch verval (hoe snel de genen van de koningin vervallen), mutatie (extra mutatiekans) en territorium (hoe ver de effecten van de korf reiken, aura's inbegrepen)."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:frame_mutation",
+      "title": "Mutatiekader",
+      "text": "Een specialist: halve levensduur, maar tien keer zoveel mutatiekans. Gemaakt om snel door de tandemlijn te kweken, niet voor productie op lange termijn."
+    }
+  ]
+}

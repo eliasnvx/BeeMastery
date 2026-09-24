@@ -249,3 +249,9 @@ logs/
 *.md
 !README.md
 !CHANGELOG.md
+
+#############
+## Local files
+#############
+.vscode/
+build_errors.txt

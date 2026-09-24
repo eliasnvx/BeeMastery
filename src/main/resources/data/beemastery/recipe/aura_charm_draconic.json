@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "NGN",
+    " N "
+  ],
+  "key": {
+    "C": {
+      "item": "beemastery:propolis_draconic"
+    },
+    "N": {
+      "item": "beemastery:nugget_draconic"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "id": "beemastery:aura_charm_draconic"
+  }
+}

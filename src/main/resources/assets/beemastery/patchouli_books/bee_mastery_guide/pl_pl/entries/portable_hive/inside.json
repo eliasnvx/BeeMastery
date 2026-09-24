@@ -1,0 +1,27 @@
+{
+  "name": "Wnętrze ula",
+  "icon": "beemastery:hive_module_booster",
+  "category": "beemastery:portable_hive",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(li)Po lewej: królowa albo księżniczka z trutniem.$(li)Obok: ramka i kwiat, oba opcjonalne.$(li)Po prawej: produkty.$(br2)Puste sloty pokazują blady przykład. Najedź na slot, by zobaczyć, co tam pasuje, lub na $(l)?$() po pełną instrukcję."
+    },
+    {
+      "type": "text",
+      "text": "Włóż kwiat, który lubią twoje pszczoły, a przestaną szukać kwiatów wokół ciebie. Blada ikona pokazuje właściwy dla obecnej pszczoły: mak dla Leśnych, brodawkę netherową dla netherowych itd.$(br2)Pszczoły, które zamiast rośliny chcą światła dziennego, nie skorzystają z niego.",
+      "title": "Slot na kwiat"
+    },
+    {
+      "type": "text",
+      "text": "Ikona nad strzałką mówi, czemu pszczoły nie pracują: za gorąco, pada, brak kwiatów... Najedź na nią, by zobaczyć wyjaśnienie z Forestry.$(br2)Strzałka wypełnia się, gdy pracują. Pasek przy królowej to jej pozostałe życie, a u księżniczki postęp kojarzenia.",
+      "title": "Status"
+    },
+    {
+      "type": "text",
+      "text": "Gdy go nosisz, mały panel w lewym górnym rogu pokazuje królową, pasek i status, więc rzadko musisz otwierać ul.$(br2)Podczas pracy wylatują z niego pszczoły, a inni gracze też je widzą.",
+      "title": "W drodze"
+    }
+  ]
+}

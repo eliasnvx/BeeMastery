@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/mutated",
+  "first": "forestry:majestic",
+  "second": "beemastery:reinforced",
+  "result": "beemastery:mutated",
+  "chance": 0.05
+}

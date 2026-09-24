@@ -1,16 +1,17 @@
 package io.github.elias.beemastery.item;
 
-import forestry.core.items.ItemForestry;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 /**
- * Unlike most Bee Mastery items, propolis uses a hand-drawn, pre-colored texture per
+ * Unlike most Bee Mastery items, the propolis uses a hand-drawn, pre-colored texture per
  * type instead of a tinted base texture, so it does not implement {@code IColoredItem}.
  */
-public class FEItemPropolis extends ItemForestry {
+public class FEItemPropolis extends Item {
     private final FEEnumPropolis type;
 
-    public FEItemPropolis(FEEnumPropolis type) {
+    public FEItemPropolis(FEEnumPropolis type, Item.Properties properties) {
+        super(properties);
         this.type = type;
     }
 

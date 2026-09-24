@@ -1,0 +1,27 @@
+{
+  "name": "Der tragbare Stock",
+  "icon": "beemastery:portable_hive",
+  "category": "beemastery:portable_hive",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Der tragbare Bienenstock ist ein Bienenhaus für den Brustpanzer-Platz. Seine Bienen arbeiten, wo immer du sie hinträgst: Biom, Wetter, Licht und Blumen kommen von dort, wo du stehst.$(br2)Geh in ein besseres Klima, und der Stock zieht mit."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive",
+      "text": "Ein Bienenhaus mit Lederriemen, Faden und einer Eisenschnalle."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Schleichen + Rechtsklick$(), um ihn anzulegen.$(li)Drück $(k:beemastery.open_hive), um ihn auf dem Rücken zu öffnen.$(li)Rechtsklick in der Hand öffnet ihn, ohne ihn anzulegen.$(br2)Die Bienen arbeiten nur, solange der Stock auf deinem Rücken ist.",
+      "title": "Anlegen"
+    },
+    {
+      "type": "text",
+      "text": "Ein Basis-Stock arbeitet im Tempo eines Bienenhauses: ein Viertel der eigenen Geschwindigkeit der Bienen. $(l:portable_hive/upgrades)Verbesserungen$(/l) machen ihn schneller, $(l:portable_hive/modules)Module$(/l) ändern, was er kann.",
+      "title": "Wie schnell?"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "内置护甲",
+  "icon": "minecraft:iron_chestplate",
+  "category": "beemastery:portable_hive",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "蜂箱占用胸甲栏，所以它可以替你带着胸甲。$(br2)把蜂箱和任意胸甲放入合成方格：蜂箱就会获得该胸甲的护甲值、盔甲韧性和魔咒，穿在身上时的外观也与之相同。"
+    },
+    {
+      "type": "text",
+      "text": "把带护甲的蜂箱单独放入合成方格，即可取回胸甲。$(br2)如果内置的胸甲损坏，只会失去胸甲，蜂箱和里面的蜜蜂都会保留。",
+      "title": "拆下胸甲"
+    }
+  ]
+}

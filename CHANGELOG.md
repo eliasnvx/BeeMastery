@@ -5,6 +5,44 @@ All notable changes to Bee Mastery will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0+1.21.1] - 2026-09-25
+
+First release for **Minecraft 1.21.1 / NeoForge**: everything from 1.1.0 (the aura system, Aura Belt, hive synergy, frame tandem, guide book and all 11 bees) plus the new **Portable Hive**.
+
+### Added
+- **Portable Hive:** a bee house you wear on your back in the chestplate slot. Put in a queen (or princess + drone) and a frame, and it keeps producing as you walk around — biome, weather and light come from where you are. Production starts at a Bee House's pace and grows as you upgrade the hive.
+  - **Flower slot:** carry a flower your bees like (a poppy for Forest bees, nether wart for Nether bees…) and they no longer need flowers around you. The empty slot shows which flower the current bee wants. Doesn't apply to bees that want daylight instead of a plant.
+  - Press **B** (rebindable) to open the worn hive, or right-click it in your hand. Shift+right-click to wear it — the action bar reminds you of the key when you put it on.
+  - The GUI explains itself: faded example items in the empty slots, a hint on hovering any slot, a status icon above the arrow telling you why the bees aren't working (too hot, no flowers, not worn…), a progress bar (queen's life, or mating progress for a princess), an arrow that animates while the bees work, and a **?** button with the full how-to.
+  - On your back it's a small 3D beehive — bottom board with a landing board (and a drop of honey), brood box with the entrance, honey super with handholds, and an overhanging roof.
+  - Bees buzz out of the hive on your back while it's working — Forestry's own hive particles, visible to other players too.
+  - While worn, a small HUD panel in the top-left corner shows the queen, the progress bar and the hive status, so you can see what your bees are doing without opening it.
+  - Craft it together with any chestplate to get that chestplate's armor while wearing it; craft the armored hive alone to take the chestplate back. If the chestplate breaks, the hive stays. An armoured hive shows its chestplate as a small icon in the corner of its slot.
+  - Recipe: Bee House, leather, string and an iron nugget.
+  - New **Portable Hive** chapter in the guide book: wearing and opening it, the slots and status, built-in armour, upgrades and all nine modules with their recipes.
+- **Portable Hive upgrades & modules** (Thermal-style augments):
+  - Upgrade the hive in a crafting grid with Reinforced → Draconic → Legendary ingots and propolis. Each tier adds a module slot (1 → 4) and speed (25% → 35% → 50% → 75%, the basic tier matching Forestry's Bee House). Everything inside the hive — bees, frame, flower, modules, built-in armour — is kept.
+  - Each tier looks the part: its own icon with metal fittings (steel, red-black, blue with gold rivets — the Legendary one shimmers), metal corners in the tier's colours on the hive on your back, and metal corner brackets plus the tier icon in the hive window.
+  - 9 modules for the side panel of the hive GUI, each switching on Forestry's own housing mechanics: **Lantern** (a lantern on the hive that lights up the area around you; bees work day and night), **Canopy** (work in rain), **Artificial Sun** (work underground), **Climate Stabilizer** (ignore biome climate), **Booster** (+25% production), **Longevity** (queen lives twice as long), **Mutagen** (2× mutation chance), **Gene Stabilizer** (no mutations — can't be combined with Mutagen) and **Collector** (products go straight into your inventory). One of each kind per hive.
+- **Your own hive never hurts you:** Forestry bee effects (aggressive, radioactive, ignition, creeper, phasing, harmful potions) no longer hit the player wearing the hive. Other hives still do.
+- **Config** (`serverconfig/beemastery-server.toml`, synced to clients, and a Config button in the mod list): speed per hive tier, module strengths, collector interval, the lantern's light on/off and level, own-hive protection. Client options: show/hide the hive panel and pick its corner, bees around worn hives on/off. Module tooltips show the configured numbers.
+- **The guide book is translated** into all the mod's languages: Russian, Ukrainian, Belarusian, German, Dutch, Polish and Chinese (Simplified, Taiwan, Hong Kong). It opens in your game language, with the in-game item names.
+
+
+### Changed
+- **Potato and Carrot bees mutate from Cultivated now:** Potato from Cultivated + Meadows, Carrot from Cultivated + Forest (was Forest + Meadows for both, clashing with each other).
+
+
+### Fixed
+- Guide book: the Aura Belt page said a right-click with both hands empty shows the socketed charms — it's a right-click with the belt in one hand and the other hand empty.
+
+### Port notes
+- **Requires Forestry: Community Edition 3.0.0-alpha6+** (the only Forestry build for 1.21.1 so far) and **NeoForge 21.1.251+** — older NeoForge 21.1 builds crash on world creation because of Forestry.
+- Bee mutations now use Forestry 3.x's data-driven mutation recipes, so they show up and breed exactly as on 1.20.1.
+- **Metal frames (Tin, Silver, Lead, Bronze, Steel, Invar, Electrum)** are craftable whenever any mod in your pack provides the ingot (e.g. Mekanism). On 1.20.1 they required Thermal, which doesn't exist for 1.21.1.
+- The in-game guide book is crafted with a regular recipe now (Book + Reinforced Propolis), since Patchouli dropped its special book recipe type.
+- Released as a **beta** because Forestry itself is still in alpha on 1.21.1.
+
 ## [1.1.0] - 2026-07-05
 
 ### Added

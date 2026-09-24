@@ -2,9 +2,10 @@ package io.github.elias.beemastery.effect;
 
 import forestry.api.apiculture.IBeeHousing;
 import forestry.api.apiculture.genetics.IBeeEffect;
-import forestry.api.genetics.IEffectData;
-import forestry.api.genetics.IGenome;
-import forestry.api.genetics.alleles.BeeChromosomes;
+import forestry.api.core.genetics.IEffectData;
+import forestry.api.core.genetics.IGenome;
+import forestry.api.core.genetics.alleles.BeeChromosomes;
+import io.github.elias.beemastery.hive.PortableHiveHousing;
 import io.github.elias.beemastery.item.FEEnumAura;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -59,7 +60,12 @@ public class AuraBeeEffect implements IBeeEffect {
 
     @Override
     public IEffectData doEffect(IGenome genome, IEffectData storedData, IBeeHousing housing) {
-        Level level = housing.getWorldObj();
+        // Auras only come from stationary hives; a portable hive would otherwise be a way
+        // around the Aura Belt's two-aura limit.
+        if (housing instanceof PortableHiveHousing) {
+            return storedData;
+        }
+        Level level = housing.getLevel();
         if (level == null || level.isClientSide) {
             return storedData;
         }
@@ -67,7 +73,7 @@ public class AuraBeeEffect implements IBeeEffect {
             return storedData;
         }
 
-        BlockPos center = housing.getCoordinates();
+        BlockPos center = housing.getBlockPos();
         long gameTime = level.getGameTime();
 
         AuraHiveRegistry.announce(aura, level, center, gameTime);

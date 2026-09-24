@@ -1,0 +1,18 @@
+{
+  "type": "forestry:centrifuge",
+  "id": "beemastery:centrifuge/carrot_comb",
+  "input": {
+    "item": "beemastery:bee_comb_carrot"
+  },
+  "products": [
+    {
+      "chance": 0.15,
+      "item": "minecraft:carrot"
+    },
+    {
+      "chance": 0.02,
+      "item": "minecraft:golden_carrot"
+    }
+  ],
+  "time": 200
+}

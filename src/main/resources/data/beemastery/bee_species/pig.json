@@ -1,0 +1,22 @@
+{
+  "genus": "apis",
+  "species": "pig",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 16738740,
+  "body": 16761035,
+  "stripes": 16758465,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.5,
+      "item": "beemastery:bee_comb_pig"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

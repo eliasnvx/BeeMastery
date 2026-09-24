@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " SS",
+    "S  "
+  ],
+  "key": {
+    "S": {
+      "item": "beemastery:stick_legendary"
+    }
+  },
+  "result": {
+    "id": "beemastery:scoop_legendary"
+  }
+}

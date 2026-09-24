@@ -1,8 +1,0 @@
-{
-  "type": "patchouli:shapeless_book_recipe",
-  "book": "beemastery:bee_mastery_guide",
-  "ingredients": [
-    {"item": "minecraft:book"},
-    {"item": "beemastery:propolis_reinforced"}
-  ]
-}

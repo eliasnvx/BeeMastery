@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/witheria",
+  "first": "forestry:industrious",
+  "second": "beemastery:mutated",
+  "result": "beemastery:witheria",
+  "chance": 0.05
+}

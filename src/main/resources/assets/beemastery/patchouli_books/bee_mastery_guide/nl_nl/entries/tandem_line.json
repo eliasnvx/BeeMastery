@@ -1,0 +1,33 @@
+{
+  "name": "De tandemlijn",
+  "icon": "beemastery:bee_comb_legendary",
+  "category": "beemastery:breeding",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Versterkt",
+      "text": "De basis van de tandem. Muteert uit Forestry's eigen Dappere en Nobele bijen. Stevig, algemeen en de toegang tot alles daarboven."
+    },
+    {
+      "type": "text",
+      "title": "Witheria",
+      "text": "Een zijtak, geen nakomeling van Versterkt. Muteert uit Forestry's Vlijtige bij plus een Gemuteerde bij. Draagt de aura Verwelking, die vijanden in de buurt laat verwelken."
+    },
+    {
+      "type": "text",
+      "title": "Draconisch",
+      "text": "Muteert uit Witheria en Versterkt samen – beide ouders zijn nodig, net als bij het kaderrecept verderop. Draagt de aura Draconische woede: beschadigt vijanden in de buurt en geeft spelers Kracht."
+    },
+    {
+      "type": "text",
+      "title": "Legendarisch",
+      "text": "De top van de tandem. Muteert uit Witheria en Draconisch samen. Draagt de aura Legendarische zegen: Regeneratie en Absorptie voor spelers in de buurt. Alles aan dit niveau – het kader, het gereedschap – is de duurste versie in zijn soort."
+    },
+    {
+      "type": "text",
+      "title": "Gemuteerd",
+      "text": "Een heel aparte lijn, die muteert uit Forestry's Majestueuze bij plus Versterkt. Draagt de aura Mutageen, die spelers in de buurt bij elke puls een willekeurige buff geeft."
+    }
+  ]
+}

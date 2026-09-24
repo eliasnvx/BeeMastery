@@ -10,23 +10,27 @@ import io.github.elias.beemastery.item.FEEnumFrame;
 import io.github.elias.beemastery.item.FEEnumStick;
 import io.github.elias.beemastery.item.FEEnumPropolis;
 import io.github.elias.beemastery.item.FEEnumAura;
+import io.github.elias.beemastery.item.FEEnumHiveModule;
+import io.github.elias.beemastery.hive.HiveTier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.neoforge.registries.DeferredHolder;
+
+import java.util.function.Supplier;
 
 public class ModCreativeTabs {
     
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = 
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ForestryExtras.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> FORESTRY_EXTRAS_TAB = CREATIVE_MODE_TABS.register("forestry_extras_tab",
+    public static final Supplier<CreativeModeTab> FORESTRY_EXTRAS_TAB = CREATIVE_MODE_TABS.register("forestry_extras_tab",
         () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.beemastery"))
             .icon(() -> new ItemStack(ModItems.BEE_COMBS.get(FEEnumHoneyComb.DRACONIC).get()))
@@ -78,6 +82,15 @@ public class ModCreativeTabs {
 
                 // Пояс аур
                 output.accept(ModItems.AURA_BELT.get());
+                output.accept(ModItems.PORTABLE_HIVE.get());
+                for (HiveTier tier : HiveTier.VALUES) {
+                    if (tier != HiveTier.BASIC) {
+                        output.accept(HiveTier.withTier(new ItemStack(ModItems.PORTABLE_HIVE.get()), tier));
+                    }
+                }
+                for (FEEnumHiveModule module : FEEnumHiveModule.VALUES) {
+                    output.accept(ModItems.HIVE_MODULES.get(module).get());
+                }
 
                 // Блоки
                 output.accept(ModBlocks.DRACONIC_BLOCK_ITEM.get());

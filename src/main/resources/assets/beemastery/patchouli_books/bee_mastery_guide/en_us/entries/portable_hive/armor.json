@@ -1,0 +1,17 @@
+{
+  "name": "Built-in Armour",
+  "icon": "minecraft:iron_chestplate",
+  "category": "beemastery:portable_hive",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "A hive takes up your chestplate slot, so it can carry the chestplate for you.$(br2)Put a hive and any chestplate into a crafting grid: the hive now has that chestplate's armour, toughness and enchantments, and looks like it on you."
+    },
+    {
+      "type": "text",
+      "text": "Put an armoured hive into a crafting grid on its own to take the chestplate back out.$(br2)If the built-in chestplate breaks, only the chestplate is lost. The hive and its bees stay.",
+      "title": "Taking It Off"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Modules",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Modules gaan in het zijpaneel van het korfvenster. Het niveau van de korf bepaalt hoeveel vakken open zijn.$(br2)Van elke soort één module per korf, en de mutagene module en de genstabilisator gaan niet samen."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Lantaarn$(): verlicht de omgeving; bijen werken dag en nacht.$(li)$(l)Afdak$(): werken in de regen.$(li)$(l)Kunstzon$(): werken onder de grond.$(li)$(l)Klimaatstabilisator$(): negeert het klimaat van het bioom.",
+      "title": "Waar & wanneer"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Versnelling$(): +25% productie.$(li)$(l)Levensduur$(): de koningin leeft twee keer zo lang.$(li)$(l)Mutageen$(): dubbele mutatiekans.$(li)$(l)Genstabilisator$(): geen mutaties.$(li)$(l)Verzamelaar$(): producten gaan direct naar je inventaris.",
+      "title": "Hoe & wat"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "Elke module is propolis, bijenwas en één sleutelvoorwerp; sterkere modules vragen zeldzamere propolis."
+    }
+  ]
+}

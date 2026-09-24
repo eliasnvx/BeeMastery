@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/reinforced",
+  "first": "forestry:valiant",
+  "second": "forestry:noble",
+  "result": "beemastery:reinforced",
+  "chance": 0.05
+}

@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/cow",
+  "first": "forestry:steadfast",
+  "second": "beemastery:potato",
+  "result": "beemastery:cow",
+  "chance": 0.3
+}

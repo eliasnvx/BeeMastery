@@ -1,0 +1,18 @@
+{
+  "type": "forestry:centrifuge",
+  "id": "beemastery:centrifuge/cow_comb",
+  "input": {
+    "item": "beemastery:bee_comb_cow"
+  },
+  "products": [
+    {
+      "chance": 0.1,
+      "item": "minecraft:leather"
+    },
+    {
+      "chance": 0.15,
+      "item": "minecraft:beef"
+    }
+  ],
+  "time": 200
+}

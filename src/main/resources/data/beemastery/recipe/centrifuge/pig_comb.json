@@ -1,0 +1,14 @@
+{
+  "type": "forestry:centrifuge",
+  "id": "beemastery:centrifuge/pig_comb",
+  "input": {
+    "item": "beemastery:bee_comb_pig"
+  },
+  "products": [
+    {
+      "chance": 0.15,
+      "item": "minecraft:porkchop"
+    }
+  ],
+  "time": 200
+}

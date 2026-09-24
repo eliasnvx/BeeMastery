@@ -1,6 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["#", "#"],
-  "key": {"#": {"item": "beemastery:ingot_reinforced"}},
-  "result": {"item": "beemastery:stick_reinforced", "count": 2}
-}

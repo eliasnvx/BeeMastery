@@ -1,0 +1,27 @@
+{
+  "name": "Upgrades",
+  "icon": "beemastery:portable_hive[beemastery:hive_tier=3]",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Upgrade the hive with the mod's metals. Each tier adds speed and a module slot:$(li)Basic: 25%, 1 slot$(li)Reinforced: 35%, 2 slots$(li)Draconic: 50%, 3 slots$(li)Legendary: 75%, 4 slots"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Tiers go in order: only a Draconic hive becomes Legendary. Everything inside is kept: bees, frame, flower, modules, armour."
+    },
+    {
+      "type": "text",
+      "text": "Each tier looks the part: metal fittings on the item, metal corners on the hive on your back, and the tier's colours on the hive window.",
+      "title": "Showing Off"
+    }
+  ]
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["SSS", "SWS", "SSS"],
-  "key": {
-    "S": {"item": "beemastery:stick_iron"},
-    "W": {"item": "forestry:beeswax"}
-  },
-  "result": {"item": "beemastery:frame_iron"}
-}

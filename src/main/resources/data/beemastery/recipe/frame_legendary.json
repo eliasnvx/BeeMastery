@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SNS",
+    "SXS",
+    "HSC"
+  ],
+  "key": {
+    "S": {
+      "item": "beemastery:stick_legendary"
+    },
+    "X": {
+      "item": "forestry:beeswax"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "H": {
+      "item": "beemastery:frame_witheria"
+    },
+    "C": {
+      "item": "beemastery:frame_draconic"
+    }
+  },
+  "result": {
+    "id": "beemastery:frame_legendary"
+  }
+}

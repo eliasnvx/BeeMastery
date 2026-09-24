@@ -1,0 +1,27 @@
+{
+  "name": "Verbesserungen",
+  "icon": "beemastery:portable_hive[beemastery:hive_tier=3]",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Verbessere den Stock mit den Metallen der Mod. Jede Stufe bringt mehr Tempo und einen Modulplatz:$(li)Basis: 25 %, 1 Platz$(li)Verstärkt: 35 %, 2 Plätze$(li)Drakonisch: 50 %, 3 Plätze$(li)Legendär: 75 %, 4 Plätze"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Die Stufen gehen der Reihe nach: Nur ein Drakonischer Stock wird Legendär. Alles darin bleibt erhalten: Bienen, Rahmen, Blume, Module, Rüstung."
+    },
+    {
+      "type": "text",
+      "text": "Jede Stufe sieht auch danach aus: Metallbeschläge am Item, Metallecken am Stock auf deinem Rücken und die Farben der Stufe im Stockfenster.",
+      "title": "Zum Angeben"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Ingebouwd pantser",
+  "icon": "minecraft:iron_chestplate",
+  "category": "beemastery:portable_hive",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Een korf neemt je borstplaatvak in, dus kan hij de borstplaat voor je dragen.$(br2)Leg een korf en een borstplaat samen in een craftingveld: de korf krijgt het pantser, de hardheid en de betoveringen van die borstplaat, en ziet er ook zo uit."
+    },
+    {
+      "type": "text",
+      "text": "Leg een gepantserde korf alleen in een craftingveld om de borstplaat er weer uit te halen.$(br2)Breekt de ingebouwde borstplaat, dan ben je alleen die kwijt. De korf en de bijen blijven.",
+      "title": "Eruit halen"
+    }
+  ]
+}

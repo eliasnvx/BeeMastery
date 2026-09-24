@@ -1,0 +1,47 @@
+{
+  "name": "Moduły",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Moduły trafiają do panelu bocznego okna ula. Poziom ula decyduje, ile slotów jest otwartych.$(br2)Każdy rodzaj modułu tylko raz na ul, a Mutagenu i Stabilizatora genów nie można łączyć."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Latarnia$(): oświetla okolicę; pszczoły pracują w dzień i w nocy.$(li)$(l)Daszek$(): praca w deszczu.$(li)$(l)Sztuczne słońce$(): praca pod ziemią.$(li)$(l)Stabilizator klimatu$(): ignoruje klimat biomu.",
+      "title": "Gdzie i kiedy"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Przyspieszacz$(): +25% produkcji.$(li)$(l)Długowieczność$(): królowa żyje dwa razy dłużej.$(li)$(l)Mutagen$(): podwójna szansa na mutację.$(li)$(l)Stabilizator genów$(): brak mutacji.$(li)$(l)Zbieracz$(): produkty trafiają prosto do ekwipunku.",
+      "title": "Jak i co"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "Każdy moduł to propolis, wosk i jeden kluczowy przedmiot; mocniejsze moduły wymagają rzadszego propolisu."
+    }
+  ]
+}

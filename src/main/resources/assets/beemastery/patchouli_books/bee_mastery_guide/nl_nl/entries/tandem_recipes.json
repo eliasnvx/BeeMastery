@@ -1,0 +1,27 @@
+{
+  "name": "De tandemrecepten",
+  "icon": "beemastery:frame_draconic",
+  "category": "beemastery:frames",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Kaders in de tandemlijn gebruiken niet alleen stokken en was – elk bouwt voort op het kader eronder, zoals de bijen zelf uit hun ouders muteren."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_reinforced",
+      "text": "Versterkt begint de tandem: een diamanten kader plus Versterkte stokken en was."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_draconic",
+      "text": "Draconisch heeft beide ouderkaders tegelijk op de werkbank nodig – Witheria en Versterkt – net zoals de bij zelf beide nodig heeft om te muteren."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_legendary",
+      "text": "Legendarisch vraagt Witheria en Draconisch, plus een Netherster. Veruit het duurste kader van de mod – zie het als het echte eindspeldoel, niet als routineklusje."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "入门指南",
+  "icon": "beemastery:bee_comb_reinforced",
+  "category": "beemastery:breeding",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "每种 Bee Mastery 蜜蜂都会产出自己的蜂巢，每个蜂巢经离心后都会得到三样东西：一颗对应金属的粒、蜂蜜，以及一定几率的蜂胶。强化蜂巢是其中产出最丰厚的，所以就从这条线开始吧。"
+    },
+    {
+      "type": "text",
+      "text": "粒可以压缩成锭，锭可以做成棒，棒再与蜂蜡合成蜂框和工具。从蜂巢到粒、到锭、再到棒——这整条链是本书中每个等级的核心。"
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:scoop_reinforced",
+      "title": "捕捉野生蜜蜂",
+      "text": "用捕虫网可以捕捉原版的野生蜜蜂，并把它变成 Forestry 的雄蜂，之后就能用它培育下文的串联谱系。"
+    }
+  ]
+}

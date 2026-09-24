@@ -1,0 +1,22 @@
+{
+  "genus": "apis",
+  "species": "sheep",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 16777215,
+  "body": 16777215,
+  "stripes": 15308410,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.5,
+      "item": "beemastery:bee_comb_sheep"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

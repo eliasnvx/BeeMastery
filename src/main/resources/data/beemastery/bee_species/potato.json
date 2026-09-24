@@ -1,0 +1,22 @@
+{
+  "genus": "apis",
+  "species": "potato",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 15657130,
+  "body": 15657130,
+  "stripes": 15787660,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_potato"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

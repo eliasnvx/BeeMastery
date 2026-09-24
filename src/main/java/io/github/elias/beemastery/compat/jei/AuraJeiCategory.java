@@ -32,11 +32,9 @@ public class AuraJeiCategory implements IRecipeCategory<FEEnumAura> {
     private static final int WIDTH = 150;
     private static final int HEIGHT = 60;
 
-    private final IDrawable background;
     private final IDrawable icon;
 
     public AuraJeiCategory(IGuiHelper guiHelper) {
-        this.background = guiHelper.createBlankDrawable(WIDTH, HEIGHT);
         this.icon = guiHelper.createDrawableItemStack(new ItemStack(ModItems.AURA_BELT.get()));
     }
 
@@ -51,8 +49,13 @@ public class AuraJeiCategory implements IRecipeCategory<FEEnumAura> {
     }
 
     @Override
-    public IDrawable getBackground() {
-        return background;
+    public int getWidth() {
+        return WIDTH;
+    }
+
+    @Override
+    public int getHeight() {
+        return HEIGHT;
     }
 
     @Override
@@ -89,6 +92,6 @@ public class AuraJeiCategory implements IRecipeCategory<FEEnumAura> {
 
     @Override
     public ResourceLocation getRegistryName(FEEnumAura aura) {
-        return new ResourceLocation(ForestryExtras.MOD_ID, aura.getSerializedName() + "_aura");
+        return ResourceLocation.fromNamespaceAndPath(ForestryExtras.MOD_ID, aura.getSerializedName() + "_aura");
     }
 }

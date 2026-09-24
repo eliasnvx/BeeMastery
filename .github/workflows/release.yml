@@ -1,15 +1,14 @@
 name: 🚀 Release
 
+# Tag scheme:
+#   vX.Y.Z           -> legacy 1.20.1 (Forge) releases
+#   vX.Y.Z+<mc>      -> any branch, e.g. v1.1.0+1.21.1
+# Everything shown in the release (MC version, loader, Forestry requirement) is read from
+# gradle.properties of the tagged commit, so it can't drift out of date between branches.
 on:
   push:
     tags:
-      - 'v*.*.*'
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release version (e.g., 1.0.0)'
-        required: true
-        type: string
+      - 'v*'
 
 jobs:
   release:
@@ -17,83 +16,136 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: ☕ Set up JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
           cache: 'gradle'
-      
+
       - name: ✅ Validate Gradle wrapper
         uses: gradle/actions/wrapper-validation@v3
-      
-      - name: 🔧 Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
+
+      - name: 🔧 Prepare Gradle for CI
+        run: |
+          chmod +x gradlew
+          # gradle.properties may pin a local (macOS) JDK path; CI uses the JDK set up above.
+          sed -i '/^org.gradle.java.home=/d' gradle.properties
+
+      - name: 🔍 Read release metadata
+        id: meta
+        run: |
+          prop()  { grep -E "^$1 *=" gradle.properties | head -1 | cut -d= -f2- | xargs; }
+          human() { echo "$1" | sed -E 's/^\[([^,]+),\)$/\1+/; s/^\[([^,]+),([^)]+)\)$/\1 – \2/'; }
+
+          RAW="${GITHUB_REF_NAME#v}"          # 1.1.0 or 1.1.0+1.21.1
+          VERSION="${RAW%%+*}"
+          TAG_MC=""; [[ "$RAW" == *+* ]] && TAG_MC="${RAW#*+}"
+
+          MOD_VERSION="$(prop mod_version)"
+          MC="$(prop minecraft_version)"
+          FORESTRY="$(prop forestry_version)"
+          if [ -n "$(prop neo_version)" ]; then
+            LOADER="NeoForge"; LOADER_RANGE="$(prop neo_version_range)"
+          else
+            LOADER="Forge";    LOADER_RANGE="$(prop forge_version_range)"
+          fi
+
+          # The tag must describe what this commit actually builds.
+          if [ "$VERSION" != "$MOD_VERSION" ]; then
+            echo "::error::Tag version $VERSION does not match mod_version $MOD_VERSION in gradle.properties"; exit 1
+          fi
+          if [ -n "$TAG_MC" ] && [ "$TAG_MC" != "$MC" ]; then
+            echo "::error::Tag targets Minecraft $TAG_MC but this commit builds for $MC — was the wrong branch tagged?"; exit 1
+          fi
+
+          # A dependency on an alpha/beta Forestry makes this release a pre-release.
+          PRERELEASE=false
+          echo "$FORESTRY" | grep -qiE 'alpha|beta' && PRERELEASE=true
+
+          {
+            echo "version=$VERSION"
+            echo "mc=$MC"
+            echo "loader=$LOADER"
+            echo "loader_req=$(human "$LOADER_RANGE")"
+            echo "forestry_req=$(human "$FORESTRY")"
+            echo "prerelease=$PRERELEASE"
+          } >> "$GITHUB_OUTPUT"
+
       - name: 🏗️ Build with Gradle
         run: ./gradlew build --no-daemon --stacktrace
         env:
           GRADLE_OPTS: "-Xmx3G"
-      
-      - name: 📝 Extract version
-        id: version
+
+      # Creates a real world and checks that recipes, bee mutations and the guide book
+      # loaded. Only on branches that have the smoke test (1.21.1+).
+      - name: 🧪 Datapack smoke test (world creation)
+        if: hashFiles('src/main/java/**/gametest/*.java') != ''
+        run: ./gradlew runGameTestServer --no-daemon
+        env:
+          GRADLE_OPTS: "-Xmx3G"
+
+      - name: 📝 Compose release notes
+        env:
+          VERSION: ${{ steps.meta.outputs.version }}
+          MC: ${{ steps.meta.outputs.mc }}
+          LOADER: ${{ steps.meta.outputs.loader }}
+          LOADER_REQ: ${{ steps.meta.outputs.loader_req }}
+          FORESTRY_REQ: ${{ steps.meta.outputs.forestry_req }}
+          PRERELEASE: ${{ steps.meta.outputs.prerelease }}
         run: |
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
-          else
-            echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
-          fi
-      
-      - name: 📋 Generate changelog
-        id: changelog
-        run: |
-          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
-          if [ -f CHANGELOG.md ]; then
-            sed -n '/^## \[${{ steps.version.outputs.VERSION }}\]/,/^## \[/p' CHANGELOG.md | sed '$d' >> $GITHUB_OUTPUT
-          else
-            echo "Release ${{ steps.version.outputs.VERSION }}" >> $GITHUB_OUTPUT
-          fi
-          echo "EOF" >> $GITHUB_OUTPUT
-      
+          # Prefer a per-port section ("## [1.1.0+1.21.1]"), fall back to the shared one ("## [1.1.0]").
+          section() { awk -v h="## [$1]" 'index($0, h) == 1 { f = 1; next } f && /^## \[/ { exit } f' CHANGELOG.md; }
+          NOTES="$(section "$VERSION+$MC")"
+          [ -z "$NOTES" ] && NOTES="$(section "$VERSION")"
+          [ -z "$NOTES" ] && NOTES="Release $VERSION"
+
+          {
+            echo "## 🐝 Bee Mastery v$VERSION — Minecraft $MC ($LOADER)"
+            echo
+            if [ "$PRERELEASE" = "true" ]; then
+              echo "> ⚠️ **Beta:** built against an alpha version of Forestry: Community Edition ($FORESTRY_REQ). Future Forestry updates may break it — please report issues."
+              echo
+            fi
+            echo "$NOTES"
+            echo
+            echo "---"
+            echo
+            echo "### 📥 Requirements"
+            echo "- Minecraft $MC"
+            echo "- $LOADER $LOADER_REQ"
+            echo "- Forestry: Community Edition $FORESTRY_REQ"
+            echo "- Patchouli (for the in-game guide book)"
+            echo
+            echo "### 🔗 Links"
+            echo "- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/bee-mastery)"
+            echo "- [Modrinth](https://modrinth.com/mod/bee-mastery)"
+            echo "- [GitHub](https://github.com/eliasnvx/BeeMastery)"
+          } > release_notes.md
+          cat release_notes.md
+
       - name: 🎉 Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.version.outputs.VERSION }}
-          name: Bee Mastery v${{ steps.version.outputs.VERSION }}
-          body: |
-            ## 🐝 Bee Mastery v${{ steps.version.outputs.VERSION }}
-            
-            ${{ steps.changelog.outputs.CHANGELOG }}
-            
-            ---
-            
-            ### 📥 Downloads
-            - Download the JAR file below
-            - Requires Minecraft 1.20.1 + Forge 47.2.0+
-            - Requires Forestry: Community Edition 7.0.0+
-            
-            ### 🔗 Links
-            - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/bee-mastery)
-            - [Modrinth](https://modrinth.com/mod/bee-mastery)
-            - [GitHub](https://github.com/eliasnvx/BeeMastery)
+          tag_name: ${{ github.ref_name }}
+          name: Bee Mastery v${{ steps.meta.outputs.version }} (${{ steps.meta.outputs.mc }} ${{ steps.meta.outputs.loader }})
+          body_path: release_notes.md
           files: build/libs/*.jar
           draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+          prerelease: ${{ steps.meta.outputs.prerelease == 'true' }}
+
       - name: ✅ Release summary
         run: |
-          echo "### 🎉 Release v${{ steps.version.outputs.VERSION }} Published!" >> $GITHUB_STEP_SUMMARY
+          echo "### 🎉 ${{ github.ref_name }} published" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Version:** \`${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Tag:** \`v${{ steps.version.outputs.VERSION }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Minecraft:** ${{ steps.meta.outputs.mc }} (${{ steps.meta.outputs.loader }})" >> $GITHUB_STEP_SUMMARY
+          echo "**Pre-release:** ${{ steps.meta.outputs.prerelease }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🔗 [View Release](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.VERSION }})" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 [View Release](https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }})" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,23 @@
+{
+  "name": "捕蟲網與嫁接刀",
+  "icon": "beemastery:scoop_legendary",
+  "category": "beemastery:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "title": "捕蟲網",
+      "text": "捕蟲網能捕捉原版的野生蜜蜂，並把牠變成 Forestry 的雄蜂。共有強化、龍族和傳說三個等級，每一級都比上一級捕得更快、用得更久。"
+    },
+    {
+      "type": "text",
+      "title": "嫁接刀",
+      "text": "嫁接刀能加快 Forestry 樹木栽培玩法中的樹木嫁接。等級與捕蟲網相同，每一級的刀刃都用對應等級的錠鍛造，而不只是多加幾根棒。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:grafter_legendary",
+      "text": "每種嫁接刀的配方都把錠放在刀刃的最頂端——那就是刃口——下方由兩根棒組成刀柄。"
+    }
+  ]
+}

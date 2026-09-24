@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/clayious",
+  "first": "forestry:meadows",
+  "second": "forestry:noble",
+  "result": "beemastery:clayious",
+  "chance": 0.15
+}

@@ -18,7 +18,7 @@ public class BeeMasteryJEIPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(ForestryExtras.MOD_ID, "jei_plugin");
+        return ResourceLocation.fromNamespaceAndPath(ForestryExtras.MOD_ID, "jei_plugin");
     }
 
     @Override

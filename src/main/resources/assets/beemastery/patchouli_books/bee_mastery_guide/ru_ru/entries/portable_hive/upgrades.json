@@ -1,0 +1,27 @@
+{
+  "name": "Улучшения",
+  "icon": "beemastery:portable_hive[beemastery:hive_tier=3]",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Улучшайте улей металлами мода. Каждый уровень добавляет скорость и слот модуля:$(li)Базовый: 25%, 1 слот$(li)Усиленный: 35%, 2 слота$(li)Драконий: 50%, 3 слота$(li)Легендарный: 75%, 4 слота"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Уровни идут по порядку: Легендарным становится только Драконий улей. Всё внутри сохраняется: пчёлы, рамка, цветок, модули, броня."
+    },
+    {
+      "type": "text",
+      "text": "Каждый уровень выглядит по-своему: металлическая отделка на предмете, металлические уголки на улье за спиной и цвета уровня в окне улья.",
+      "title": "Во всей красе"
+    }
+  ]
+}

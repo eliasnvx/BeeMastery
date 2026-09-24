@@ -1,0 +1,27 @@
+{
+  "name": "Паляпшэнні",
+  "icon": "beemastery:portable_hive[beemastery:hive_tier=3]",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Паляпшайце вулей металамі мода. Кожны ўзровень дадае хуткасць і слот модуля:$(li)Базавы: 25%, 1 слот$(li)Узмоцнены: 35%, 2 слоты$(li)Драконавы: 50%, 3 слоты$(li)Легендарны: 75%, 4 слоты"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Узроўні ідуць па чарзе: Легендарным становіцца толькі Драконавы вулей. Усё ўнутры захоўваецца: пчолы, рамка, кветка, модулі, браня."
+    },
+    {
+      "type": "text",
+      "text": "Кожны ўзровень мае свой выгляд: металічная аздоба на прадмеце, металічныя кутнікі на вуллі за спіной і колеры ўзроўню ў акне вулля.",
+      "title": "Ва ўсёй красе"
+    }
+  ]
+}

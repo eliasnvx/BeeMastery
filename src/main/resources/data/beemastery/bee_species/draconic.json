@@ -1,0 +1,32 @@
+{
+  "genus": "herapis",
+  "species": "draconic",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 10027008,
+  "body": 10027008,
+  "stripes": 16777164,
+  "temperature": "HELLISH",
+  "humidity": "ARID",
+  "complexity": 4,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_draconic"
+    },
+    {
+      "chance": 0.05,
+      "item": "beemastery:nugget_draconic"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "glint": true,
+  "genome": {
+    "forestry:bee_effect": {
+      "value": "beemastery:draconic_aura"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Kescher & Veredler",
+  "icon": "beemastery:scoop_legendary",
+  "category": "beemastery:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Kescher",
+      "text": "Ein Kescher fängt eine wilde Vanilla-Biene und macht daraus eine Forestry-Drohne. Es gibt ihn als Verstärkt, Drakonisch und Legendär – jede Stufe fängt schneller und hält länger als die vorige."
+    },
+    {
+      "type": "text",
+      "title": "Veredler",
+      "text": "Ein Veredler beschleunigt das Veredeln von Bäumen in der Baumzucht von Forestry. Dieselben drei Stufen wie beim Kescher, und die Klinge wird jeweils aus dem Barren ihrer Stufe geschmiedet statt aus noch mehr Stäben."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:grafter_legendary",
+      "text": "Jedes Veredler-Rezept setzt den Barren ganz an die Spitze der Klinge – das ist die Schneide –, mit zwei Stäben als Griff darunter."
+    }
+  ]
+}

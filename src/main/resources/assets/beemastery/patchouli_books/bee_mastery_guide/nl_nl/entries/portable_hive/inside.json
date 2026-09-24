@@ -1,0 +1,27 @@
+{
+  "name": "In de korf",
+  "icon": "beemastery:hive_module_booster",
+  "category": "beemastery:portable_hive",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(li)Links: een koningin, of een prinses met een dar.$(li)Daarnaast: kader en bloem, beide optioneel.$(li)Rechts: de producten.$(br2)Lege vakken tonen een vaag voorbeeld. Beweeg over een vak voor info, of over het $(l)?$() voor de uitleg."
+    },
+    {
+      "type": "text",
+      "text": "Leg er een bloem in die je bijen fijn vinden, dan zoeken ze geen bloemen meer om je heen. Het vage icoon toont de juiste voor de huidige bij: een klaproos voor Bosbijen, netherwrat voor Netherbijen, enzovoort.$(br2)Bijen die daglicht willen in plaats van een plant, hebben er niets aan.",
+      "title": "Bloemvak"
+    },
+    {
+      "type": "text",
+      "text": "Het icoon boven de pijl zegt waarom de bijen niet werken: te heet, regen, geen bloemen... Beweeg erover voor de uitleg van Forestry zelf.$(br2)De pijl vult zich terwijl ze werken. De balk bij de koningin is haar resterende leven, of de paringsvoortgang bij een prinses.",
+      "title": "Status"
+    },
+    {
+      "type": "text",
+      "text": "Terwijl je hem draagt, toont een klein paneel linksboven de koningin, de balk en de status, dus je hoeft de korf zelden te openen.$(br2)Tijdens het werk zoemen er bijen uit, en andere spelers zien ze ook.",
+      "title": "Onderweg"
+    }
+  ]
+}

@@ -29,13 +29,13 @@ public final class AuraActions {
 
     private static final int MUTAGENIC_DURATION = 20 * 8;
 
-    private static final MobEffect[] MUTAGENIC_POOL = {
+    private static final java.util.List<net.minecraft.core.Holder<net.minecraft.world.effect.MobEffect>> MUTAGENIC_POOL = java.util.List.of(
             MobEffects.MOVEMENT_SPEED,
             MobEffects.DIG_SPEED,
             MobEffects.JUMP,
             MobEffects.DAMAGE_BOOST,
-            MobEffects.LUCK,
-    };
+            MobEffects.LUCK
+    );
 
     private AuraActions() {
     }
@@ -64,7 +64,7 @@ public final class AuraActions {
             }
             case WITHERIA -> witherHostiles(level, area);
             case MUTAGENIC -> {
-                MobEffect chosen = MUTAGENIC_POOL[level.random.nextInt(MUTAGENIC_POOL.length)];
+                net.minecraft.core.Holder<net.minecraft.world.effect.MobEffect> chosen = MUTAGENIC_POOL.get(level.random.nextInt(MUTAGENIC_POOL.size()));
                 buff(players, chosen, MUTAGENIC_DURATION, 0);
             }
             case HARVEST -> fertilize(level, area);
@@ -88,7 +88,7 @@ public final class AuraActions {
         return level.getEntitiesOfClass(Player.class, area, p -> !p.isSpectator());
     }
 
-    private static void buff(List<Player> players, MobEffect effect, int duration, int amplifier) {
+    private static void buff(List<Player> players, net.minecraft.core.Holder<net.minecraft.world.effect.MobEffect> effect, int duration, int amplifier) {
         for (Player player : players) {
             player.addEffect(new MobEffectInstance(effect, duration, amplifier, true, true));
         }
@@ -123,7 +123,7 @@ public final class AuraActions {
             BlockPos pos = new BlockPos(x, y, z);
             BlockState state = level.getBlockState(pos);
             Block block = state.getBlock();
-            if (block.isRandomlyTicking(state) && block instanceof BonemealableBlock) {
+            if (state.isRandomlyTicking() && block instanceof BonemealableBlock) {
                 level.scheduleTick(pos, block, 5);
                 return;
             }

@@ -6,12 +6,12 @@ import io.github.elias.beemastery.item.FEItemFrame;
 import io.github.elias.beemastery.item.FEItemStick;
 import net.minecraft.client.color.item.ItemColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 
-@Mod.EventBusSubscriber(modid = "beemastery", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = "beemastery", value = Dist.CLIENT)
 public class ClientEventHandler {
 
     @SubscribeEvent
@@ -22,7 +22,7 @@ public class ClientEventHandler {
                 @Override
                 public int getColor(ItemStack stack, int tintIndex) {
                     if (stack.getItem() instanceof FEItemHoneyComb honeyComb) {
-                        return honeyComb.getColorFromItemStack(stack, tintIndex);
+                        return honeyComb.getColor(tintIndex);
                     }
                     return 0xFFFFFF;
                 }
@@ -35,7 +35,7 @@ public class ClientEventHandler {
                 @Override
                 public int getColor(ItemStack stack, int tintIndex) {
                     if (stack.getItem() instanceof FEItemFrame frame) {
-                        return frame.getColorFromItemStack(stack, tintIndex);
+                        return frame.getColor(tintIndex);
                     }
                     return 0xFFFFFF;
                 }
@@ -48,7 +48,7 @@ public class ClientEventHandler {
                 @Override
                 public int getColor(ItemStack stack, int tintIndex) {
                     if (stack.getItem() instanceof FEItemStick stick) {
-                        return stick.getColorFromItemStack(stack, tintIndex);
+                        return stick.getColor(tintIndex);
                     }
                     return 0xFFFFFF;
                 }

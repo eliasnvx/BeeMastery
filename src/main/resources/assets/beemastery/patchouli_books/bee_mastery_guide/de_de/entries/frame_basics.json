@@ -1,0 +1,18 @@
+{
+  "name": "Rahmen-Grundlagen",
+  "icon": "beemastery:frame_reinforced",
+  "category": "beemastery:frames",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Jeder Rahmen in Bee Mastery hat vier Werte: Produktion (wie schnell der Stock arbeitet), Genetischer Verfall (wie schnell die Gene der Königin zerfallen), Mutation (Bonus-Chance auf Mutationen) und Territorium (wie weit Effekte und Auren reichen)."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:frame_mutation",
+      "title": "Mutationsrahmen",
+      "text": "Ein Spezialist: halbe Lebensdauer, aber zehnfache Mutationschance. Gebaut, um schnell durch die Tandem-Linie zu züchten, nicht für dauerhafte Produktion."
+    }
+  ]
+}

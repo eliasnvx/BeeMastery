@@ -1,7 +1,7 @@
 package io.github.elias.beemastery.item;
 
 import forestry.api.arboriculture.IToolGrafter;
-import forestry.core.items.ItemForestry;
+import net.minecraft.world.item.Item;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -11,11 +11,11 @@ import net.minecraft.world.level.Level;
  * Unlike most Bee Mastery items, the grafter uses a hand-drawn, pre-colored texture per
  * type instead of a tinted base texture, so it does not implement {@code IColoredItem}.
  */
-public class FEItemGrafter extends ItemForestry implements IToolGrafter {
+public class FEItemGrafter extends Item implements IToolGrafter {
     private final FEEnumGrafter type;
 
-    public FEItemGrafter(FEEnumGrafter type) {
-        super(new Properties().stacksTo(1).durability(type.maxDamage));
+    public FEItemGrafter(FEEnumGrafter type, Item.Properties properties) {
+        super(properties.stacksTo(1).durability(type.maxDamage));
         this.type = type;
     }
 

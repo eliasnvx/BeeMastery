@@ -1,0 +1,17 @@
+{
+  "name": "Wbudowany pancerz",
+  "icon": "minecraft:iron_chestplate",
+  "category": "beemastery:portable_hive",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ul zajmuje slot napierśnika, więc może nosić napierśnik za ciebie.$(br2)Włóż ul i dowolny napierśnik do pola craftingu: ul przejmie pancerz, wytrzymałość i zaklęcia napierśnika, a na tobie będzie tak wyglądał."
+    },
+    {
+      "type": "text",
+      "text": "Włóż opancerzony ul sam do pola craftingu, aby wyjąć z niego napierśnik.$(br2)Jeśli wbudowany napierśnik się zniszczy, tracisz tylko napierśnik. Ul i pszczoły zostają.",
+      "title": "Zdejmowanie"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Stock-Synergie",
+  "icon": "beemastery:draconic_block",
+  "category": "beemastery:auras",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Stöcke mit derselben Aura verstärken sich gegenseitig, wenn sie höchstens etwa 12 Blöcke auseinanderstehen: Jeder nahe Stock mit dieser Aura vergrößert den Pulsbereich, bis zum Bonus von vier Nachbarn."
+    },
+    {
+      "type": "text",
+      "text": "Das belohnt einen Bienengarten mit Thema – eine ganze Reihe Drakonischer Stöcke nebeneinander – statt wild verstreuter Bienenkörbe. Mischst du die Stufen, ist der Bonus weg; bleib bei einer Aura pro Gruppe, und sie wächst mit dir."
+    }
+  ]
+}

@@ -5,10 +5,9 @@ import forestry.api.apiculture.IBeeModifier;
 import forestry.api.apiculture.genetics.IBee;
 import forestry.api.apiculture.genetics.IBeeSpecies;
 import forestry.api.apiculture.hives.IHiveFrame;
-import forestry.api.genetics.IGenome;
-import forestry.api.genetics.IMutation;
-import forestry.core.items.ItemForestry;
-import forestry.core.items.definitions.IColoredItem;
+import forestry.api.core.genetics.IGenome;
+import forestry.api.core.genetics.IMutation;
+import net.minecraft.world.item.Item;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Vec3i;
 import net.minecraft.network.chat.Component;
@@ -25,12 +24,12 @@ import java.util.List;
  * bee houses. Its {@link IBeeModifier} applies the tuning stored on the {@link FEEnumFrame}
  * variant (production / lifespan / mutation / territory).
  */
-public class FEItemFrame extends ItemForestry implements IColoredItem, IHiveFrame {
+public class FEItemFrame extends Item implements IHiveFrame {
     private final FEEnumFrame type;
     private final IBeeModifier beeModifier;
 
-    public FEItemFrame(FEEnumFrame type) {
-        super(new Properties().stacksTo(1).durability(type.maxDamage));
+    public FEItemFrame(FEEnumFrame type, Item.Properties properties) {
+        super(properties.stacksTo(1).durability(type.maxDamage));
         this.type = type;
         this.beeModifier = new FrameBeeModifier(type);
     }
@@ -41,11 +40,12 @@ public class FEItemFrame extends ItemForestry implements IColoredItem, IHiveFram
 
     @Override
     public ItemStack frameUsed(IBeeHousing housing, ItemStack frame, IBee queen, int wear) {
-        Level level = housing.getWorldObj();
+        Level level = housing.getLevel();
         if (level == null) {
             return frame;
         }
-        if (frame.hurt(wear, level.getRandom(), null)) {
+        frame.hurtAndBreak(wear, level instanceof net.minecraft.server.level.ServerLevel serverLevel ? serverLevel : null, null, item -> {});
+        if (frame.isEmpty()) {
             return ItemStack.EMPTY;
         }
         return frame;
@@ -56,14 +56,13 @@ public class FEItemFrame extends ItemForestry implements IColoredItem, IHiveFram
         return beeModifier;
     }
 
-    @Override
-    public int getColorFromItemStack(ItemStack itemstack, int tintIndex) {
+    public int getColor(int tintIndex) {
         return type.color;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, world, tooltip, flag);
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltip, flag);
 
         // Показываем информацию всегда
         tooltip.add(Component.literal(""));

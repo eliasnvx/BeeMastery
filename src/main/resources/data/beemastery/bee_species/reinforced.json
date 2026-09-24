@@ -1,0 +1,26 @@
+{
+  "genus": "industrapis",
+  "species": "reinforced",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 13421721,
+  "body": 13421721,
+  "stripes": 16777164,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 3,
+  "products": [
+    {
+      "chance": 0.25,
+      "item": "beemastery:bee_comb_reinforced"
+    },
+    {
+      "chance": 0.1,
+      "item": "beemastery:nugget_reinforced"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beemastery:ingot_legendary"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "beemastery:nugget_legendary"
+  }
+}

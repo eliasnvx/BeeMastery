@@ -1,0 +1,22 @@
+{
+  "name": "灵气与护符",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "龙族、传说、凋零和变异蜜蜂各自带有一种灵气，工作时会从蜂箱向外发出脉冲。脉冲半径直接取决于蜜蜂自身的活动范围基因，所以任何能扩大活动范围的东西也会扩大灵气范围。"
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "灵气护符",
+      "text": "用对应的蜂胶合成护符，就能把灵气随身带走，而不必留在蜂箱旁。护符的充能有限——每次脉冲消耗一点耐久度，耗尽时护符就会损坏。"
+    },
+    {
+      "type": "text",
+      "text": "此外还有第五种灵气：丰收，由胡萝卜蜂携带，能像骨粉一样为附近作物施肥。它没有对应的蜂胶，所以它的护符仍然用胡萝卜蜂巢合成。"
+    }
+  ]
+}

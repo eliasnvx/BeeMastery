@@ -1,6 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "pattern": ["#", "#"],
-  "key": {"#": {"item": "minecraft:obsidian"}},
-  "result": {"item": "beemastery:stick_obsidian", "count": 2}
-}

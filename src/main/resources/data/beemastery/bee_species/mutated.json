@@ -1,0 +1,31 @@
+{
+  "genus": "modapis",
+  "species": "mutated",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 10079232,
+  "body": 10079232,
+  "stripes": 16777164,
+  "temperature": "NORMAL",
+  "humidity": "DAMP",
+  "complexity": 3,
+  "products": [
+    {
+      "chance": 0.25,
+      "item": "beemastery:bee_comb_mutated"
+    },
+    {
+      "chance": 0.1,
+      "item": "beemastery:nugget_mutated_iron"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "genome": {
+    "forestry:bee_effect": {
+      "value": "beemastery:mutagenic_aura"
+    }
+  }
+}

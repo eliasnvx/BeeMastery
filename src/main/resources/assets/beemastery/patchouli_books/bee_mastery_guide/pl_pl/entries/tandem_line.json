@@ -1,0 +1,33 @@
+{
+  "name": "Linia tandemowa",
+  "icon": "beemastery:bee_comb_legendary",
+  "category": "beemastery:breeding",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Wzmocniona",
+      "text": "Podstawa tandemu. Mutuje z Dzielnej i Szlachetnej – pszczół samego Forestry. Solidna, pospolita i brama do wszystkiego, co wyżej."
+    },
+    {
+      "type": "text",
+      "title": "Witherowa",
+      "text": "Boczna gałąź, nie potomek Wzmocnionej. Mutuje z Pilnej z Forestry i Zmutowanej pszczoły. Nosi aurę Usychanie, która nakłada Więdnięcie na pobliskich wrogów."
+    },
+    {
+      "type": "text",
+      "title": "Smocza",
+      "text": "Mutuje z Witherowej i Wzmocnionej razem – potrzebni są oboje rodzice, tak jak w recepturze ramki niżej. Nosi aurę Smocza furia: rani pobliskich wrogów i daje graczom Siłę."
+    },
+    {
+      "type": "text",
+      "title": "Legendarna",
+      "text": "Szczyt tandemu. Mutuje z Witherowej i Smoczej razem. Nosi aurę Legendarne błogosławieństwo: Regeneracja i Pochłanianie dla pobliskich graczy. Wszystko na tym poziomie – ramka, narzędzia – to najdroższa wersja w swoim rodzaju."
+    },
+    {
+      "type": "text",
+      "title": "Zmutowana",
+      "text": "Zupełnie osobna linia, mutująca z Majestycznej z Forestry i Wzmocnionej. Nosi aurę Mutagen, która przy każdym pulsie daje pobliskim graczom losowe wzmocnienie."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "genus": "industrapis",
+  "species": "clayious",
+  "dominant": false,
+  "authority": "beemastery",
+  "outline": 11584734,
+  "body": 10506797,
+  "stripes": 13789470,
+  "temperature": "NORMAL",
+  "humidity": "NORMAL",
+  "complexity": 1,
+  "products": [
+    {
+      "chance": 0.12,
+      "item": "beemastery:bee_comb_clayious"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:honeycomb"
+    }
+  ]
+}

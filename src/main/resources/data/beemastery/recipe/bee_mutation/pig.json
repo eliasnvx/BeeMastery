@@ -1,0 +1,8 @@
+{
+  "type": "forestry:bee_mutation",
+  "id": "beemastery:bee_mutation/pig",
+  "first": "forestry:steadfast",
+  "second": "beemastery:carrot",
+  "result": "beemastery:pig",
+  "chance": 0.3
+}

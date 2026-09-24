@@ -1,0 +1,21 @@
+{
+  "type": "beemastery:portable_hive_upgrade",
+  "category": "equipment",
+  "tier": "draconic",
+  "pattern": [
+    "IPI",
+    "IHI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "beemastery:ingot_draconic"
+    },
+    "P": {
+      "item": "beemastery:propolis_draconic"
+    },
+    "H": {
+      "item": "beemastery:portable_hive"
+    }
+  }
+}
