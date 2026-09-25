@@ -5,6 +5,31 @@ All notable changes to Bee Mastery will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1+1.20.1] - 2026-09-25
+
+The **Portable Hive** comes to 1.20.1 — the same content as Bee Mastery 1.2.1 for 1.21.1 — together with new textures and a few balance fixes.
+
+### Added
+- **Portable Hive** (backported from the 1.21.1 version): a bee house you wear in the chestplate slot. Put in a queen (or princess + drone) and a frame, and it keeps producing as you walk around — biome, weather and light come from where you are, and Forestry's own beekeeping logic runs the bees.
+  - **Flower slot:** carry a flower your bees like (a poppy for Forest bees, nether wart for Nether bees…) and they no longer need flowers around you. Doesn't apply to bees that want daylight instead of a plant.
+  - Press **B** (rebindable) to open the worn hive, or right-click it in your hand. Shift+right-click to wear it.
+  - Self-explaining GUI: faded example items, slot hints, a status icon with Forestry's own error texts, a progress bar (queen's life or mating), an animated arrow and a **?** with the full how-to.
+  - A small 3D beehive on your back, bees buzzing out of it (visible to other players), and a HUD panel with the queen, progress and status while worn.
+  - Craft it with any chestplate to get that chestplate's armour; craft it alone to take the chestplate back. If the chestplate breaks, the hive stays.
+  - Recipe: Bee House, leather, string and an iron nugget.
+- **Portable Hive upgrades & modules:** Reinforced → Draconic → Legendary upgrades (1 → 4 module slots, 25% → 35% → 50% → 75% speed, contents kept) and 9 modules: Lantern, Canopy, Artificial Sun, Climate Stabilizer, Booster, Longevity, Mutagen, Gene Stabilizer, Collector.
+- **Your own hive never hurts you:** Forestry bee effects no longer hit the player wearing the hive. Other hives still do.
+- **Config:** `serverconfig/beemastery-server.toml` (speed per hive tier, module strengths, collector interval, lantern light, own-hive protection; synced to clients) and `config/beemastery-client.toml` (hive panel on/off and corner, bees around worn hives).
+- New **Portable Hive** chapter in the guide book, and the whole guide book is now translated into all the mod's languages.
+
+### Changed
+- **New 16×16 textures** for ingots, nuggets, grafters, scoops, aura charms, the aura belt, propolis and storage blocks — true pixel-grid art in the vanilla style.
+- **Potato and Carrot bees mutate from Cultivated now:** Potato from Cultivated + Meadows, Carrot from Cultivated + Forest (was Forest + Meadows for both, clashing with each other).
+- Translations: the scoop is called a net (сачок, Kescher, vlindernet, siatka, 捕虫网/捕蟲網), as it catches bees rather than hooking them.
+
+### Fixed
+- Guide book: the Aura Belt page said a right-click with both hands empty shows the socketed charms — it's a right-click with the belt in one hand and the other hand empty.
+
 ## [1.1.0] - 2026-07-05
 
 ### Added

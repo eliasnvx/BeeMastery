@@ -1,0 +1,22 @@
+{
+  "name": "Pierwsze kroki",
+  "icon": "beemastery:bee_comb_reinforced",
+  "category": "beemastery:breeding",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Każda pszczoła z Bee Mastery wytwarza własny plaster, a każdy plaster rozkłada się w wirówce na trzy rzeczy: bryłkę swojego metalu, miód i szansę na propolis. Wzmocnione plastry są najhojniejsze, więc od tej linii warto zacząć."
+    },
+    {
+      "type": "text",
+      "text": "Bryłki łączysz w sztabki, sztabki w patyki, a z patyków i wosku robisz ramki i narzędzia. Cały ten łańcuch – plaster, bryłka, sztabka, patyk – to kręgosłup każdego poziomu w tej książce."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:scoop_reinforced",
+      "title": "Dzikie pszczoły",
+      "text": "Siatką złapiesz dziką pszczołę z vanilli i zamienisz ją w trutnia z Forestry, którego potem wprowadzisz do opisanej niżej linii tandemowej."
+    }
+  ]
+}

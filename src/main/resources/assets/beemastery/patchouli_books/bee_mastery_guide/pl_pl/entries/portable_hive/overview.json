@@ -1,0 +1,27 @@
+{
+  "name": "Przenośny ul",
+  "icon": "beemastery:portable_hive",
+  "category": "beemastery:portable_hive",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Pszczeli domek, który nosisz w slocie napierśnika. Jego pszczoły pracują wszędzie, gdzie je zabierzesz: biom, pogoda, światło i kwiaty biorą się z miejsca, w którym stoisz.$(br2)Przejdź w lepszy klimat, a ul pójdzie z tobą."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive",
+      "text": "Pszczeli domek ze skórzanymi paskami, nicią i żelazną sprzączką."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Skradanie + PPM$(), aby go założyć.$(li)Naciśnij $(k:beemastery.open_hive), aby go otworzyć, gdy masz go na plecach.$(li)PPM z ulem w ręce otwiera go bez zakładania.$(br2)Pszczoły pracują tylko wtedy, gdy ul jest na plecach.",
+      "title": "Zakładanie"
+    },
+    {
+      "type": "text",
+      "text": "Podstawowy ul pracuje w tempie pszczelego domku: jedna czwarta własnej szybkości pszczół. $(l:portable_hive/upgrades)Ulepszenia$(/l) go przyspieszają, $(l:portable_hive/modules)moduły$(/l) zmieniają, co potrafi.",
+      "title": "Jak szybko?"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Upgrades",
+  "icon": "beemastery:portable_hive{hive_tier:3}",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Waardeer de korf op met de metalen van de mod. Elk niveau geeft snelheid en een modulevak:$(li)Basis: 25%, 1 vak$(li)Versterkt: 35%, 2 vakken$(li)Draconisch: 50%, 3 vakken$(li)Legendarisch: 75%, 4 vakken"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Niveaus gaan op volgorde: alleen een Draconische korf wordt Legendarisch. Alles erin blijft behouden: bijen, kader, bloem, modules, pantser."
+    },
+    {
+      "type": "text",
+      "text": "Elk niveau ziet er ook naar uit: metalen beslag op het voorwerp, metalen hoeken op de korf op je rug en de kleuren van het niveau in het korfvenster.",
+      "title": "Pronken"
+    }
+  ]
+}

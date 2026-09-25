@@ -1,0 +1,27 @@
+{
+  "name": "Receptury tandemu",
+  "icon": "beemastery:frame_draconic",
+  "category": "beemastery:frames",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Ramki w linii tandemowej to nie tylko patyki i wosk – każda powstaje na bazie ramki poziom niżej, tak jak same pszczoły mutują ze swoich rodziców."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_reinforced",
+      "text": "Wzmocniona rozpoczyna tandem: Diamentowa ramka plus Wzmocnione patyki i wosk."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_draconic",
+      "text": "Smocza wymaga obu ramek rodziców naraz na stole rzemieślniczym – Witherowej i Wzmocnionej – tak jak sama pszczoła potrzebuje obu, by zmutować."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_legendary",
+      "text": "Legendarna wymaga Witherowej i Smoczej oraz Gwiazdy Netheru. To zdecydowanie najdroższa ramka w modzie – traktuj ją jako prawdziwy cel końcowej gry, a nie zwykły crafting."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "串联配方",
+  "icon": "beemastery:frame_draconic",
+  "category": "beemastery:frames",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "串联谱系中的蜂框不只用棒和蜂蜡——每种蜂框都建立在下一级蜂框的基础上，就像蜜蜂本身由亲本突变而来一样。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_reinforced",
+      "text": "强化蜂框是串联的起点：钻石蜂框加上强化棒和蜂蜡。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_draconic",
+      "text": "龙族蜂框需要同时把两个亲本蜂框放上工作台——凋零蜂框和强化蜂框——就像龙族蜂本身需要两者才能突变一样。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_legendary",
+      "text": "传说蜂框需要凋零蜂框和龙族蜂框，外加一颗下界之星。它是本模组中最昂贵的蜂框，远超其他——请把它当作真正的终局目标，而不是日常合成。"
+    }
+  ]
+}

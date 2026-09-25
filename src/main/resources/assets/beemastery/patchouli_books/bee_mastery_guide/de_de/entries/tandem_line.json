@@ -1,0 +1,33 @@
+{
+  "name": "Die Tandem-Linie",
+  "icon": "beemastery:bee_comb_legendary",
+  "category": "beemastery:breeding",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Verstärkt",
+      "text": "Die Basis des Tandems. Mutiert aus Forestrys eigenen Edel- und Nobel-Bienen. Robust, häufig und das Tor zu allem darüber."
+    },
+    {
+      "type": "text",
+      "title": "Witheria",
+      "text": "Ein Seitenzweig, kein Nachkomme von Verstärkt. Mutiert aus Forestrys Industriell plus einer Mutierten Biene. Trägt die Aura Verwelken, die nahe Feinde verwelken lässt."
+    },
+    {
+      "type": "text",
+      "title": "Drakonisch",
+      "text": "Mutiert aus Witheria und Verstärkt zusammen – beide Eltern sind nötig, genau wie beim Rahmenrezept. Trägt die Aura Drakonischer Zorn: schadet nahen Feinden und gibt Spielern Stärke."
+    },
+    {
+      "type": "text",
+      "title": "Legendär",
+      "text": "Die Spitze des Tandems. Mutiert aus Witheria und Drakonisch zusammen. Trägt die Aura Legendärer Segen: Regeneration und Absorption für nahe Spieler. Alles an dieser Stufe – Rahmen, Werkzeuge – ist die teuerste Version ihrer Art."
+    },
+    {
+      "type": "text",
+      "title": "Mutiert",
+      "text": "Eine ganz eigene Linie: mutiert aus Forestrys Majestätisch plus Verstärkt. Trägt die Aura Mutagen, die nahen Spielern bei jedem Puls einen zufälligen Buff gibt."
+    }
+  ]
+}

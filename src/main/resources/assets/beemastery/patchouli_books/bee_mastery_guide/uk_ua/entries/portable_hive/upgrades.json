@@ -1,0 +1,27 @@
+{
+  "name": "Покращення",
+  "icon": "beemastery:portable_hive{hive_tier:3}",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Покращуйте вулик металами мода. Кожен рівень додає швидкість і слот модуля:$(li)Базовий: 25%, 1 слот$(li)Посилений: 35%, 2 слоти$(li)Драконячий: 50%, 3 слоти$(li)Легендарний: 75%, 4 слоти"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "Рівні йдуть по черзі: Легендарним стає лише Драконячий вулик. Усе всередині зберігається: бджоли, рамка, квітка, модулі, броня."
+    },
+    {
+      "type": "text",
+      "text": "Кожен рівень має свій вигляд: металеве оздоблення на предметі, металеві кутики на вулику за спиною і кольори рівня у вікні вулика.",
+      "title": "У всій красі"
+    }
+  ]
+}

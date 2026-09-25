@@ -1,0 +1,47 @@
+{
+  "name": "Module",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Module kommen in die Seitenleiste des Stockfensters. Die Stufe des Stocks bestimmt, wie viele Plätze offen sind.$(br2)Jede Modulart nur einmal pro Stock, und Mutagen und Genstabilisator lassen sich nicht kombinieren."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Laterne$(): beleuchtet deine Umgebung; Bienen arbeiten Tag und Nacht.$(li)$(l)Schutzdach$(): Arbeit im Regen.$(li)$(l)Kunstsonne$(): Arbeit unter Tage.$(li)$(l)Klimastabilisator$(): ignoriert das Klima des Bioms.",
+      "title": "Wo & wann"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Beschleuniger$(): +25 % Produktion.$(li)$(l)Langlebigkeit$(): Die Königin lebt doppelt so lange.$(li)$(l)Mutagen$(): doppelte Mutationschance.$(li)$(l)Genstabilisator$(): keine Mutationen.$(li)$(l)Sammler$(): Produkte landen direkt in deinem Inventar.",
+      "title": "Wie & was"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "Jedes Modul besteht aus Propolis, Bienenwachs und einem Schlüsselgegenstand; stärkere Module brauchen selteneres Propolis."
+    }
+  ]
+}

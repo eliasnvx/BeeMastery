@@ -1,0 +1,16 @@
+{
+  "name": "Bauernhofbienen",
+  "icon": "beemastery:bee_comb_cow",
+  "category": "beemastery:breeding",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Eine eigene, albernere Linie, die über Hofprodukte statt Metalle mutiert: Lehm-, Schweine-, Kuh-, Schaf-, Kartoffel- und Karottenbienen. Keine Auren, keine Werkzeuge – nur Ton, Leder, Rindfleisch, Wolle, Faden, Kartoffeln und Karotten direkt aus dem Stock."
+    },
+    {
+      "type": "text",
+      "text": "Lehm mutiert aus Wiesig und Nobel. Kartoffel mutiert aus Kultiviert und Wiesig, Karotte aus Kultiviert und Waldig. Schwein entsteht aus Standhaft und Karotte, Kuh aus Standhaft und Kartoffel, Schaf aus Karotte und Kartoffel – ein kleines, eigenes Zuchtnetz."
+    }
+  ]
+}

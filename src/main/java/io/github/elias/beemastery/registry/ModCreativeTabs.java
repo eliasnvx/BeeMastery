@@ -10,6 +10,8 @@ import io.github.elias.beemastery.item.FEEnumFrame;
 import io.github.elias.beemastery.item.FEEnumStick;
 import io.github.elias.beemastery.item.FEEnumPropolis;
 import io.github.elias.beemastery.item.FEEnumAura;
+import io.github.elias.beemastery.item.FEEnumHiveModule;
+import io.github.elias.beemastery.hive.HiveTier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -78,6 +80,15 @@ public class ModCreativeTabs {
 
                 // Пояс аур
                 output.accept(ModItems.AURA_BELT.get());
+                output.accept(ModItems.PORTABLE_HIVE.get());
+                for (HiveTier tier : HiveTier.VALUES) {
+                    if (tier != HiveTier.BASIC) {
+                        output.accept(HiveTier.withTier(new ItemStack(ModItems.PORTABLE_HIVE.get()), tier));
+                    }
+                }
+                for (FEEnumHiveModule module : FEEnumHiveModule.VALUES) {
+                    output.accept(ModItems.HIVE_MODULES.get(module).get());
+                }
 
                 // Блоки
                 output.accept(ModBlocks.DRACONIC_BLOCK_ITEM.get());

@@ -1,12 +1,18 @@
 package io.github.elias.beemastery;
 
 import com.mojang.logging.LogUtils;
+import io.github.elias.beemastery.config.BeeMasteryConfig;
 import io.github.elias.beemastery.registry.ModBlocks;
 import io.github.elias.beemastery.registry.ModCreativeTabs;
 import io.github.elias.beemastery.registry.ModItems;
+import io.github.elias.beemastery.registry.ModMenuTypes;
+import io.github.elias.beemastery.registry.ModNetwork;
+import io.github.elias.beemastery.registry.ModRecipeSerializers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -26,6 +32,11 @@ public class ForestryExtras {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipeSerializers.register(modEventBus);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, BeeMasteryConfig.SERVER_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, BeeMasteryConfig.CLIENT_SPEC);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -33,6 +44,7 @@ public class ForestryExtras {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(ModNetwork::register);
         LOGGER.info("ForestryExtras: Common setup complete");
     }
 }

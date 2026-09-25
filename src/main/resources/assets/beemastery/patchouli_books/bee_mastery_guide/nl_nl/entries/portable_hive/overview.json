@@ -1,0 +1,27 @@
+{
+  "name": "De draagbare korf",
+  "icon": "beemastery:portable_hive",
+  "category": "beemastery:portable_hive",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Een bijenhuis dat je in het borstplaatvak draagt. De bijen werken overal waar je ze meeneemt: bioom, weer, licht en bloemen komen van de plek waar jij staat.$(br2)Loop naar een beter klimaat en de korf gaat mee."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive",
+      "text": "Een bijenhuis met leren riemen, draad en een ijzeren gesp."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Sluipen + rechtsklik$() om hem om te doen.$(li)Druk op $(k:beemastery.open_hive) om hem te openen terwijl hij op je rug zit.$(li)Rechtsklik met hem in je hand om hem te openen zonder hem te dragen.$(br2)De bijen werken alleen als de korf op je rug zit.",
+      "title": "Dragen"
+    },
+    {
+      "type": "text",
+      "text": "Een basiskorf werkt in het tempo van een bijenhuis: een kwart van de eigen snelheid van de bijen. $(l:portable_hive/upgrades)Upgrades$(/l) maken hem sneller, $(l:portable_hive/modules)modules$(/l) veranderen wat hij kan.",
+      "title": "Hoe snel?"
+    }
+  ]
+}

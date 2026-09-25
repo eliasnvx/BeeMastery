@@ -1,0 +1,27 @@
+{
+  "name": "Inside the Hive",
+  "icon": "beemastery:hive_module_booster",
+  "category": "beemastery:portable_hive",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(li)Left: a queen, or a princess with a drone.$(li)Next to them: a frame and a flower, both optional.$(li)Right: the products.$(br2)Empty slots show a faded example. Hover any slot to see what goes there, or the $(l)?$() for the full how-to."
+    },
+    {
+      "type": "text",
+      "text": "Put in a flower your bees like and they stop looking for flowers around you. The faded icon in the empty slot shows the right one for the current bee: a poppy for Forest bees, nether wart for Nether bees and so on.$(br2)Bees that want daylight instead of a plant can't use it.",
+      "title": "Flower Slot"
+    },
+    {
+      "type": "text",
+      "text": "The icon above the arrow says why the bees aren't working: too hot, raining, no flowers... Hover it for Forestry's own explanation.$(br2)The arrow fills while they work. The bar by the queen is her remaining life, or the mating progress for a princess.",
+      "title": "Status"
+    },
+    {
+      "type": "text",
+      "text": "While you wear it, a small panel in the top left corner shows the queen, the bar and the status, so you rarely need to open the hive.$(br2)Bees buzz out of it while it works, and other players see them too.",
+      "title": "On the Go"
+    }
+  ]
+}

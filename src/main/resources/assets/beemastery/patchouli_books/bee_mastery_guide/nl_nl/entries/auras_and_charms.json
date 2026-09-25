@@ -1,0 +1,22 @@
+{
+  "name": "Aura's & amuletten",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Draconische, Legendarische, Witheria- en Gemuteerde bijen dragen elk een levende aura die tijdens het werk vanuit hun korf pulseert. De straal komt rechtstreeks uit het Territorium-gen van de bij: meer territorium betekent ook een grotere aura."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "Aura-amuletten",
+      "text": "Verwerk de bijpassende propolis tot een amulet om een aura mee te nemen in plaats van hem bij de korf te laten. Een amulet heeft beperkte lading: elke puls kost één punt duurzaamheid, en is hij op, dan breekt het amulet."
+    },
+    {
+      "type": "text",
+      "text": "Er is ook een vijfde aura: Oogst, gedragen door de Wortelbij, die gewassen in de buurt bemest zoals beendermeel. Er is geen bijpassende propolis, dus dit amulet maak je nog steeds van een wortelhoningraat."
+    }
+  ]
+}

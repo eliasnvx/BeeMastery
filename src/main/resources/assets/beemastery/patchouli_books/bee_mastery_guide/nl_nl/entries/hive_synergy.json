@@ -1,0 +1,16 @@
+{
+  "name": "Korfsynergie",
+  "icon": "beemastery:draconic_block",
+  "category": "beemastery:auras",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Korven met dezelfde aura versterken elkaar als ze binnen zo'n 12 blokken van elkaar staan: elke korf in de buurt met die aura vergroot het pulsgebied, tot een bonus van vier buren."
+    },
+    {
+      "type": "text",
+      "text": "Zo loont een bijenerf met een thema – een hele rij Draconische korven naast elkaar – meer dan willekeurig verspreide bijenstallen. Meng je de niveaus, dan verlies je de bonus; kies één aura per groep en hij groeit met je mee."
+    }
+  ]
+}

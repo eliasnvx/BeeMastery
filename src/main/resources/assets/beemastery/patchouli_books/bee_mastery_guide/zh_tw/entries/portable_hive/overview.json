@@ -1,0 +1,27 @@
+{
+  "name": "攜帶式蜂箱",
+  "icon": "beemastery:portable_hive",
+  "category": "beemastery:portable_hive",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "一個穿在胸甲欄上的簡易蜂房。你帶著它走到哪裡，裡面的蜜蜂就在哪裡工作：生態域、天氣、光照和花都取決於你所站的位置。$(br2)走進更合適的氣候，蜂箱也會跟著受益。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive",
+      "text": "由簡易蜂房加上皮革背帶、線和鐵扣合成。"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)潛行+右鍵$()即可穿上。$(li)背在身上時按$(k:beemastery.open_hive)開啟。$(li)手持時按右鍵可直接開啟，無需穿戴。$(br2)只有蜂箱背在背上時，蜜蜂才會工作。",
+      "title": "穿戴方法"
+    },
+    {
+      "type": "text",
+      "text": "基礎蜂箱的工作速度與簡易蜂房相同：蜜蜂自身速度的四分之一。$(l:portable_hive/upgrades)升級$(/l)能讓它更快，$(l:portable_hive/modules)模組$(/l)能改變它的功能。",
+      "title": "有多快？"
+    }
+  ]
+}

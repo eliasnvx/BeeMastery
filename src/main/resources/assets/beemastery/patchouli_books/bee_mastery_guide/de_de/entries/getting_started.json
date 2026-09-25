@@ -1,0 +1,22 @@
+{
+  "name": "Erste Schritte",
+  "icon": "beemastery:bee_comb_reinforced",
+  "category": "beemastery:breeding",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Jede Bee-Mastery-Biene erzeugt ihre eigene Wabe, und jede Wabe ergibt in der Zentrifuge drei Dinge: ein Nugget ihres Metalls, Honig und eine Chance auf Propolis. Verstärkte Waben sind am ergiebigsten – fang also mit dieser Linie an."
+    },
+    {
+      "type": "text",
+      "text": "Nuggets werden zu Barren, Barren zu Stäben, und aus Stäben entstehen mit Bienenwachs Rahmen und Werkzeuge. Diese Kette – Wabe, Nugget, Barren, Stab – ist das Rückgrat jeder Stufe in diesem Buch."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:scoop_reinforced",
+      "title": "Wilde Bienen fangen",
+      "text": "Mit einem Kescher fängst du eine wilde Vanilla-Biene und machst daraus eine Forestry-Drohne, die du dann in die Tandem-Linie unten einkreuzen kannst."
+    }
+  ]
+}

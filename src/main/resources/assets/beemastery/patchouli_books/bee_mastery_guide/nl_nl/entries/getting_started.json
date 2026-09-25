@@ -1,0 +1,22 @@
+{
+  "name": "Aan de slag",
+  "icon": "beemastery:bee_comb_reinforced",
+  "category": "beemastery:breeding",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Elke Bee Mastery-bij maakt een eigen honingraat, en elke raat levert in de centrifuge drie dingen op: een klompje van zijn metaal, honing en een kans op propolis. Versterkte raten zijn het gulst, dus daar begin je mee."
+    },
+    {
+      "type": "text",
+      "text": "Klompjes pers je tot staven, staven tot stokken, en van stokken maak je met bijenwas kaders en gereedschap. Die keten – raat, klompje, staaf, stok – is de ruggengraat van elk niveau in dit boek."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:scoop_reinforced",
+      "title": "Wilde bijen vangen",
+      "text": "Met een vlindernet vang je een wilde vanilla-bij en maak je er een Forestry-dar van, die je daarna in de tandemlijn hieronder kunt kruisen."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Boerderijbijen",
+  "icon": "beemastery:bee_comb_cow",
+  "category": "beemastery:breeding",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Een aparte, gekkere lijn die via boerderijproducten muteert in plaats van metalen: Klei-, Varkens-, Koeien-, Schapen-, Aardappel- en Wortelbijen. Geen aura's of eigen gereedschap – gewoon klei, leer, rundvlees, wol, draad, aardappels en wortels, recht uit de korf."
+    },
+    {
+      "type": "text",
+      "text": "Klei muteert uit Weide en Nobel. Aardappel muteert uit Gecultiveerd en Weide, Wortel uit Gecultiveerd en Bos. Varken muteert uit Standvastig en Wortel, Koe uit Standvastig en Aardappel, en Schaap uit Wortel en Aardappel – een eigen klein kweekweb."
+    }
+  ]
+}

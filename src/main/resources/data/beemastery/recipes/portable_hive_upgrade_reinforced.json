@@ -1,0 +1,21 @@
+{
+  "type": "beemastery:portable_hive_upgrade",
+  "category": "equipment",
+  "tier": "reinforced",
+  "pattern": [
+    "IPI",
+    "IHI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "beemastery:ingot_reinforced"
+    },
+    "P": {
+      "item": "beemastery:propolis_reinforced"
+    },
+    "H": {
+      "item": "beemastery:portable_hive"
+    }
+  }
+}

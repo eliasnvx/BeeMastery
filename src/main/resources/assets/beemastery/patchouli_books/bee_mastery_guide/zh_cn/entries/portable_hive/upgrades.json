@@ -1,0 +1,27 @@
+{
+  "name": "升级",
+  "icon": "beemastery:portable_hive{hive_tier:3}",
+  "category": "beemastery:portable_hive",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "text",
+      "text": "用本模组的金属升级蜂箱。每提升一级都会增加速度和一个模块槽：$(li)基础：25%，1 个槽位$(li)强化：35%，2 个槽位$(li)龙之：50%，3 个槽位$(li)传说：75%，4 个槽位"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_reinforced",
+      "recipe2": "beemastery:portable_hive_upgrade_draconic"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive_upgrade_legendary",
+      "text": "等级必须依次提升：只有龙之蜂箱才能升级为传说蜂箱。里面的一切都会保留：蜜蜂、蜂框、花、模块和护甲。"
+    },
+    {
+      "type": "text",
+      "text": "每个等级都有相应的外观：物品上的金属配件、背上蜂箱的金属包角，以及蜂箱界面上的等级配色。",
+      "title": "彰显身份"
+    }
+  ]
+}

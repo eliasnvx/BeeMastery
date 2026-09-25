@@ -1,0 +1,27 @@
+{
+  "name": "Im Inneren",
+  "icon": "beemastery:hive_module_booster",
+  "category": "beemastery:portable_hive",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(li)Links: Königin oder Prinzessin mit Drohne.$(li)Daneben: Rahmen und Blume (optional).$(li)Rechts: die Produkte.$(br2)Leere Plätze zeigen ein blasses Beispiel. Mit der Maus darauf siehst du, was hineingehört, beim $(l)?$() die ganze Anleitung."
+    },
+    {
+      "type": "text",
+      "text": "Leg eine Blume hinein, die deine Bienen mögen, dann suchen sie keine Blumen mehr um dich herum. Das blasse Symbol zeigt die passende für die aktuelle Biene: Mohn für Waldbienen, Netherwarze für Netherbienen usw.$(br2)Bienen, die Tageslicht statt einer Pflanze wollen, können ihn nicht nutzen.",
+      "title": "Blumenplatz"
+    },
+    {
+      "type": "text",
+      "text": "Das Symbol über dem Pfeil zeigt, warum die Bienen nicht arbeiten: zu heiß, Regen, keine Blumen … Zeig darauf für Forestrys eigene Erklärung.$(br2)Der Pfeil füllt sich, während sie arbeiten. Der Balken bei der Königin zeigt ihr restliches Leben, bei einer Prinzessin den Paarungsfortschritt.",
+      "title": "Status"
+    },
+    {
+      "type": "text",
+      "text": "Solange du ihn trägst, zeigt ein kleines Feld oben links Königin, Balken und Status – du musst den Stock also selten öffnen.$(br2)Bei der Arbeit summen Bienen aus ihm heraus, und auch andere Spieler sehen sie.",
+      "title": "Unterwegs"
+    }
+  ]
+}

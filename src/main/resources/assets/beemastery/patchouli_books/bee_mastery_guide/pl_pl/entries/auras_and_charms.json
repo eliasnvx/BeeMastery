@@ -1,0 +1,22 @@
+{
+  "name": "Aury i talizmany",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Smocze, Legendarne, Witherowe i Zmutowane pszczoły mają żywą aurę, która pulsuje z ich ula podczas pracy. Jej zasięg wynika wprost z genu Terytorium pszczoły, więc wszystko, co poszerza terytorium, poszerza też aurę."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "Talizmany aury",
+      "text": "Przerób pasujący propolis na talizman, aby nosić aurę ze sobą, zamiast zostawiać ją przy ulu. Talizman ma ograniczony ładunek – każdy puls kosztuje punkt wytrzymałości, a gdy się wyczerpie, talizman się psuje."
+    },
+    {
+      "type": "text",
+      "text": "Jest też piąta aura: Żniwa, którą nosi Marchewkowa pszczoła. Nawozi pobliskie uprawy jak mączka kostna. Nie ma do niej propolisu, więc jej talizman wciąż robi się z Marchewkowego plastra."
+    }
+  ]
+}

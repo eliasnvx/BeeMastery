@@ -1,0 +1,22 @@
+{
+  "name": "De Aura-riem",
+  "icon": "beemastery:aura_belt",
+  "category": "beemastery:auras",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Een los amulet doet niets – pas in een Aura-riem gaat het echt pulseren. De riem houdt twee amuletten tegelijk vast, dus je moet altijd kiezen welke twee aura's je meeneemt."
+    },
+    {
+      "type": "text",
+      "title": "Plaatsen",
+      "text": "Geen GUI nodig: houd de riem in de ene hand en een amulet in de andere, en rechtsklik. Welke hand wat vasthoudt, maakt niet uit."
+    },
+    {
+      "type": "text",
+      "title": "Verwijderen",
+      "text": "Sluip en rechtsklik met de riem in je hand en je andere hand leeg om het laatst geplaatste amulet er weer uit te halen. Rechtsklik je zo zonder te sluipen, dan zie je alleen wat er nu in zit."
+    }
+  ]
+}

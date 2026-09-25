@@ -1,0 +1,27 @@
+{
+  "name": "The Portable Hive",
+  "icon": "beemastery:portable_hive",
+  "category": "beemastery:portable_hive",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "A Bee House you wear in the chestplate slot. Its bees work wherever you carry them: biome, weather, light and flowers all come from where you're standing.$(br2)Wander into a better climate and the hive follows."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:portable_hive",
+      "text": "A Bee House with leather straps, string and an iron buckle."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Sneak + right-click$() to put it on.$(li)Press $(k:beemastery.open_hive) to open it while it's on your back.$(li)Right-click it in your hand to open it without wearing it.$(br2)The bees only work while the hive is on your back.",
+      "title": "Wearing It"
+    },
+    {
+      "type": "text",
+      "text": "A basic hive works at a Bee House's pace: a quarter of the bees' own speed. $(l:portable_hive/upgrades)Upgrades$(/l) make it faster, $(l:portable_hive/modules)modules$(/l) change what it can do.",
+      "title": "How Fast?"
+    }
+  ]
+}

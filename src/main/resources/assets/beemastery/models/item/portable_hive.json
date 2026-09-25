@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "beemastery:item/portable_hive"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "beemastery:tier": 0.3
+      },
+      "model": "beemastery:item/portable_hive_reinforced"
+    },
+    {
+      "predicate": {
+        "beemastery:tier": 0.6
+      },
+      "model": "beemastery:item/portable_hive_draconic"
+    },
+    {
+      "predicate": {
+        "beemastery:tier": 0.9
+      },
+      "model": "beemastery:item/portable_hive_legendary"
+    }
+  ]
+}

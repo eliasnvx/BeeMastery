@@ -1,0 +1,22 @@
+{
+  "name": "靈氣與護符",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "龍族、傳說、凋零和變異蜜蜂各自帶有一種靈氣，工作時會從蜂箱向外發出脈衝。脈衝半徑直接取決於蜜蜂自身的活動範圍基因，所以任何能擴大活動範圍的東西也會擴大靈氣範圍。"
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "靈氣護符",
+      "text": "用對應的蜂膠合成護符，就能把靈氣隨身帶走，而不必留在蜂箱旁。護符的充能有限——每次脈衝消耗一點耐久度，耗盡時護符就會損壞。"
+    },
+    {
+      "type": "text",
+      "text": "此外還有第五種靈氣：豐收，由甘筍蜂攜帶，能像骨粉一樣為附近作物施肥。它沒有對應的蜂膠，所以它的護符仍然用甘筍蜂巢合成。"
+    }
+  ]
+}

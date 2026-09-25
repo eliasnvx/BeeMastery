@@ -1,6 +1,6 @@
 {
-  "parent1": "forestry:forest",
-  "parent2": "forestry:meadows",
+  "parent1": "forestry:cultivated",
+  "parent2": "forestry:forest",
   "result": "beemastery:carrot",
   "chance": 0.15
 }

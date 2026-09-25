@@ -279,7 +279,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
                     .setComplexity(1)
                     .addMutations(mutations -> mutations.add(
-                            ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MEADOWS, 15));
+                            ForestryBeeSpecies.CULTIVATED, ForestryBeeSpecies.MEADOWS, 15));
         });
 
         // Carrot Bee
@@ -300,7 +300,7 @@ public class ForestryExtrasPlugin implements IForestryPlugin {
                     .addProduct(new ItemStack(Items.HONEYCOMB), 0.1f)
                     .setComplexity(1)
                     .addMutations(mutations -> mutations.add(
-                            ForestryBeeSpecies.FOREST, ForestryBeeSpecies.MEADOWS, 15));
+                            ForestryBeeSpecies.CULTIVATED, ForestryBeeSpecies.FOREST, 15));
         });
     }
 

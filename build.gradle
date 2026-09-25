@@ -105,6 +105,26 @@ minecraft {
             }
         }
 
+        // ./gradlew runGameTestServer: starts a server, runs every game test of this mod, then exits
+        // (non-zero exit code if a required test fails). Tests are only registered for the
+        // namespaces listed here, so they never load for players.
+        gameTestServer {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', mod_id
+
+            // Mixin refmap remapping для Patchouli
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
+            mods {
+                beemastery {
+                    source sourceSets.main
+                }
+            }
+        }
+
         data {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'

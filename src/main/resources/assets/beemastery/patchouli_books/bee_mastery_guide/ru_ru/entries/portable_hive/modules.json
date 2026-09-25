@@ -1,0 +1,47 @@
+{
+  "name": "Модули",
+  "icon": "beemastery:hive_module_lantern",
+  "category": "beemastery:portable_hive",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Модули ставятся в боковую панель окна улья. Сколько слотов открыто, зависит от уровня улья.$(br2)Каждого вида — только один модуль на улей, а «Мутаген» и «Стабилизатор генов» вместе не ставятся."
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Фонарь$(): освещает всё вокруг, пчёлы работают днём и ночью.$(li)$(l)Навес$(): работа в дождь.$(li)$(l)Искусственное солнце$(): работа под землёй.$(li)$(l)Стабилизатор климата$(): климат биома не важен.",
+      "title": "Где и когда"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l)Ускоритель$(): +25% к производству.$(li)$(l)Долголетие$(): королева живёт вдвое дольше.$(li)$(l)Мутаген$(): удваивает шанс мутаций.$(li)$(l)Стабилизатор генов$(): никаких мутаций.$(li)$(l)Сборщик$(): продукция сразу идёт в инвентарь.",
+      "title": "Как и что"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_lantern",
+      "recipe2": "beemastery:hive_module_canopy"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_sun",
+      "recipe2": "beemastery:hive_module_climate"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_booster",
+      "recipe2": "beemastery:hive_module_longevity"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_mutagen",
+      "recipe2": "beemastery:hive_module_stabilizer"
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:hive_module_collector",
+      "text": "Каждый модуль — это прополис, пчелиный воск и один ключевой предмет; чем сильнее модуль, тем реже нужный прополис."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Pszczoły z farmy",
+  "icon": "beemastery:bee_comb_cow",
+  "category": "beemastery:breeding",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Osobna, bardziej zwariowana linia, która mutuje przez płody rolne zamiast metali: pszczoły Gliniana, Świńska, Krowia, Owcza, Ziemniaczana i Marchewkowa. Bez aur i własnych narzędzi – po prostu glina, skóra, wołowina, wełna, nić, ziemniaki i marchewki prosto z ula."
+    },
+    {
+      "type": "text",
+      "text": "Gliniana mutuje z Łąkowej i Szlachetnej. Ziemniaczana mutuje z Uprawnej i Łąkowej, Marchewkowa z Uprawnej i Leśnej. Świńska mutuje z Niezłomnej i Marchewkowej, Krowia z Niezłomnej i Ziemniaczanej, a Owcza z Marchewkowej i Ziemniaczanej – mała, własna sieć hodowlana."
+    }
+  ]
+}

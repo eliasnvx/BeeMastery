@@ -1,0 +1,23 @@
+{
+  "name": "Netten & entmessen",
+  "icon": "beemastery:scoop_legendary",
+  "category": "beemastery:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Vlindernetten",
+      "text": "Een vlindernet vangt een wilde vanilla-bij en maakt er een Forestry-dar van. Er zijn Versterkte, Draconische en Legendarische niveaus, die elk sneller vangen en langer meegaan dan de vorige."
+    },
+    {
+      "type": "text",
+      "title": "Entmessen",
+      "text": "Een entmes versnelt het enten van bomen in het boomkweekdeel van Forestry. Dezelfde drie niveaus als het vlindernet, en elk lemmet wordt gesmeed uit de staaf van zijn niveau in plaats van uit nog meer stokken."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:grafter_legendary",
+      "text": "Elk entmesrecept zet de staaf helemaal aan de punt van het lemmet – dat is de snede – met twee stokken als handvat eronder."
+    }
+  ]
+}

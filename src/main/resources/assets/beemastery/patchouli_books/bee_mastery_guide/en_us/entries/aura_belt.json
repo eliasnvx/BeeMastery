@@ -16,7 +16,7 @@
     {
       "type": "text",
       "title": "Removing",
-      "text": "Sneak and right-click with the belt in hand and your other hand empty to pop the most recently socketed charm back out. A quick right-click with both hands empty just shows you what's currently socketed."
+      "text": "Sneak and right-click with the belt in hand and your other hand empty to pop the most recently socketed charm back out. Right-click the same way without sneaking to just see what's currently socketed."
     }
   ]
 }

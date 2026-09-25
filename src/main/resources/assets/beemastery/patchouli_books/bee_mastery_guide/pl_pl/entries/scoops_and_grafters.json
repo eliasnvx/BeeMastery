@@ -1,0 +1,23 @@
+{
+  "name": "Siatki i szczepiarki",
+  "icon": "beemastery:scoop_legendary",
+  "category": "beemastery:tools",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "title": "Siatki",
+      "text": "Siatka łapie dziką pszczołę z vanilli i zamienia ją w trutnia z Forestry. Występuje w poziomach Wzmocniona, Smocza i Legendarna – każdy łapie szybciej i wytrzymuje dłużej od poprzedniego."
+    },
+    {
+      "type": "text",
+      "title": "Szczepiarki",
+      "text": "Szczepiarka przyspiesza szczepienie drzew przy uprawie drzew w Forestry. Te same trzy poziomy co siatka, a ostrze każdej wykuwa się ze sztabki jej poziomu, a nie z kolejnych patyków."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:grafter_legendary",
+      "text": "Każda receptura szczepiarki umieszcza sztabkę na samym czubku ostrza – to krawędź tnąca – a pod nią dwa patyki tworzą rękojeść."
+    }
+  ]
+}

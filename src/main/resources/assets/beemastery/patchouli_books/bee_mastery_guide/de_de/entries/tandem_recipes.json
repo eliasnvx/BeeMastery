@@ -1,0 +1,27 @@
+{
+  "name": "Die Tandem-Rezepte",
+  "icon": "beemastery:frame_draconic",
+  "category": "beemastery:frames",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Rahmen der Tandem-Linie brauchen nicht nur Stäbe und Wachs – jeder baut auf dem Rahmen darunter auf, so wie die Bienen selbst aus ihren Eltern mutieren."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_reinforced",
+      "text": "Verstärkt startet das Tandem: ein Diamantrahmen plus Verstärkte Stäbe und Wachs."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_draconic",
+      "text": "Drakonisch braucht beide Eltern-Rahmen zugleich in der Werkbank – Witheria und Verstärkt –, so wie die Biene selbst beide zum Mutieren braucht."
+    },
+    {
+      "type": "crafting",
+      "recipe": "beemastery:frame_legendary",
+      "text": "Legendär braucht Witheria und Drakonisch plus einen Netherstern. Mit Abstand der teuerste Rahmen der Mod – das echte Endgame-Ziel, kein Routine-Craft."
+    }
+  ]
+}

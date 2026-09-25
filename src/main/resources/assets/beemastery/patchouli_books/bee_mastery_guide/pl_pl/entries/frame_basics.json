@@ -1,0 +1,18 @@
+{
+  "name": "Podstawy ramek",
+  "icon": "beemastery:frame_reinforced",
+  "category": "beemastery:frames",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Każda ramka w Bee Mastery ma cztery wartości: produkcję (jak szybko pracuje ul), rozkład genetyczny (jak szybko słabną geny królowej), mutację (dodatkowa szansa na mutację) i terytorium (jak daleko sięgają efekty ula, także aury)."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:frame_mutation",
+      "title": "Ramka mutacji",
+      "text": "Specjalistka: połowa długości życia, ale dziesięciokrotna szansa na mutację. Stworzona do szybkiej hodowli przez linię tandemową, nie do długiej produkcji."
+    }
+  ]
+}

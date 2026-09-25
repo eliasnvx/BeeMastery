@@ -1,0 +1,22 @@
+{
+  "name": "Auren & Talismane",
+  "icon": "beemastery:aura_charm_legendary",
+  "category": "beemastery:auras",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "text",
+      "text": "Drakonische, Legendäre, Witheria- und Mutierte Bienen tragen je eine lebendige Aura, die bei der Arbeit von ihrem Stock pulsiert. Der Radius folgt direkt dem Territorium-Gen der Biene: Mehr Territorium heißt auch mehr Aura."
+    },
+    {
+      "type": "spotlight",
+      "item": "beemastery:aura_charm_draconic",
+      "title": "Aura-Talismane",
+      "text": "Verarbeite das passende Propolis zu einem Talisman, um eine Aura mitzunehmen, statt sie am Stock zu lassen. Die Ladung ist begrenzt: Jeder Puls kostet einen Haltbarkeitspunkt, und ist sie leer, zerbricht der Talisman."
+    },
+    {
+      "type": "text",
+      "text": "Es gibt noch eine fünfte Aura: Ernte, getragen von der Karottenbiene. Sie düngt nahe Pflanzen wie Knochenmehl. Passendes Propolis gibt es dafür nicht, deshalb stellst du ihren Talisman aus einer Karottenwabe her."
+    }
+  ]
+}

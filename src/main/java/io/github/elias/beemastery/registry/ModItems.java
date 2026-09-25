@@ -20,6 +20,9 @@ import io.github.elias.beemastery.item.FEItemStick;
 import io.github.elias.beemastery.item.FEItemPropolis;
 import io.github.elias.beemastery.item.FEItemAuraCharm;
 import io.github.elias.beemastery.item.FEItemAuraBelt;
+import io.github.elias.beemastery.item.FEItemPortableHive;
+import io.github.elias.beemastery.item.FEEnumHiveModule;
+import io.github.elias.beemastery.item.FEItemHiveModule;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -62,6 +65,12 @@ public class ModItems {
 
     // Пояс аур (держит ограниченное число талисманов)
     public static final RegistryObject<Item> AURA_BELT = ITEMS.register("aura_belt", FEItemAuraBelt::new);
+
+    // Модули портативного улья
+    public static final Map<FEEnumHiveModule, RegistryObject<Item>> HIVE_MODULES = new HashMap<>();
+
+    // Походный улей (носится в слоте нагрудника)
+    public static final RegistryObject<Item> PORTABLE_HIVE = ITEMS.register("portable_hive", FEItemPortableHive::new);
 
     static {
         // Регистрируем все соты
@@ -126,6 +135,13 @@ public class ModItems {
             FEEnumPropolis finalPropolisType = propolisType; // Захватываем значение для лямбды
             RegistryObject<Item> propolis = ITEMS.register(name, () -> new FEItemPropolis(finalPropolisType));
             PROPOLIS.put(propolisType, propolis);
+        }
+
+        // Регистрируем модули портативного улья
+        for (FEEnumHiveModule moduleType : FEEnumHiveModule.VALUES) {
+            String name = "hive_module_" + moduleType.getSerializedName();
+            RegistryObject<Item> module = ITEMS.register(name, () -> new FEItemHiveModule(moduleType));
+            HIVE_MODULES.put(moduleType, module);
         }
 
         // Регистрируем аура-талисманы
