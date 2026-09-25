@@ -38,6 +38,9 @@ public class HiveStackContainer implements Container, IBeeHousingInventory {
     public static final int SIZE = MODULES_START + MODULE_SLOTS;
 
     private final ItemStack hive;
+    /** The drone stack last handed to Forestry, see {@link #commitDrone()}. */
+    private ItemStack lentDrone = ItemStack.EMPTY;
+    private int lentDroneCount;
 
     public HiveStackContainer(ItemStack hive) {
         this.hive = hive;
@@ -165,7 +168,28 @@ public class HiveStackContainer implements Container, IBeeHousingInventory {
 
     @Override
     public ItemStack getDrone() {
-        return getItem(DRONE);
+        ItemStack drone = getItem(DRONE);
+        lentDrone = drone;
+        lentDroneCount = drone.getCount();
+        return drone;
+    }
+
+    /**
+     * Forestry uses up a drone when a princess mates by shrinking the very stack {@link #getDrone()}
+     * returned (and only calls {@link #setDrone} once it is empty). Here that stack is a copy read
+     * from the item, so a shrink of a larger drone stack would be lost; write it back instead.
+     * Called after each work tick.
+     */
+    public void commitDrone() {
+        ItemStack lent = lentDrone;
+        lentDrone = ItemStack.EMPTY;
+        if (lent.isEmpty() || lent.getCount() == lentDroneCount) {
+            return;  // untouched, or used up (Forestry has already emptied the slot itself)
+        }
+        ItemStack stored = getItem(DRONE);
+        if (stored.getCount() == lentDroneCount && ItemStack.isSameItemSameComponents(stored, lent)) {
+            setItem(DRONE, lent.copy());
+        }
     }
 
     @Override

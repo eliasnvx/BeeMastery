@@ -140,6 +140,7 @@ public class PortableHiveHousing extends PlayerBeeHousing {
             } else {
                 logic.doWork();
             }
+            inventory.commitDrone();
         }
         if (modules.contains(FEEnumHiveModule.COLLECTOR) && player.tickCount % BeeMasteryConfig.SERVER.collectorInterval() == 0) {
             collectProducts();

@@ -6,6 +6,7 @@ import forestry.api.apiculture.genetics.BeeLifeStage;
 import forestry.api.core.ForestryError;
 import forestry.api.core.IError;
 import forestry.api.core.genetics.ForestrySpeciesTypes;
+import forestry.api.core.genetics.capability.IIndividualHandlerItem;
 import io.github.elias.beemastery.ForestryExtras;
 import forestry.api.apiculture.IBeeModifier;
 import io.github.elias.beemastery.hive.HiveFlowers;
@@ -267,15 +268,41 @@ public class PortableHiveTest {
         return wearHive(helper, HiveTier.BASIC, c -> c.setItem(HiveStackContainer.FLOWER, flower));
     }
 
-    /** A plain server-side player (no network connection, so nothing tries to send it packets) wearing a hive with a forest queen. */
+    /**
+     * A princess mates with one drone of a stack: the hive's inventory is read from the item, so the
+     * drone Forestry uses up has to be written back (see HiveStackContainer#commitDrone).
+     */
+    @GameTest(template = "empty", timeoutTicks = 200)
+    public static void matingUsesOneDrone(GameTestHelper helper) {
+        var bees = IForestryApi.INSTANCE.getGeneticManager().getSpeciesType(ForestrySpeciesTypes.BEE);
+        ItemStack drones = bees.createStack(ForestryBeeSpecies.FOREST, BeeLifeStage.DRONE);
+        drones.setCount(3);
+        Player player = wearHive(helper, HiveTier.BASIC, c -> {
+            c.setQueen(bees.createStack(ForestryBeeSpecies.FOREST, BeeLifeStage.PRINCESS));
+            c.setDrone(drones);
+        }, 120);  // Forestry's mating takes 100 work ticks
+        HiveStackContainer hive = new HiveStackContainer(player.getItemBySlot(EquipmentSlot.CHEST));
+        var stage = IIndividualHandlerItem.getLifeStage(hive.getQueen());
+        helper.assertTrue(stage == BeeLifeStage.QUEEN, "princess should have mated into a queen, got " + stage);
+        helper.assertTrue(hive.getDrone().getCount() == 2, "mating should use exactly one drone, left: " + hive.getDrone().getCount());
+        helper.succeed();
+    }
+
     private static Player wearHive(GameTestHelper helper, HiveTier tier, Consumer<HiveStackContainer> setup) {
+        return wearHive(helper, tier, setup, 40);
+    }
+
+    /** A plain server-side player (no network connection, so nothing tries to send it packets) wearing a hive with a forest queen. */
+    private static Player wearHive(GameTestHelper helper, HiveTier tier, Consumer<HiveStackContainer> setup, int ticks) {
         Player player = helper.makeMockPlayer(GameType.SURVIVAL);
+        // stand in the test area: the mock player spawns high above the ground and would fall to its death
+        player.moveTo(Vec3.atBottomCenterOf(helper.absolutePos(BlockPos.ZERO)));
         ItemStack hive = HiveTier.withTier(new ItemStack(ModItems.PORTABLE_HIVE.get()), tier);
         HiveStackContainer contents = new HiveStackContainer(hive);
         contents.setQueen(queen());
         setup.accept(contents);
         player.setItemSlot(EquipmentSlot.CHEST, hive);
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < ticks; i++) {
             player.tick();
         }
         return player;

@@ -5,6 +5,11 @@ All notable changes to Bee Mastery will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1+1.21.1] - 2026-09-25
+
+### Fixed
+- **Portable Hive duplicated drones:** with two or more drones in the drone slot, a princess mating in the hive didn't use one up. Mating now takes exactly one drone.
+
 ## [1.2.0+1.21.1] - 2026-09-25
 
 First release for **Minecraft 1.21.1 / NeoForge**: everything from 1.1.0 (the aura system, Aura Belt, hive synergy, frame tandem, guide book and all 11 bees) plus the new **Portable Hive**.

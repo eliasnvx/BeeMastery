@@ -58,7 +58,7 @@ jobs:
           GRADLE_OPTS: "-Xmx3G"
 
       # Creates a real world and checks that recipes, bee mutations and the guide book
-      # loaded. Only on branches that have the smoke test (1.21.1+).
+      # loaded. Only on branches that have game tests.
       - name: 🧪 Datapack smoke test (world creation)
         if: hashFiles('src/main/java/**/gametest/*.java') != ''
         run: ./gradlew runGameTestServer --no-daemon
